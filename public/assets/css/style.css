@@ -1,0 +1,221 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 11, 2017, 3:19:17 PM
+    Author     : mohebhawari
+*/
+
+.footer-custom
+{
+    color: white;
+    background-color: #3e50b4;
+    padding: 20px;
+}
+
+.bulder-nav
+{
+    padding-left: 10px;
+}
+
+.page-header-secondary 
+{
+  display: block;
+  position: relative;
+  background-color: white;
+  width: auto;
+  height: auto;
+  min-height: 50px;
+  box-shadow: none;
+  table-layout: auto;
+  border-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0px;
+}
+
+.full-content-secondary 
+{
+  margin-left: -40px;
+  margin-right: -40px;
+  padding: 0px 0;
+}
+
+.breadcrumb 
+{
+    margin-bottom: 0px;
+    background-color: inherit;
+}
+
+.sub-menu-secondary ul{
+    float: right;
+}
+
+.delete-me-index
+{
+    width:7% !important;
+}
+
+.body
+{
+    background-color: #d9dde8;
+}
+
+.container-fluid, .fluid-container {
+    margin: 0 auto;
+    max-width: 1280px;
+}
+
+.sub-nav
+{
+    margin: 5px;
+}
+
+.form-horizontal .control-group > label
+{
+    font-weight: normal !important;
+    text-align: left !important;
+}
+
+.inputer label:first-child
+{
+    color: rgba(0, 0, 0, 1);
+}
+
+.required
+{
+    color: red;
+}
+
+.help-inline, .help-block
+{
+    color: red !important;
+}
+.card.card-stocks {
+    height: 370px !important;
+}
+.card-customs {
+    padding: 0;
+    height: 80px !important;
+    border: 0;
+    background: #2095f2 !important;
+}
+.text-bold
+{
+    font-weight: bolder !important;
+}
+
+.card.card-iconic .card-body
+{
+    padding: 20px 20px !important;
+}
+
+.card.card-iconic a
+{
+    text-decoration: none !important;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100vh;
+}
+
+body {
+  font: 14px/1 'Open Sans', sans-serif;
+  color: #555;
+  background: #eee;
+}
+
+h1 {
+  padding: 50px 0;
+  font-weight: 400;
+  text-align: center;
+}
+
+p {
+  margin: 0 0 20px;
+  line-height: 1.5;
+}
+
+main {
+  min-width: 320px;
+  max-width: 800px;
+  padding: 50px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+section {
+  display: none;
+  padding: 20px 0 0;
+  border-top: 1px solid #ddd;
+}
+
+input {
+  display: none;
+}
+
+.tab-label {
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 15px 25px;
+  font-weight: 600;
+  text-align: center;
+  color: #bbb;
+  border: 1px solid transparent;
+}
+
+.tab-label:before {
+  font-family: fontawesome;
+  font-weight: normal;
+  margin-right: 10px;
+}
+
+.tab-label[for*='1']:before { content: '\f1cb'; }
+.tab-label[for*='2']:before { content: '\f17d'; }
+.tab-label[for*='3']:before { content: '\f16b'; }
+.tab-label[for*='4']:before { content: '\f1a9'; }
+
+.tab-label:hover {
+  color: #888;
+  cursor: pointer;
+}
+
+input:checked + .tab-label {
+  color: #555;
+  border: 1px solid #ddd;
+  border-top: 2px solid orange;
+  border-bottom: 1px solid #fff;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4 {
+  display: block;
+}
+
+@media screen and (max-width: 650px) {
+  .tab-label {
+    font-size: 0;
+  }
+  .tab-label:before {
+    margin: 0;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .tab-label {
+    padding: 15px;
+  }
+}
