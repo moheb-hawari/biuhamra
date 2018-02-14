@@ -27,6 +27,19 @@
                 TablesDataTables.init();
                 FormsWysiwyg.init();
                 
+                $('.tab-input').click(function() {
+                    if($('#english').is(':checked')) { 
+                        $('#english-content').css("display","block");
+                        $('#arabic-content').css("display","none");
+                    }
+                    if($('#arabic').is(':checked')) { 
+                        $('#arabic-content').css("display","block");
+                        $('#english-content').css("display","none");
+                    }
+                });
+                
+               
+                
 });
 	</script>
 	<!-- END INITIALIZATION-->

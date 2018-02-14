@@ -60,7 +60,7 @@ if ($can_delete) {
 				<?php endif; ?>
 					<td><?php e($record->latitude); ?></td>
 					<td><?php e($record->longitude); ?></td>
-					<td><?php e($record->status); ?></td>
+					<td><?php e($record->status==0?'Active':'Inactive'); ?></td>
 				</tr>
 				<?php
 					endforeach;

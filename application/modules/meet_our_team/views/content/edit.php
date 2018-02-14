@@ -21,10 +21,15 @@ $id = isset($meet_our_team->id) ? $meet_our_team->id : '';
     <div class='panel-heading'>
         <div class='panel-title'><h3>Meet Our Team</h3></div>
     </div>
+    <input class="tab-input" id="english" type="radio" name="tabs" checked>
+    <label class="tab-label" for="english"><?php echo lang('bf_language_tab_english'); ?></label>
+    
+    <input class="tab-input" id="arabic" type="radio" name="tabs">
+    <label class="tab-label" for="arabic"><?php echo lang('bf_language_tab_arabic'); ?></label>
     <div class='panel-body'>
     <?php echo form_open($this->uri->uri_string(), 'class="form-horizontal"'); ?>
         <fieldset>
-            <div class="col-md-6">
+            <div id="english-content" class="col-md-12">
                 <div class="inputer floating-label control-group<?php echo form_error('en_title') ? ' error' : ''; ?>">
                 <?php echo form_label(lang('meet_our_team_field_en_title') . lang('bf_form_label_required'), 'en_title', array('class' => 'control-label')); ?>
                 <div class='input-wrapper controls'>
@@ -48,7 +53,7 @@ $id = isset($meet_our_team->id) ? $meet_our_team->id : '';
                     <span class='help-inline'><?php echo form_error('en_description'); ?></span>
             </div>
             </div>
-            <div class="col-md-6">
+            <div id="arabic-content" class="col-md-12">
                 <div class="inputer floating-label control-group<?php echo form_error('ar_title') ? ' error' : ''; ?>">
                 <?php echo form_label(lang('meet_our_team_field_ar_title') . lang('bf_form_label_required'), 'ar_title', array('class' => 'control-label')); ?>
                 <div class='input-wrapper controls'>

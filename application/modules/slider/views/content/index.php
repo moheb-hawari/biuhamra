@@ -60,7 +60,7 @@ if ($can_delete) {
 				<?php endif; ?>
 					<td><img width="100px" height="100px" src="<?php e(assets_path().'images/image/'.$record->id.'/'.$record->image) ?>"/></td>
 					<td><?php e($record->weight); ?></td>
-					<td><?php e($record->status); ?></td>
+					<td><?php e($record->status==0?'Active':'Inactive'); ?></td>
 				</tr>
 				<?php
 					endforeach;

@@ -328,3 +328,6 @@ $lang['bf_context_facilities'] = 'Facilities';
 $lang['bf_context_humanresources'] = 'Human Resources';
 
 $lang['bf_context_utility'] = 'Site Meta';
+
+$lang['bf_language_tab_english'] = 'English';
+$lang['bf_language_tab_arabic'] = 'Arabic';

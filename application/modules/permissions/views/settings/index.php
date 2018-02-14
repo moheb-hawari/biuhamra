@@ -38,7 +38,7 @@ $num_columns = 5;
 					<td><?php echo $record->permission_id; ?></td>
 					<td><a href='<?php echo site_url(SITE_AREA . "/settings/permissions/edit/{$record->permission_id}"); ?>'><?php e($record->name); ?></a></td>
 					<td><?php e($record->description); ?></td>
-					<td><?php e(ucfirst($record->status)); ?></td>
+					<td><?php e($record->status==0?'Active':'Inactive'); ?></td>
 				</tr>
 				<?php endforeach; ?>
 			</tbody>

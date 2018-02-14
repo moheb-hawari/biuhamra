@@ -21,10 +21,15 @@ $id = isset($doctors->id) ? $doctors->id : '';
     <div class='panel-heading'>
         <div class='panel-title'><h3>Doctors</h3></div>
     </div>
+    <input class="tab-input" id="english" type="radio" name="tabs" checked>
+    <label class="tab-label" for="english"><?php echo lang('bf_language_tab_english'); ?></label>
+    
+    <input class="tab-input" id="arabic" type="radio" name="tabs">
+    <label class="tab-label" for="arabic"><?php echo lang('bf_language_tab_arabic'); ?></label>
     <div class='panel-body'>
     <?php echo form_open_multipart($this->uri->uri_string(), 'class="form-horizontal"'); ?>
         <fieldset>
-            <div class="col-md-6">
+            <div id="english-content" class="col-md-12">
                 <div class="inputer floating-label control-group<?php echo form_error('en_name') ? ' error' : ''; ?>">
                 <?php echo form_label(lang('doctors_field_en_name') . lang('bf_form_label_required'), 'en_name', array('class' => 'control-label')); ?>
                 <div class='input-wrapper controls'>
@@ -56,37 +61,11 @@ $id = isset($doctors->id) ? $doctors->id : '';
                     </div>  
                     <span class='help-inline'><?php echo form_error('en_description'); ?></span>
             </div>
-                <div class="control-group<?php echo form_error('personal_photo') ? ' error' : ''; ?>">
-                <?php echo form_label(lang('doctors_field_personal_photo') . lang('bf_form_label_required'), 'personal_photo', array('class' => 'control-label')); ?>
-                <div class="fileinput fileinput-new" data-provides="fileinput">
-                    <span class="btn btn-default btn-file">
-                        <span class="fileinput-new">Select file</span>
-                        <span class="fileinput-exists">Change</span>
-                        <input id='personal_photo' type='file' name='personal_photo' value="" />
-                    </span>
-                    <span class="fileinput-filename"></span>
-                    <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
-                    <span class='help-inline'><?php echo form_error('personal_photo'); ?></span>
-                </div>
-            </div>
-                <?php // Change the values in this array to populate your dropdown as required
-                    $options = array(
-                    0 => 'Participant',
-                    1 => 'Administrator',
-                );
-                echo form_dropdown(array('name' => 'type','class'=>'selectpicker','required' => 'required'), $options, set_value('administrator', isset($doctors->administrator) ? $doctors->administrator : ''), lang('doctors_field_type') . lang('bf_form_label_required'),'','','col-md-6');
-            ?>
-                <?php // Change the values in this array to populate your dropdown as required
-                    $options = array(
-                    0 => 'Active',
-                    1 => 'Inactive',
-                );
-                echo form_dropdown(array('name' => 'status','class'=>'selectpicker','required' => 'required'), $options, set_value('status', isset($doctors->status) ? $doctors->status : ''), lang('doctors_field_status') . lang('bf_form_label_required'),'','','col-md-6');
-            ?>
+                
                 
             </div>
             
-            <div class="col-md-6">
+            <div id="arabic-content" class="col-md-12">
                 <div class="inputer floating-label control-group<?php echo form_error('ar_name') ? ' error' : ''; ?>">
                 <?php echo form_label(lang('doctors_field_ar_name') . lang('bf_form_label_required'), 'ar_name', array('class' => 'control-label')); ?>
                 <div class='input-wrapper controls'>
@@ -128,6 +107,7 @@ $id = isset($doctors->id) ? $doctors->id : '';
                 <span class='help-inline'><?php echo form_error('ar_description'); ?></span>
             </div>
 
+            </div>
             <div class="control-group<?php echo form_error('cover_image') ? ' error' : ''; ?>">
                 <?php echo form_label(lang('doctors_field_cover_image') . lang('bf_form_label_required'), 'cover_image', array('class' => 'control-label')); ?>
                 <div class="fileinput fileinput-new" data-provides="fileinput">
@@ -141,13 +121,39 @@ $id = isset($doctors->id) ? $doctors->id : '';
                     <span class='help-inline'><?php echo form_error('cover_image'); ?></span>
                 </div>
             </div>
-
             
-
-            <?php // Change the values in this array to populate your dropdown as required
+            <div class="col-md-12">
+                <div class="control-group<?php echo form_error('personal_photo') ? ' error' : ''; ?>">
+                <?php echo form_label(lang('doctors_field_personal_photo') . lang('bf_form_label_required'), 'personal_photo', array('class' => 'control-label')); ?>
+                <div class="fileinput fileinput-new" data-provides="fileinput">
+                    <span class="btn btn-default btn-file">
+                        <span class="fileinput-new">Select file</span>
+                        <span class="fileinput-exists">Change</span>
+                        <input id='personal_photo' type='file' name='personal_photo' value="" />
+                    </span>
+                    <span class="fileinput-filename"></span>
+                    <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
+                    <span class='help-inline'><?php echo form_error('personal_photo'); ?></span>
+                </div>
+            </div>
+                <?php // Change the values in this array to populate your dropdown as required
+                    $options = array(
+                    0 => 'Participant',
+                    1 => 'Administrator',
+                );
+                echo form_dropdown(array('name' => 'type','class'=>'selectpicker','required' => 'required'), $options, set_value('administrator', isset($doctors->administrator) ? $doctors->administrator : ''), lang('doctors_field_type') . lang('bf_form_label_required'),'','','col-md-6');
+            ?>
+                <?php // Change the values in this array to populate your dropdown as required
                 $options = [0];
                 if($weight != null) {for ($i = 1;$i<=$weight;$i++) {$options[] = $i;}}
                 echo form_dropdown(array('name' => 'weight','class'=>'selectpicker','required' => 'required'), $options, set_value('weight', isset($doctors->weight) ? $doctors->weight : ''), lang('doctors_field_weight') . lang('bf_form_label_required'),'','','col-md-6');
+            ?>
+                <?php // Change the values in this array to populate your dropdown as required
+                    $options = array(
+                    0 => 'Active',
+                    1 => 'Inactive',
+                );
+                echo form_dropdown(array('name' => 'status','class'=>'selectpicker','required' => 'required'), $options, set_value('status', isset($doctors->status) ? $doctors->status : ''), lang('doctors_field_status') . lang('bf_form_label_required'),'','','col-md-6');
             ?>
             </div>
 

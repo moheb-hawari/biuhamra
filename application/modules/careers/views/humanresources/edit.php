@@ -21,10 +21,15 @@ $id = isset($careers->id) ? $careers->id : '';
     <div class='panel-heading'>
         <div class='panel-title'><h3>Careers</h3></div>
     </div>
+    <input class="tab-input" id="english" type="radio" name="tabs" checked>
+    <label class="tab-label" for="english"><?php echo lang('bf_language_tab_english'); ?></label>
+    
+    <input class="tab-input" id="arabic" type="radio" name="tabs">
+    <label class="tab-label" for="arabic"><?php echo lang('bf_language_tab_arabic'); ?></label>
     <div class='panel-body'>
     <?php echo form_open($this->uri->uri_string(), 'class="form-horizontal"'); ?>
         <fieldset>
-            <div class="col-md-6">
+            <div id="english-content" class="col-md-12">
                 <div class="inputer floating-label control-group<?php echo form_error('en_title') ? ' error' : ''; ?>">
                 <?php echo form_label(lang('careers_field_en_title') . lang('bf_form_label_required'), 'en_title', array('class' => 'control-label')); ?>
                 <div class='input-wrapper controls'>
@@ -43,23 +48,8 @@ $id = isset($careers->id) ? $careers->id : '';
                 </div>
             </div>
                 
-                 <div class="inputer floating-label control-group<?php echo form_error('job_code') ? ' error' : ''; ?>">
-                <?php echo form_label(lang('careers_field_job_code') . lang('bf_form_label_required'), 'job_code', array('class' => 'control-label')); ?>
-                <div class='input-wrapper controls'>
-                    <input class='form-control' id='job_code' type='text' required='required' name='job_code' maxlength='255' value="<?php echo set_value('job_code', isset($careers->job_code) ? $careers->job_code : ''); ?>" />
-                        <label for='job_code'><?php echo lang('careers_field_job_code'); ?></label>
-                    <span class='help-inline'><?php echo form_error('job_code'); ?></span>
-                </div>
             </div>
-                <?php // Change the values in this array to populate your dropdown as required
-                $options = array(
-                    0 => 'Active',
-                    1 => 'Inactive',
-                );
-                echo form_dropdown(array('name' => 'status','class'=>'selectpicker','required' => 'required'), $options, set_value('status', isset($careers->status) ? $careers->status : ''), lang('careers_field_status') . lang('bf_form_label_required'),'','','col-md-6');
-            ?>
-            </div>
-            <div class="col-md-6">
+            <div  id="arabic-content" class="col-md-12">
                 <div class="inputer floating-label control-group<?php echo form_error('ar_title') ? ' error' : ''; ?>">
                 <?php echo form_label(lang('careers_field_ar_title') . lang('bf_form_label_required'), 'ar_title', array('class' => 'control-label')); ?>
                 <div class='input-wrapper controls'>
@@ -81,14 +71,31 @@ $id = isset($careers->id) ? $careers->id : '';
                 </div>
             </div>
 
-           <?php // Change the values in this array to populate your dropdown as required
+          
+
+            </div>
+            <div class="col-md-12">
+                <div class="inputer floating-label control-group<?php echo form_error('job_code') ? ' error' : ''; ?>">
+                <?php echo form_label(lang('careers_field_job_code') . lang('bf_form_label_required'), 'job_code', array('class' => 'control-label')); ?>
+                <div class='input-wrapper controls'>
+                    <input class='form-control' id='job_code' type='text' required='required' name='job_code' maxlength='255' value="<?php echo set_value('job_code', isset($careers->job_code) ? $careers->job_code : ''); ?>" />
+                        <label for='job_code'><?php echo lang('careers_field_job_code'); ?></label>
+                    <span class='help-inline'><?php echo form_error('job_code'); ?></span>
+                </div>
+            </div>
+                 <?php // Change the values in this array to populate your dropdown as required
                 $options = [0];
                 if($weight != null) {for ($i = 1;$i<=$weight;$i++) {$options[] = $i;}}
                 echo form_dropdown(array('name' => 'weight','class'=>'selectpicker','required' => 'required'), $options, set_value('weight', isset($careers->weight) ? $careers->weight : ''), lang('careers_field_weight') . lang('bf_form_label_required'),'','','col-md-6');
             ?>
-
+                <?php // Change the values in this array to populate your dropdown as required
+                $options = array(
+                    0 => 'Active',
+                    1 => 'Inactive',
+                );
+                echo form_dropdown(array('name' => 'status','class'=>'selectpicker','required' => 'required'), $options, set_value('status', isset($careers->status) ? $careers->status : ''), lang('careers_field_status') . lang('bf_form_label_required'),'','','col-md-6');
+            ?>
             </div>
-
         </fieldset>
         <fieldset class='form-actions'>
             <input type='submit' name='save' class='btn btn-primary' value="<?php echo lang('careers_action_edit'); ?>" />

@@ -60,7 +60,7 @@ if ($can_delete) {
 				<?php endif; ?>
 					<td><?php e($record->job_code); ?></td>
 					<td><?php e($record->weight); ?></td>
-					<td><?php e($record->status); ?></td>
+					<td><?php e($record->status==0?'Active':'Inactive'); ?></td>
 				</tr>
 				<?php
 					endforeach;

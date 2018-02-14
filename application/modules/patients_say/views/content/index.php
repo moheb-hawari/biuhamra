@@ -62,7 +62,7 @@ if ($can_delete) {
 					<td><?php e($record->en_job_title); ?></td>
 					<td><?php e(strip_tags($record->en_comment)); ?></td>
 					<td><?php e($record->weight); ?></td>
-					<td><?php e($record->status); ?></td>
+					<td><?php e($record->status==0?'Active':'Inactive'); ?></td>
 				</tr>
 				<?php
 					endforeach;
