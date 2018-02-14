@@ -152,7 +152,7 @@ $title = lang($controller.'_module_name');
                             'child_class' => 'child-menu',
                 ));
                 echo Contexts::context_nav('content');
-                Contexts::set_contexts(['facilities','humanresources','utility','reports','settings']);
+                Contexts::set_contexts(['facilities','humanresources','utility','reports','developer','settings']);
                 echo Contexts::render_menu('text', 'normal');
                 ?>
                 
