@@ -13,20 +13,18 @@
                         <div class="col-md-4">
                             <div class="card tile card-dashboard-info card-teal material-animate">
                                 <div class="card-body">
-                                    <div class="card-icon"><i class="fa fa-usd"></i></div><!--.card-icon-->
-                                    <h4>Revenue</h4>
-                                    <p class="result">$10,786</p>
-                                    <small><i class="fa fa-caret-up"></i> Total balance is $23,591</small>
+                                    <div class="card-icon"><i class="fa fa-sitemap"></i></div><!--.card-icon-->
+                                    <h4>Departments</h4>
+                                    <p class="result"><?php echo $departments_count; ?></p>
                                 </div>
                             </div><!--.card-->
                         </div>
                         <div class="col-md-4">
                             <div class="card tile card-dashboard-info card-light-blue material-animate">
                                 <div class="card-body">
-                                    <div class="card-icon"><i class="fa fa-calculator"></i></div><!--.card-icon-->
-                                    <h4>Open Invoices</h4>
-                                    <p class="result">26</p>
-                                    <small>Waiting to send</small>
+                                    <div class="card-icon"><i class="fa fa-user-md"></i></div><!--.card-icon-->
+                                    <h4>Doctors</h4>
+                                    <p class="result"><?php echo $doctor_count; ?></p>
                                 </div>
                             </div><!--.card-->
                         </div>
@@ -34,9 +32,8 @@
                             <div class="card tile card-dashboard-info card-blue-grey material-animate">
                                 <div class="card-body">
                                     <div class="card-icon"><i class="fa fa-thumbs-o-up"></i></div><!--.card-icon-->
-                                    <h4>New Subscribers</h4>
-                                    <p class="result">183</p>
-                                    <small><i class="fa fa-caret-up"></i> 9814 subscribers totally</small>
+                                    <h4>Patients Say</h4>
+                                    <p class="result"><?php echo $patients_say_count; ?></p>
                                 </div>
                             </div><!--.card-->
 
@@ -45,115 +42,55 @@
                         
 
                         <div class="col-md-4">
-                            <div class="card tile card-friend material-animate">
-                                <a href="user-profile.html"><img src="../../assets/globals/img/faces/1.jpg" class="user-photo" alt=""></a>
-                                <div class="friend-content">
-                                    <p class="title">Nicholas Murray</p>
-                                    <p><a href="user-profile.html">180 friends</a></p>
-                                    <a class="btn btn-flat btn-primary btn-xs">Add as a Friend</a>
-                                </div><!--.friend-content-->
-                            </div><!--.card-->
+                            
+                            <?php 
+                                if(!empty($departments))
+                                {
+                                    foreach($departments as $val)
+                                    { ?>
+                                        <div class="card tile card-friend material-animate">
+                                            <div class="friend-content">
+                                                <p class="title"><?php echo $val->en_title; ?></p>
+                                                <p><a href="user-profile.html"><?php echo $val->status==0?'Active':'Inactive'; ?></a></p>
+                                            </div><!--.friend-content-->
+                                        </div><!--.card-->
+                                   <?php } } ?>
+                            
 
-                            <div class="card tile card-friend material-animate">
-                                <a href="user-profile.html"><img src="../../assets/globals/img/faces/2.jpg" class="user-photo" alt=""></a>
-                                <div class="friend-content">
-                                    <p class="title">Jason Herrera</p>
-                                    <p><a href="user-profile.html">423 friends</a></p>
-                                    <a class="btn btn-flat btn-primary btn-xs">Add as a Friend</a>
-                                </div><!--.friend-content-->
-                            </div><!--.card-->
-
-                            <div class="card tile card-friend material-animate">
-                                <a href="user-profile.html"><img src="../../assets/globals/img/faces/3.jpg" class="user-photo" alt=""></a>
-                                <div class="friend-content">
-                                    <p class="title">Michael Bell</p>
-                                    <p><a href="user-profile.html">490 friends</a></p>
-                                    <a class="btn btn-flat btn-primary btn-xs">Add as a Friend</a>
-                                </div><!--.friend-content-->
-                            </div><!--.card-->
-
-                            <div class="card tile card-friend material-animate">
-                                <a href="user-profile.html"><img src="../../assets/globals/img/faces/5.jpg" class="user-photo" alt=""></a>
-                                <div class="friend-content">
-                                    <p class="title">Henry Allen</p>
-                                    <p><a href="user-profile.html">859 friends</a></p>
-                                    <a class="btn btn-flat btn-primary btn-xs">Add as a Friend</a>
-                                </div><!--.friend-content-->
-                            </div><!--.card-->
                         </div><!--.col-->
                         <div class="col-md-4">
+                            <?php 
+                                if(!empty($doctor))
+                                {
+                                    foreach($doctor as $val)
+                                    { ?>
                             <div class="card tile card-friend material-animate">
-                                <a href="user-profile.html"><img src="../../assets/globals/img/faces/1.jpg" class="user-photo" alt=""></a>
                                 <div class="friend-content">
-                                    <p class="title">Nicholas Murray</p>
-                                    <p><a href="user-profile.html">180 friends</a></p>
-                                    <a class="btn btn-flat btn-primary btn-xs">Add as a Friend</a>
+                                    <p class="title"><?php echo $val->en_name; ?></p>
+                                    <p><?php echo $val->en_job_title; ?></p>
+                                    <p class=""><?php echo $val->en_academic; ?></p>
                                 </div><!--.friend-content-->
                             </div><!--.card-->
-
-                            <div class="card tile card-friend material-animate">
-                                <a href="user-profile.html"><img src="../../assets/globals/img/faces/2.jpg" class="user-photo" alt=""></a>
-                                <div class="friend-content">
-                                    <p class="title">Jason Herrera</p>
-                                    <p><a href="user-profile.html">423 friends</a></p>
-                                    <a class="btn btn-flat btn-primary btn-xs">Add as a Friend</a>
-                                </div><!--.friend-content-->
-                            </div><!--.card-->
-
-                            <div class="card tile card-friend material-animate">
-                                <a href="user-profile.html"><img src="../../assets/globals/img/faces/3.jpg" class="user-photo" alt=""></a>
-                                <div class="friend-content">
-                                    <p class="title">Michael Bell</p>
-                                    <p><a href="user-profile.html">490 friends</a></p>
-                                    <a class="btn btn-flat btn-primary btn-xs">Add as a Friend</a>
-                                </div><!--.friend-content-->
-                            </div><!--.card-->
-
-                            <div class="card tile card-friend material-animate">
-                                <a href="user-profile.html"><img src="../../assets/globals/img/faces/5.jpg" class="user-photo" alt=""></a>
-                                <div class="friend-content">
-                                    <p class="title">Henry Allen</p>
-                                    <p><a href="user-profile.html">859 friends</a></p>
-                                    <a class="btn btn-flat btn-primary btn-xs">Add as a Friend</a>
-                                </div><!--.friend-content-->
-                            </div><!--.card-->
+                            <?php } } ?>
+                            
+                            
                         </div><!--.col-->
                         <div class="col-md-4">
+                             <?php 
+                                if(!empty($patients_say))
+                                {
+                                    foreach($patients_say as $val)
+                                    { ?>
                             <div class="card tile card-friend material-animate">
                                 <a href="user-profile.html"><img src="../../assets/globals/img/faces/1.jpg" class="user-photo" alt=""></a>
                                 <div class="friend-content">
-                                    <p class="title">Nicholas Murray</p>
-                                    <p><a href="user-profile.html">180 friends</a></p>
-                                    <a class="btn btn-flat btn-primary btn-xs">Add as a Friend</a>
+                                    <p class="title"><?php echo $val->en_name; ?></p>
+                                    <p><?php echo $val->en_job_title; ?></p>
+                                    <p><?php echo strip_tags($val->en_comment); ?></p>
                                 </div><!--.friend-content-->
                             </div><!--.card-->
-
-                            <div class="card tile card-friend material-animate">
-                                <a href="user-profile.html"><img src="../../assets/globals/img/faces/2.jpg" class="user-photo" alt=""></a>
-                                <div class="friend-content">
-                                    <p class="title">Jason Herrera</p>
-                                    <p><a href="user-profile.html">423 friends</a></p>
-                                    <a class="btn btn-flat btn-primary btn-xs">Add as a Friend</a>
-                                </div><!--.friend-content-->
-                            </div><!--.card-->
-
-                            <div class="card tile card-friend material-animate">
-                                <a href="user-profile.html"><img src="../../assets/globals/img/faces/3.jpg" class="user-photo" alt=""></a>
-                                <div class="friend-content">
-                                    <p class="title">Michael Bell</p>
-                                    <p><a href="user-profile.html">490 friends</a></p>
-                                    <a class="btn btn-flat btn-primary btn-xs">Add as a Friend</a>
-                                </div><!--.friend-content-->
-                            </div><!--.card-->
-
-                            <div class="card tile card-friend material-animate">
-                                <a href="user-profile.html"><img src="../../assets/globals/img/faces/5.jpg" class="user-photo" alt=""></a>
-                                <div class="friend-content">
-                                    <p class="title">Henry Allen</p>
-                                    <p><a href="user-profile.html">859 friends</a></p>
-                                    <a class="btn btn-flat btn-primary btn-xs">Add as a Friend</a>
-                                </div><!--.friend-content-->
-                            </div><!--.card-->
+                             <?php } } ?>
+                            
                         </div><!--.col-->
 
                     </div><!--.row-->

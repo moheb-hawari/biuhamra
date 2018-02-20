@@ -22,6 +22,9 @@ class Content extends Admin_Controller
         $this->auth->restrict($this->permissionView);
         $this->lang->load('dashboard');
         $this->load->model('users/user_model');
+        $this->load->model('departments/departments_model');
+        $this->load->model('doctors/doctors_model');
+        $this->load->model('patients_say/patients_say_model');
         
             $this->form_validation->set_error_delimiters("<span class='error'>", "</span>");
         
@@ -43,7 +46,13 @@ class Content extends Admin_Controller
     public function index()
     {
         
-        Template::set('toolbar_title', lang('dashboard_manage'));
+        Template::set('departments_count', $this->departments_model->count_all());
+        Template::set('doctor_count', $this->doctors_model->count_all());
+        Template::set('patients_say_count', $this->patients_say_model->count_all());
+        
+        Template::set('departments', $this->departments_model->limit(5)->find_all());
+        Template::set('doctor', $this->doctors_model->limit(5)->find_all());
+        Template::set('patients_say', $this->patients_say_model->limit(5)->find_all());
 
 
         Template::render();
