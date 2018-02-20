@@ -43,6 +43,7 @@ $title = lang($controller.'_module_name');
         <script src="<?php echo assets_path() . 'globals/plugins/modernizr/modernizr.min.js'; ?>"></script>
 <script> 
     site_url = '<?php echo site_url() ?>';
+    assets_url = '<?php echo assets_path() ?>';
 </script>
     </head>
     <body class="desktop">

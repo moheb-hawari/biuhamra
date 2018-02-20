@@ -22,23 +22,34 @@
 	<!-- END PLUGINS INITIALIZATION AND SETTINGS -->
     <script>
 	$(document).ready(function () {
-		Pleasure.init();
-		Layout.init();
+            if (typeof Pleasure !== "undefined") {
+                Pleasure.init();
+            }
+            if (typeof Layout !== "undefined") {
+                Layout.init();
+            }
+            if (typeof TablesDataTables !== "undefined") {
                 TablesDataTables.init();
+            }
+            if (typeof FormsWysiwyg !== "undefined") {
                 FormsWysiwyg.init();
+            }
+            if (typeof FormsMultipleUpload !== "undefined") {
+                FormsMultipleUpload.init();
+            }
+		
+            $('.tab-input').click(function() {
+                if($('#english').is(':checked')) { 
+                    $('#english-content').css("display","block");
+                    $('#arabic-content').css("display","none");
+                }
+                if($('#arabic').is(':checked')) { 
+                    $('#arabic-content').css("display","block");
+                    $('#english-content').css("display","none");
+                }
+            });
+
                 
-                $('.tab-input').click(function() {
-                    if($('#english').is(':checked')) { 
-                        $('#english-content').css("display","block");
-                        $('#arabic-content').css("display","none");
-                    }
-                    if($('#arabic').is(':checked')) { 
-                        $('#arabic-content').css("display","block");
-                        $('#english-content').css("display","none");
-                    }
-                });
-                
-               
                 
 });
 	</script>

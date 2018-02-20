@@ -21,7 +21,7 @@ class Facilities extends Admin_Controller
         
         $this->auth->restrict($this->permissionView);
         $this->load->model('videos/videos_model');
-        $this->load->model('departments/departments_model');
+        $this->load->model('photo_gallery/photo_gallery_model');
         $this->lang->load('videos');
         $this->load->helper('upload_helper');
             $this->form_validation->set_error_delimiters("<span class='error'>", "</span>");
@@ -126,7 +126,7 @@ class Facilities extends Admin_Controller
     public function edit()
     {
         $id = $this->uri->segment(5);
-        Template::set('departments', $this->departments_model->find_all());
+        Template::set('photo_gallery', $this->photo_gallery_model->find_all());
         if (empty($id)) {
             if (isset($_POST['save'])) {
             if ($insert_id = $this->save_videos()) {

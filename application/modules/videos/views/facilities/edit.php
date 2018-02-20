@@ -29,11 +29,11 @@ $id = isset($videos->id) ? $videos->id : '';
             <?php // Change the values in this array to populate your dropdown as required
                 $options = array();
                 
-                if($departments!= null)
+                if($photo_gallery!= null)
                 {
-                    foreach($departments as $key => $val)
+                    foreach($photo_gallery as $key => $val)
                     {
-                        $options[$val->id] = $val->en_title;
+                        $options[$val->id] = $val->section;
                     }
                 }
                 echo form_dropdown(array('name' => 'department','class'=>'selectpicker','required' => 'required'), $options, set_value('department', isset($videos->department) ? $videos->department : ''), lang('videos_field_department') . lang('bf_form_label_required'),'','','col-md-6');

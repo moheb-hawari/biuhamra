@@ -56,3 +56,4 @@ $lang['photo_gallery_area_title'] = 'Photo Gallery';
 $lang['photo_gallery_field_section'] = 'Section';
 $lang['photo_gallery_field_weight'] = 'Weight';
 $lang['photo_gallery_field_status'] = 'Status';
+$lang['photo_gallery_field_photos'] = 'Photos';
