@@ -22,80 +22,20 @@ class Utility extends Admin_Controller
         $this->auth->restrict($this->permissionView);
         $this->load->model('social_media/social_media_model');
         $this->lang->load('social_media');
-        $this->load->helper('upload_helper');
-            $this->form_validation->set_error_delimiters("<span class='error'>", "</span>");
+        $this->form_validation->set_error_delimiters("<span class='error'>", "</span>");
         
         Template::set_block('sub_nav', 'utility/_sub_nav');
 
         Assets::add_css(assets_path() . 'globals/css/elements.css');
-        Assets::add_css( assets_path().'globals/plugins/datatables/themes/bootstrap/dataTables.bootstrap.css');
-        Assets::add_css( assets_path().'globals/plugins/datatables/media/css/jquery.dataTables.min.css');
-        Assets::add_css( assets_path().'globals/plugins/components-summernote/dist/summernote.css');
-        Assets::add_css( assets_path().'globals/plugins/jasny-bootstrap/dist/css/jasny-bootstrap.min.css');
         
-        Assets::add_js(assets_path().'globals/plugins/components-summernote/dist/summernote.min.js');
-        Assets::add_js( assets_path().'globals/plugins/datatables/media/js/jquery.dataTables.min.js');
-        Assets::add_js(assets_path().'globals/plugins/datatables/themes/bootstrap/dataTables.bootstrap.js');
-        Assets::add_js(assets_path().'globals/plugins/jasny-bootstrap/dist/js/jasny-bootstrap.min.js');
-        Assets::add_js(assets_path().'globals/scripts/tables-datatables.js');
         
         Assets::add_module_js('social_media', 'social_media.js');
     }
 
-    /**
-     * Display a list of Social Media data.
-     *
-     * @return void
-     */
-    public function index($offset = 0)
+    public function index()
     {
-        // Deleting anything?
-        if (isset($_POST['delete'])) {
-            $this->auth->restrict($this->permissionDelete);
-            $checked = $this->input->post('checked');
-            if (is_array($checked) && count($checked)) {
-
-                // If any of the deletions fail, set the result to false, so
-                // failure message is set if any of the attempts fail, not just
-                // the last attempt
-
-                $result = true;
-                foreach ($checked as $pid) {
-                    $deleted = $this->social_media_model->delete($pid);
-                    if ($deleted == false) {
-                        $result = false;
-                    }
-                }
-                if ($result) {
-                    Template::set_message(count($checked) . ' ' . lang('social_media_delete_success'), 'success');
-                } else {
-                    Template::set_message(lang('social_media_delete_failure') . $this->social_media_model->error, 'error');
-                }
-            }
-        }
-        $pagerUriSegment = 5;
-        $pagerBaseUrl = site_url(SITE_AREA . '/utility/social_media/index') . '/';
-        
-        $limit  = $this->settings_lib->item('site.list_limit') ?: 15;
-
-        $this->load->library('pagination');
-        $pager['base_url']    = $pagerBaseUrl;
-        $pager['total_rows']  = $this->social_media_model->count_all();
-        $pager['per_page']    = $limit;
-        $pager['uri_segment'] = $pagerUriSegment;
-
-        $this->pagination->initialize($pager);
-        $this->social_media_model->limit($limit, $offset);
-        
-        $records = $this->social_media_model->find_all();
-
-        Template::set('records', $records);
-        
-    Template::set('toolbar_title', lang('social_media_manage'));
-
-        Template::render();
+        redirect(SITE_AREA . '/utility/social_media/edit');
     }
-    
     /**
      * Create a Social Media object.
      *
@@ -114,36 +54,14 @@ class Utility extends Admin_Controller
      */
     public function edit()
     {
-        $id = $this->uri->segment(5);
-        Template::set('weight', $this->social_media_model->count_all());
-        if (empty($id)) {
-            if (isset($_POST['save'])) {
-            if ($insert_id = $this->save_social_media()) {
-                log_activity($this->auth->user_id(), lang('social_media_act_create_record') . ': ' . $insert_id . ' : ' . $this->input->ip_address(), 'social_media');
-                Template::set_message(lang('social_media_create_success'), 'success');
-
-                redirect(SITE_AREA . '/utility/social_media');
-            }
-
-            // Not validation error
-            if ( ! empty($this->social_media_model->error)) {
-                Template::set_message(lang('social_media_create_failure') . $this->social_media_model->error, 'error');
-            }
-        }
-
-        Template::set('toolbar_title', lang('social_media_action_create'));
-        Template::set_view('edit');
-        Template::render();
-        }
-        else
-        {        
+        $id = 1;
+        
         if (isset($_POST['save'])) {
             $this->auth->restrict($this->permissionEdit);
 
             if ($this->save_social_media('update', $id)) {
                 log_activity($this->auth->user_id(), lang('social_media_act_edit_record') . ': ' . $id . ' : ' . $this->input->ip_address(), 'social_media');
                 Template::set_message(lang('social_media_edit_success'), 'success');
-                redirect(SITE_AREA . '/utility/social_media');
             }
 
             // Not validation error
@@ -152,24 +70,13 @@ class Utility extends Admin_Controller
             }
         }
         
-        elseif (isset($_POST['delete'])) {
-            $this->auth->restrict($this->permissionDelete);
-
-            if ($this->social_media_model->delete($id)) {
-                log_activity($this->auth->user_id(), lang('social_media_act_delete_record') . ': ' . $id . ' : ' . $this->input->ip_address(), 'social_media');
-                Template::set_message(lang('social_media_delete_success'), 'success');
-
-                redirect(SITE_AREA . '/utility/social_media');
-            }
-
-            Template::set_message(lang('social_media_delete_failure') . $this->social_media_model->error, 'error');
-        }
+        
         
         Template::set('social_media', $this->social_media_model->find($id));
 
         Template::set('toolbar_title', lang('social_media_edit_heading'));
         Template::render();
-        }
+        
     }
 
     //--------------------------------------------------------------------------

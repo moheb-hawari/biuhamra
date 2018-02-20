@@ -44,53 +44,9 @@ class Utility extends Admin_Controller
      *
      * @return void
      */
-    public function index($offset = 0)
+    public function index()
     {
-        // Deleting anything?
-        if (isset($_POST['delete'])) {
-            $this->auth->restrict($this->permissionDelete);
-            $checked = $this->input->post('checked');
-            if (is_array($checked) && count($checked)) {
-
-                // If any of the deletions fail, set the result to false, so
-                // failure message is set if any of the attempts fail, not just
-                // the last attempt
-
-                $result = true;
-                foreach ($checked as $pid) {
-                    $deleted = $this->information_model->delete($pid);
-                    if ($deleted == false) {
-                        $result = false;
-                    }
-                }
-                if ($result) {
-                    Template::set_message(count($checked) . ' ' . lang('information_delete_success'), 'success');
-                } else {
-                    Template::set_message(lang('information_delete_failure') . $this->information_model->error, 'error');
-                }
-            }
-        }
-        $pagerUriSegment = 5;
-        $pagerBaseUrl = site_url(SITE_AREA . '/utility/information/index') . '/';
-        
-        $limit  = $this->settings_lib->item('site.list_limit') ?: 15;
-
-        $this->load->library('pagination');
-        $pager['base_url']    = $pagerBaseUrl;
-        $pager['total_rows']  = $this->information_model->count_all();
-        $pager['per_page']    = $limit;
-        $pager['uri_segment'] = $pagerUriSegment;
-
-        $this->pagination->initialize($pager);
-        $this->information_model->limit($limit, $offset);
-        
-        $records = $this->information_model->find_all();
-
-        Template::set('records', $records);
-        
-    Template::set('toolbar_title', lang('information_manage'));
-
-        Template::render();
+        redirect(SITE_AREA . '/utility/information/edit');
     }
     
     /**
@@ -111,36 +67,14 @@ class Utility extends Admin_Controller
      */
     public function edit()
     {
-        $id = $this->uri->segment(5);
-        Template::set('weight', $this->information_model->count_all());
-        if (empty($id)) {
-             if (isset($_POST['save'])) {
-            if ($insert_id = $this->save_information()) {
-                log_activity($this->auth->user_id(), lang('information_act_create_record') . ': ' . $insert_id . ' : ' . $this->input->ip_address(), 'information');
-                Template::set_message(lang('information_create_success'), 'success');
-
-                redirect(SITE_AREA . '/utility/information');
-            }
-
-            // Not validation error
-            if ( ! empty($this->information_model->error)) {
-                Template::set_message(lang('information_create_failure') . $this->information_model->error, 'error');
-            }
-        }
-
-        Template::set('toolbar_title', lang('information_action_create'));
-        Template::set_view('edit');
-        Template::render();
-        }
-        else
-        {        
+        $id = 1;
+        
         if (isset($_POST['save'])) {
             $this->auth->restrict($this->permissionEdit);
 
             if ($this->save_information('update', $id)) {
                 log_activity($this->auth->user_id(), lang('information_act_edit_record') . ': ' . $id . ' : ' . $this->input->ip_address(), 'information');
                 Template::set_message(lang('information_edit_success'), 'success');
-                redirect(SITE_AREA . '/utility/information');
             }
 
             // Not validation error
@@ -149,24 +83,12 @@ class Utility extends Admin_Controller
             }
         }
         
-        elseif (isset($_POST['delete'])) {
-            $this->auth->restrict($this->permissionDelete);
-
-            if ($this->information_model->delete($id)) {
-                log_activity($this->auth->user_id(), lang('information_act_delete_record') . ': ' . $id . ' : ' . $this->input->ip_address(), 'information');
-                Template::set_message(lang('information_delete_success'), 'success');
-
-                redirect(SITE_AREA . '/utility/information');
-            }
-
-            Template::set_message(lang('information_delete_failure') . $this->information_model->error, 'error');
-        }
         
         Template::set('information', $this->information_model->find($id));
 
         Template::set('toolbar_title', lang('information_edit_heading'));
         Template::render();
-        }
+       
     }
 
     //--------------------------------------------------------------------------

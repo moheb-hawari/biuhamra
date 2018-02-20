@@ -28,13 +28,6 @@ class Utility extends Admin_Controller
         Template::set_block('sub_nav', 'utility/_sub_nav');
 
         Assets::add_css(assets_path() . 'globals/css/elements.css');
-        Assets::add_css( assets_path().'globals/plugins/datatables/themes/bootstrap/dataTables.bootstrap.css');
-        Assets::add_css( assets_path().'globals/plugins/datatables/media/css/jquery.dataTables.min.css');
-        Assets::add_css( assets_path().'globals/plugins/components-summernote/dist/summernote.css');
-        Assets::add_js(assets_path().'globals/plugins/components-summernote/dist/summernote.min.js');
-        Assets::add_js( assets_path().'globals/plugins/datatables/media/js/jquery.dataTables.min.js');
-        Assets::add_js(assets_path().'globals/plugins/datatables/themes/bootstrap/dataTables.bootstrap.js');
-        Assets::add_js(assets_path().'globals/scripts/tables-datatables.js');
         
         Assets::add_module_js('emails', 'emails.js');
     }
@@ -46,51 +39,7 @@ class Utility extends Admin_Controller
      */
     public function index($offset = 0)
     {
-        // Deleting anything?
-        if (isset($_POST['delete'])) {
-            $this->auth->restrict($this->permissionDelete);
-            $checked = $this->input->post('checked');
-            if (is_array($checked) && count($checked)) {
-
-                // If any of the deletions fail, set the result to false, so
-                // failure message is set if any of the attempts fail, not just
-                // the last attempt
-
-                $result = true;
-                foreach ($checked as $pid) {
-                    $deleted = $this->emails_model->delete($pid);
-                    if ($deleted == false) {
-                        $result = false;
-                    }
-                }
-                if ($result) {
-                    Template::set_message(count($checked) . ' ' . lang('emails_delete_success'), 'success');
-                } else {
-                    Template::set_message(lang('emails_delete_failure') . $this->emails_model->error, 'error');
-                }
-            }
-        }
-        $pagerUriSegment = 5;
-        $pagerBaseUrl = site_url(SITE_AREA . '/utility/emails/index') . '/';
-        
-        $limit  = $this->settings_lib->item('site.list_limit') ?: 15;
-
-        $this->load->library('pagination');
-        $pager['base_url']    = $pagerBaseUrl;
-        $pager['total_rows']  = $this->emails_model->count_all();
-        $pager['per_page']    = $limit;
-        $pager['uri_segment'] = $pagerUriSegment;
-
-        $this->pagination->initialize($pager);
-        $this->emails_model->limit($limit, $offset);
-        
-        $records = $this->emails_model->find_all();
-
-        Template::set('records', $records);
-        
-    Template::set('toolbar_title', lang('emails_manage'));
-
-        Template::render();
+       redirect(SITE_AREA . '/utility/emails/edit');
     }
     
     /**
@@ -111,36 +60,14 @@ class Utility extends Admin_Controller
      */
     public function edit()
     {
-        $id = $this->uri->segment(5);
-        Template::set('weight', $this->emails_model->count_all());
-        if (empty($id)) {
-           if (isset($_POST['save'])) {
-            if ($insert_id = $this->save_emails()) {
-                log_activity($this->auth->user_id(), lang('emails_act_create_record') . ': ' . $insert_id . ' : ' . $this->input->ip_address(), 'emails');
-                Template::set_message(lang('emails_create_success'), 'success');
-
-                redirect(SITE_AREA . '/utility/emails');
-            }
-
-            // Not validation error
-            if ( ! empty($this->emails_model->error)) {
-                Template::set_message(lang('emails_create_failure') . $this->emails_model->error, 'error');
-            }
-        }
-
-        Template::set('toolbar_title', lang('emails_action_create'));
-        Template::set_view('edit');
-        Template::render();
-        }
-        else
-        {        
+        $id = 1;
+        
         if (isset($_POST['save'])) {
             $this->auth->restrict($this->permissionEdit);
 
             if ($this->save_emails('update', $id)) {
                 log_activity($this->auth->user_id(), lang('emails_act_edit_record') . ': ' . $id . ' : ' . $this->input->ip_address(), 'emails');
                 Template::set_message(lang('emails_edit_success'), 'success');
-                redirect(SITE_AREA . '/utility/emails');
             }
 
             // Not validation error
@@ -149,24 +76,13 @@ class Utility extends Admin_Controller
             }
         }
         
-        elseif (isset($_POST['delete'])) {
-            $this->auth->restrict($this->permissionDelete);
-
-            if ($this->emails_model->delete($id)) {
-                log_activity($this->auth->user_id(), lang('emails_act_delete_record') . ': ' . $id . ' : ' . $this->input->ip_address(), 'emails');
-                Template::set_message(lang('emails_delete_success'), 'success');
-
-                redirect(SITE_AREA . '/utility/emails');
-            }
-
-            Template::set_message(lang('emails_delete_failure') . $this->emails_model->error, 'error');
-        }
+        
         
         Template::set('emails', $this->emails_model->find($id));
 
         Template::set('toolbar_title', lang('emails_edit_heading'));
         Template::render();
-        }
+        
     }
 
     //--------------------------------------------------------------------------
