@@ -65,7 +65,7 @@ $lang['bf_display_name'] = 'Display Name';
 //------------------------------------------------------------------------------
 // ! CRUD SETTINGS
 //------------------------------------------------------------------------------
-$lang['bf_home_page'] = 'Home Page';
+$lang['bf_home_pages'] = 'Home Page';
 $lang['bf_pages'] = 'Pages';
 $lang['bf_enable_rte'] = 'Enable RTE for pages?';
 $lang['bf_rte_type'] = 'RTE Type';
@@ -182,7 +182,7 @@ $lang['bf_keyboard_shortcuts_edit'] = 'Update the keyboard shortcuts';
 // Common
 //------------------------------------------------------------------------------
 $lang['bf_question_mark'] = '?';
-$lang['bf_language_direction'] = 'ltr';
+$lang['bf_language_direction'] = 'en';
 $lang['bf_name'] = 'Name';
 $lang['bf_status'] = 'Status';
 
@@ -331,3 +331,47 @@ $lang['bf_context_utility'] = 'Site Meta';
 
 $lang['bf_language_tab_english'] = 'English';
 $lang['bf_language_tab_arabic'] = 'Arabic';
+$lang['bf_nav_language'] = 'العربية';
+$lang['bf_home_nav_title'] = 'Home';
+$lang['bf_about_nav_title'] = 'About Clinic';
+$lang['bf_departments_nav_title'] = 'Department & Services';
+$lang['bf_doctors_nav_title'] = 'Our Doctors';
+$lang['bf_facilities_nav_title'] = 'Facilities';
+$lang['bf_human_nav_title'] = 'Human Resources';
+$lang['bf_admin_nav_title'] = 'Administrations';
+$lang['bf_careers_nav_title'] = 'Careers';
+$lang['bf_contact_nav_title'] = 'Contact Us';
+
+$lang['bf_tab_departments_title'] = 'Departments';
+$lang['bf_tab_departments_desc'] = 'Bouhamra Clinic is covering a wide range of required departments as:';
+
+$lang['bf_read_more'] = 'Read More';
+
+$lang['bf_meet'] = 'Meet';
+$lang['bf_our_team'] = 'Our Team';
+
+$lang['bf_patients_say'] = 'Happy Patients Say';
+
+$lang['bf_send_message'] = 'Send Us A Message';
+$lang['bf_send_desc'] = 'You can send us a message with any inquiry can come in your mind.';
+$lang['bf_contact_name'] = 'Name:';
+$lang['bf_contact_email'] = 'Email:';
+$lang['bf_contact_mobile'] = 'Mobile:';
+$lang['bf_contact_message'] = 'Message:';
+$lang['bf_contact_send'] = 'Send';
+
+$lang['bf_contact_name_place'] = 'Enter Your Full Name';
+$lang['bf_contact_email_place'] = 'Enter Your Email Address';
+$lang['bf_contact_mobile_place'] = 'Enter Your Mobile Number';
+$lang['bf_contact_message_place'] = 'Enter The Message';
+
+$lang['bf_have_question'] = 'Have Some Questions?';
+$lang['bf_have_question_desc'] = 'You may find a lot of answers on frequesnt asked questions ';
+
+$lang['bf_hot_line'] = 'Hotline';
+$lang['bf_support'] = 'Support';
+$lang['bf_address'] = 'Address';
+
+
+
+

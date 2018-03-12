@@ -64,3 +64,4 @@ $lang['departments_field_ar_image_description'] = 'Arabic Image Description';
 $lang['departments_field_image'] = 'Image';
 $lang['departments_field_weight'] = 'Weight';
 $lang['departments_field_status'] = 'Status';
+$lang['departments_nav_title'] = 'Departments & Services';

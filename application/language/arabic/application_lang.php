@@ -182,7 +182,7 @@ $lang['bf_keyboard_shortcuts_edit'] = 'Update the keyboard shortcuts';
 // Common
 //------------------------------------------------------------------------------
 $lang['bf_question_mark'] = '؟';
-$lang['bf_language_direction'] = 'rtl';
+$lang['bf_language_direction'] = 'ar';
 $lang['bf_name'] = 'الاسم';
 $lang['bf_status'] = 'الحالة';
 
@@ -322,3 +322,43 @@ $lang['bf_context_dashboard'] = 'Dashboard';
 $lang['bf_context_list'] = 'List';
 
 $lang['bf_context_test'] = 'Test';
+$lang['bf_nav_language'] = 'English';
+$lang['bf_home_nav_title'] = 'الرئيسية';
+$lang['bf_about_nav_title'] = 'عن العيادة';
+$lang['bf_departments_nav_title'] = 'الأقسام';
+$lang['bf_doctors_nav_title'] = 'أطبائنا';
+$lang['bf_facilities_nav_title'] = 'المرافق';
+$lang['bf_human_nav_title'] = 'الموارد البشرية';
+$lang['bf_admin_nav_title'] = 'الإدارة';
+$lang['bf_careers_nav_title'] = 'وظائف';
+$lang['bf_contact_nav_title'] = 'الأتصال بنا';
+
+$lang['bf_tab_departments_title'] = 'الأقسام';
+$lang['bf_tab_departments_desc'] = 'عيادة بوحمرة تغطي مجموعة واسعة من الأقسام المطلوبة على النحو التالي:';
+
+$lang['bf_read_more'] = 'قراءة المزيد';
+
+$lang['bf_meet'] = 'التقي ';
+$lang['bf_our_team'] = 'أطبائنا';
+
+$lang['bf_patients_say'] = 'اقوال المرضى';
+
+$lang['bf_send_message'] = 'راسلنا';
+$lang['bf_send_desc'] = 'يمكنك أن ترسل لنا رسالة مع أي استفسار يمكن أن يخطر لك.';
+$lang['bf_patients_say'] = 'الاسم الكامل';
+$lang['bf_patients_say'] = 'عنوان البريد الالكتروني';
+$lang['bf_patients_say'] = 'رقم الموبايل';
+$lang['bf_patients_say'] = 'الرسالة';
+$lang['bf_patients_say'] = 'ارسال';
+
+$lang['bf_contact_name_place'] = 'الاسم الكامل';
+$lang['bf_contact_email_place'] = 'عنوان البريد الالكتروني';
+$lang['bf_contact_mobile_place'] = 'رقم الموبايل';
+$lang['bf_contact_message_place'] = 'الرسالة';
+
+$lang['bf_have_question'] = 'لديك اسئلة ؟';
+$lang['bf_have_question_desc'] = 'قد تجد الكثير من الإجابات على الأسئلة الشائعة';
+
+$lang['bf_hot_line'] = 'الخط الساخن';
+$lang['bf_support'] = 'الدعم الفني';
+$lang['bf_address'] = 'العنوان';

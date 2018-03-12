@@ -1,0 +1,219 @@
+@media (min-width: 992px) and (max-width: 1199px) {
+    /* ================= Departments Section Start ================= */
+    .sin_tab_btn.active:before {
+        right: auto;
+        left: -38px;
+    }
+    .tab_read_more {
+        right: auto;
+        left: 20px;
+    }
+    /*Departments Section End*/
+    /* ================= Testimonial Slider Start ================= */
+    .sin_patient_testim {
+        margin-left: 25px;
+        margin-right: 0;
+        font-size: 16px;
+    }
+    .patient_txt:before {
+        margin-right: 0;
+        margin-left: 7px;
+    }
+    .patient_txt:after {
+        margin-left: 0;
+        margin-right: 8px;
+        -moz-transform: scale(1, -1) translateY(-6px);
+        -webkit-transform: scale(1, -1) translateY(-6px);
+        -o-transform: scale(1, -1) translateY(-6px);
+        -ms-transform: scale(1, -1) translateY(-6px);
+        transform: scale(1, -1) translateY(-6px);
+    }
+    /*Testimonial Slider End*/
+    /* ================= Message - FAQ Section Start ================= */
+    .acc_desc, .acc_ttle {
+        padding: 10px 15px 10px 30px;
+        font-size: 12px;
+    }
+    .acc_ttle:after {
+        right: auto;
+        left: 15px;
+    }
+    /*Message - FAQ Section End*/
+    /* ================= Careers Page Start ================= */
+    #hr_page .hr_hd_text .text1 {
+        padding-right: 0;
+        padding-left: 100px;
+    }
+    /*Careers Page End*/
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    /* ================= Departments Section Start ================= */
+    .sin_tab_btn.active:before {
+        right: auto;
+        left: -31px;
+    }
+    .tab_read_more {
+        right: auto;
+        left: 15px;
+    }
+    /*Departments Section End*/
+    /* ================= Testimonial Slider Start ================= */
+    .sin_patient_testim {
+        margin-left: 0;
+        margin-right: 20px;
+        font-size: 15px;
+    }
+    .patient_txt:before {
+        margin-right: 0;
+        margin-left: 5px;
+    }
+    .patient_txt:after {
+        margin-left: 0;
+        margin-right: 5px;
+        -moz-transform: scale(1, -1) translateY(-5px);
+        -webkit-transform: scale(1, -1) translateY(-5px);
+        -o-transform: scale(1, -1) translateY(-5px);
+        -ms-transform: scale(1, -1) translateY(-5px);
+        transform: scale(1, -1) translateY(-5px);
+    }
+    /*Testimonial Slider End*/
+    /* ================= Message - FAQ Section Start ================= */
+    .acc_desc, .acc_ttle {
+        padding: 10px 10px 10px 20px;
+        font-size: 12px;
+    }
+    .acc_ttle:after {
+        right: auto;
+        left: 15px;
+    }
+    /*Message - FAQ Section End*/
+    /* ================= Administration Page Start ================= */
+    .sin_admin_img {
+        margin-right: 0;
+        margin-left: 15px;
+    }
+    /*Administration Page End*/
+    /* ================= Careers Page Start ================= */
+    #hr_page .hr_hd_text .text1 {
+        padding-right: 0;
+        padding-left: 100px;
+    }
+    /*Careers Page End*/
+}
+@media (max-width: 767px) {
+    /* ================= Main Header Start ================= */
+    /* == Header Social Media == */
+    /* == Mob Navbar == */
+    .mob_nav .nav_logo {
+        float: right;
+    }
+    .mob_lks_cont {
+        float: left;
+    }
+    .mob_nav .mob_sub_btn {
+        right: auto;
+        left: 0;
+    }
+    /* == Header Slider == */
+    .header_slider .sin_slide_text {
+        margin-right: 0;
+    }
+    /*Main Header End*/
+    /* ================= Testimonial Slider Start ================= */
+    .sin_patient_testim {
+        float: none;
+        margin: 0 0 0 auto;
+    }
+    .patient_txt:before {
+        margin-right: 0;
+        margin-left: 5px;
+    }
+    .patient_txt:after {
+        margin-left: 0;
+        margin-right: 7px;
+    }
+    /*Testimonial Slider End*/
+    /* ================= Message - FAQ Section Start ================= */
+    .msg_faq_bio {
+        font-size: 12px;
+    }
+    .acc_desc, .acc_ttle {
+        padding: 5px 10px 5px 20px;
+    }
+    .acc_ttle, .acc_desc {
+        font-size: 12px;
+    }
+    .acc_ttle:after {
+        right: auto;
+        left: 10px;
+    }
+    /*Message - FAQ Section End*/
+    /* ================= Facilities Page Start ================= */
+    .facil_ttle {
+        text-align: center;
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    .facil_tab_btns {
+        margin-bottom: 20px;
+    }
+    .fac_tb_btn {
+        height: 35px;
+        line-height: 35px;
+        font-size: 16px;
+        padding: 0 20px;
+        margin: 0;
+    }
+    .fac_sld_btns {
+        margin-bottom: 15px;
+    }
+    .sld_tab_btn {
+        margin: 0 10px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 14px;
+    }
+    .sld_tab_btn.active {
+        border-bottom: 2px solid #e51e26;
+    }
+    .fci_sin_med_text {
+        font-size: 15px;
+    }
+    /*popup*/
+    .faci_hidden_cont {
+        width: 100%;
+        height: 400px;
+    }
+    .faci_ppup_img, .med_desc {
+        float: none;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .faci_ppup_img {
+        height: 200px;
+    }
+    .med_desc {
+        padding: 10px;
+        font-size: 14px;
+        text-align: center;
+        height: auto;
+    }
+    .med_ttle {
+        font-size: 20px;
+    }
+    .med_share {
+        position: static;
+        margin-top: 30px;
+    }
+    .med_share li {
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+    }
+    .med_share li a {
+        width: 30px;
+        height: 30px;
+    }
+    /*Facilities Page End*/
+}

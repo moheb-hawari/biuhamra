@@ -1,0 +1,211 @@
+/* =================================== General Style Start =================================== */
+* {
+    direction: rtl;
+}
+body {
+    text-align: right;
+}
+/*General Style End*/
+/* =================================== Main Header Start =================================== */
+/* == Header Social Media == */
+/*Lang Selector*/
+.site_lang {
+    float: right;
+}
+/*social media*/
+.hd_sm_list {
+    float: left;
+}
+/* == Web Navbar == */
+.wb_nv_cont .nav_logo {
+    float: right;
+}
+.nav_lks {
+    float: left;
+}
+.web_sbmnu_lst li a:hover {
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+    transform: translateX(-10px);
+}
+/* == Header Slider == */
+.header_slider .sin_slide {
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+}
+.header_slider .sin_slide_cont {
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+}
+.header_slider .sin_slide_text {
+    float: right;
+    margin-left: 0;
+    margin-right: 20px;
+}
+.header_slider .swiper-button-prev:before {
+    content: '\f054';
+}
+.header_slider .swiper-button-next:before {
+    content: '\f053';
+}
+/* == Clinic Bio == */
+.clinic_discip .sin_discip {
+    float: right;
+}
+/*Main Header End*/
+/* =================================== Departments Section Start =================================== */
+.tabs_btns_cont, .tabs_contents_cont {
+    float: right;
+}
+/*tabs buttons*/
+.tabs_title {
+    font-size: 31px;
+    margin-bottom: 5px;
+}
+.sin_tab_btn:not(.active):before {
+    content: '\f053';
+    right: auto;
+    left: 4px;
+}
+.sin_tab_btn.active:before {
+    left: -40px;
+    right: auto;
+    border-left-color: transparent;
+    border-right-color: #fff;
+}
+/*tabs contents*/
+.tab_detail, .tab_img {
+    float: right;
+}
+.tab_det_ttle {
+    font-size: 31px;
+    line-height: 1.2;
+}
+.tab_read_more {
+    right: auto;
+    left: 30px;
+}
+/*Departments Section End*/
+/* =================================== Our Team Section Start =================================== */
+.our_team_intro, .our_team_imgs {
+    float: right;
+}
+.our_team_ttle {
+    line-height: 1.5;
+}
+.rd_more_btn_cont {
+    text-align: left;
+}
+.sin_doc_img {
+    float: right;
+}
+/*Our Team Section End*/
+/* =================================== Testimonial Slider Start =================================== */
+.testim_sec, .testim_cont {
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+}
+.testim_slider .swiper-button-prev {
+    left: auto;
+    right: 0;
+}
+.testim_slider .swiper-button-next {
+    right: auto;
+    left: 0;
+}
+.sin_patient_testim {
+    float: right;
+    margin-left: 0;
+    margin-right: 50px;
+}
+.patient_txt:before {
+    margin-right: 0;
+    margin-left: 10px;
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+}
+.patient_txt:after {
+    margin-left: 0;
+    margin-right: 10px;
+    -moz-transform: scale(1, -1) translateY(-10px);
+    -webkit-transform: scale(1, -1) translateY(-10px);
+    -o-transform: scale(1, -1) translateY(-10px);
+    -ms-transform: scale(1, -1) translateY(-10px);
+    transform: scale(1, -1) translateY(-10px);
+}
+.patient_job {
+    font-size: 16px;
+}
+/*Testimonial Slider End*/
+/* =================================== Message - FAQ Section Start =================================== */
+.mess_faq_sec .row > div {
+    float: right;
+}
+.form_ipt_cont label {
+    width: 120px;
+}
+.form_ipt_cont input[type="text"], .form_ipt_cont input[type="email"] {
+    width: calc(100% - 129px);
+}
+.frm_confirm {
+    text-align: left;
+}
+.frm_confirm .main_btn {
+    margin-right: 0;
+    margin-left: 5px;
+}
+/*Accordion*/
+.acc_desc, .acc_ttle {
+    padding: 10px 20px 10px 40px;
+}
+.acc_ttle {
+    font-size: 14px;
+}
+.acc_ttle:after {
+    right: auto;
+    left: 20px;
+}
+.acc_desc {
+    font-size: 13px;
+    line-height: 1.6;
+}
+/*Message - FAQ Section End*/
+/* =================================== Footer Start =================================== */
+.main_footer .row > div {
+    float: right;
+}
+.ftr_desc.ph_num {
+    direction: ltr;
+}
+/*Footer End*/
+/* =================================== departments & services Pages Start =================================== */
+.subpage_header, .subpage_header .hd_main_cont {
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+}
+.subpage_header .header_content .header_ttle {
+    font-size: 45px;
+}
+.subpage_header .header_content .header_desc {
+    font-size: 19px;
+}
+.dep_doc_cont .row > div {
+    float: right;
+}
+/*departments & services Pages End*/

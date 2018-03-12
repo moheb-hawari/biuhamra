@@ -60,3 +60,4 @@ $lang['about_field_ar_description'] = 'Arabic Description';
 $lang['about_field_en_hours'] = 'English Hours';
 $lang['about_field_ar_hours'] = 'Arabic Hours';
 $lang['about_field_logo'] = 'Logo';
+$lang['about_nav_title'] = 'About Clinic';

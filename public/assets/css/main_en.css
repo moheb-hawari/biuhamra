@@ -1,0 +1,1348 @@
+/* =================================== Font Families Start =================================== */
+@font-face {
+    font-family: 'Droid Arabic Kufi';
+    src: url('../fonts/DroidArabicKufi-Bold.woff2') format('woff2'),
+    url('../fonts/DroidArabicKufi-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Droid Arabic Kufi';
+    src: url('../fonts/DroidArabicKufi.woff2') format('woff2'),
+    url('../fonts/DroidArabicKufi.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Helvetica Neue Light';
+    src: url('../fonts/HelveticaNeue-Light.woff2') format('woff2'),
+    url('../fonts/HelveticaNeue-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+/*Font Families End*/
+/* =================================== General Style Start =================================== */
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    direction: ltr;
+    text-align: left;
+    font-family: 'Droid Arabic Kufi', "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+a:focus, a:hover {
+    text-decoration: none;
+}
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.main_sction {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.container-fluid
+{
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto; 
+    margin-left: auto; 
+}
+.main_btn {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 0 10px;
+    background-color: #e71e26;
+    border-radius: 3px;
+}
+.main_btn:hover, .main_btn:focus {
+    color: #fff;
+}
+/*General Style End*/
+/* =================================== Main Header Start =================================== */
+.main_header {
+    position: relative;
+}
+.sm_wbnv_cont {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+}
+.head_smed, .site_lang, .hd_sm_list, .hd_sm_list > li > a,.hd_sm_list > li > a > i,
+.web_nav, .wb_nv_cont .nav_logo img, .nav_lk_list > li,
+.nav_lk_list > li > a > span, .wb_nv_cont .sub_mneu_ttle > span,
+.nav_lk_list > li.active > a > span, .nav_lk_list > li.active .sub_mneu_ttle > span, .web_sbmnu_lst {
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
+}
+/* == Header Social Media == */
+/*Lang Selector*/
+.site_lang {
+    float: left;
+    height: 40px;
+    line-height: 40px;
+}
+.site_lang a {
+    color: #fff;
+    display: block;
+}
+/*social media*/
+.head_smed {
+    background: #006aa1;
+    background: -moz-linear-gradient(top, #006aa1 0%, #007cb5 100%);
+    background: -webkit-linear-gradient(top, #006aa1 0%,#007cb5 100%);
+    background: linear-gradient(to bottom, #006aa1 0%,#007cb5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006aa1', endColorstr='#007cb5',GradientType=0 );
+    height: 40px;
+}
+.hd_sm_cont {
+    overflow: hidden;
+}
+.hd_sm_list {
+    float: right;
+    height: 34px;
+    margin: 3px 0;
+}
+.hd_sm_list > li {
+    display: inline-block;
+}
+.hd_sm_list > li > a {
+    display: block;
+    color: #fff;
+    width: 34px;
+    height: 34px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
+}
+.hd_sm_list > li > a:hover {
+    background-color: #fff;
+    color: #0069a1;
+}
+.hd_sm_list > li > a > i {
+    height: 34px;
+    display: table-cell;
+    vertical-align: middle;
+    width: 34px;
+    font-size: 21px;
+    text-align: center;
+}
+/* == Web Navbar == */
+.web_nav {
+    height: 100px;
+    background-color: #fff;
+    box-shadow: 0 7px 7px 1px rgba(0, 0, 0, 0.3);
+}
+.wb_nv_cont .nav_logo {
+    float: left;
+}
+.wb_nv_cont .nav_logo img {
+    height: 70px;
+    margin: 15px 0;
+}
+.nav_lks {
+    float: right;
+}
+.nav_lk_list {
+    height: 100px;
+}
+.nav_lk_list > li {
+    display: inline-block;
+    height: 100px;
+    padding: 30px 10px;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.nav_lk_list > li > a, .wb_nv_cont .sub_mneu_ttle {
+    text-transform: capitalize;
+    font-size: 16px;
+    color: #2b337a;
+    cursor: pointer;
+    display: block;
+}
+.nav_lk_list > li > a > span , .wb_nv_cont .sub_mneu_ttle > span {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+}
+.nav_lk_list > li.active > a > span, .nav_lk_list > li.active .sub_mneu_ttle > span {
+    border-bottom: 3px solid #ec5359;
+}
+.web_sbmnu_lst {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    min-width: 200px;
+    background-color: #fff;
+    box-shadow: 0 5px 5px 1px rgba(0, 0, 0, 0.3);
+    visibility: hidden;
+    opacity: 0;
+    z-index: 2;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
+}
+.nav_lk_list > li:hover .web_sbmnu_lst {
+    visibility: visible;
+    opacity: 1;
+}
+.web_sbmnu_lst li:not(:nth-last-of-type(1)) {
+    border-bottom: 1px solid #ec4b51;
+}
+.web_sbmnu_lst li a {
+    display: block;
+    padding: 5px;
+    font-size: 13px;
+    color: #293881;
+    background-color: #fff;
+    text-transform: capitalize;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
+}
+.web_sbmnu_lst li a:hover {
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -o-transform: translateX(10px);
+    transform: translateX(10px);
+    color: #293881;
+}
+.web_sbmnu_lst li.active a {
+    font-weight: 700;
+}
+/* == Header Slider == */
+.header_slider {
+    height: 800px;
+}
+.header_slider .sin_slide {
+    height: 800px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.header_slider .sin_slide_cont {
+    overflow: hidden;
+}
+.header_slider .sin_slide_text {
+    float: left;
+    margin-top: 150px;
+    margin-left: 20px;
+    color: #fff;
+    width: 400px;
+}
+.header_slider .slide_ttle {
+    font-size: 47px;
+    font-weight: 700;
+}
+.header_slider .slide_desc {
+    font-size: 21px;
+    text-align: justify;
+    font-family: 'Helvetica Neue Light', 'Droid Arabic Kufi', "Helvetica Neue", sans-serif;
+    line-height: 1.7;
+}
+.header_slider .swiper-button-prev, .header_slider .swiper-button-next {
+    top: 230px;
+    width: 30px;
+    height: 40px;
+    margin-top: 0;
+    background: none;
+}
+.header_slider .swiper-button-prev:before, .header_slider .swiper-button-next:before {
+    font-family: Font Awesome\ 5 Free;
+    font-weight: 700;
+    font-size: 40px;
+    display: table-cell;
+    vertical-align: middle;
+    height: 40px;
+    text-align: center;
+    color: #fff;
+}
+.header_slider .swiper-button-prev:before {
+    content: '\f053';
+}
+.header_slider .swiper-button-next:before {
+    content: '\f054';
+}
+/* == Clinic Bio == */
+.clinic_discip {
+    overflow: hidden;
+    position: absolute;
+    top:640px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 300px;
+    z-index: 2;
+}
+.clinic_discip .sin_discip {
+    float: left;
+    width: 33.33333333%;
+    height: 300px;
+    padding: 50px 60px;
+    text-align: center;
+    color: #fff;
+}
+.clinic_discip .sin_discip:nth-of-type(2n+1) {
+    background-color: rgba(0, 119, 192, 0.7);
+}
+.clinic_discip .sin_discip:nth-of-type(2n+2) {
+    background-color: rgba(0, 174, 239, 0.7);
+}
+.clinic_discip .discip_ico {
+    margin-bottom: 20px;
+}
+.clinic_discip .discip_ico  img {
+    width: 70px;
+}
+.clinic_discip .discip_ttle {
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.clinic_discip .discip_desc {
+    font-size: 16px;
+}
+/*Main Header End*/
+/* =================================== About The Clinic Start =================================== */
+.abt_clin_cont {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 15px;
+    text-align: justify;
+    color: #293881;
+}
+.about_clinic_sec .sec_title {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #e51e26;
+}
+/*About The Clinic End*/
+/* =================================== Departments Section Start =================================== */
+.departs_sec {
+    background-color: #00adef;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover
+}
+.departs_sec .dep_sec_cont {
+    overflow: hidden;
+}
+.tabs_btns_cont, .tabs_contents_cont {
+    float: left;
+    height: 451px;
+}
+/*tabs buttons*/
+.tabs_btns_cont {
+    width: 300px;
+    background-color: #fff;
+    color: #293881;
+}
+.tabs_title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #e31e2a;
+}
+.tab_intro {
+    padding: 15px 20px;
+}
+.dep_tabs_btns {
+    padding: 0 20px 20px;
+}
+.sin_tab_btn {
+    position: relative;
+    padding: 0 10px;
+    height: 50px;
+    line-height: 50px;
+    border-top: 1px solid #2a3780;
+    cursor: pointer;
+}
+.sin_tab_btn:not(.active):before {
+    content: '\f054';
+    font-family: Font Awesome\ 5 Free;
+    font-weight: 700;
+    position: absolute;
+    right: 4px;
+    color: #e31e2a;
+}
+.sin_tab_btn.active {
+    font-weight: 700;
+}
+.sin_tab_btn.active:before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    right: -40px;
+    border: 10px solid transparent;
+    border-left-color: #fff;
+    z-index: 2;
+}
+/*tabs contents*/
+.tabs_contents_cont {
+    width: calc(100% - 300px);
+}
+.sin_tab_cont {
+    overflow: hidden;
+    height: 100%;
+}
+.sin_tab_cont:not(:nth-of-type(1)) {
+    display: none;
+}
+.tab_detail, .tab_img {
+    float: left;
+    height: 100%;
+}
+.tab_detail {
+    position: relative;
+    width: 350px;
+    padding: 30px;
+    background-color: rgba(3, 78, 162, 0.8);
+    color: #fff;
+}
+.tab_det_ttle {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+.tab_det_desc {
+    font-family: 'Helvetica Neue Light', 'Droid Arabic Kufi', "Helvetica Neue", sans-serif;
+    line-height: 1.9;
+}
+.tab_read_more {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+
+}
+.tab_read_more:hover, .tab_read_more:focus {
+    color: #fff;
+}
+.tab_img {
+    width: calc(100% - 350px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/*Departments Section End*/
+
+/* =================================== Our Team Section Start =================================== */
+.our_team_sec {
+    background-color: #e9eaf1;
+}
+.our_tm_cont {
+    width: 1000px;
+    margin: 50px auto;
+    overflow: hidden;
+}
+.our_team_intro, .our_team_imgs {
+    float: left;
+}
+.our_team_intro {
+    width: 280px;
+    padding: 30px
+}
+.our_team_ttle {
+    font-size: 32px;
+    color: #e31e2a;
+    text-transform: uppercase;
+    width: 50%;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    font-family: 'Helvetica Neue Light', 'Droid Arabic Kufi', "Helvetica Neue", sans-serif;
+}
+.our_team_ttle b {
+    font-family: 'Droid Arabic Kufi', "Helvetica Neue", sans-serif;
+}
+.our_team_desc {
+    color: #293881;
+    text-align: justify;
+    margin-bottom: 20px;
+    line-height: 2;
+}
+.rd_more_btn_cont {
+    text-align: right;
+}
+.our_team_imgs {
+    width: 720px;
+    overflow: hidden;
+}
+.sin_doc_img {
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.sin_doc_det {
+    width: 200px;
+    height: 200px;
+    display: table-cell;
+    vertical-align: middle;
+    color: #293881;
+    background-color: rgba(255, 255, 255, 0.6);
+    visibility: hidden;
+    opacity: 0;
+    text-transform: capitalize;
+    text-align: center;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
+}
+.sin_doc_img:hover .sin_doc_det {
+    visibility: visible;
+    opacity: 1;
+}
+.sin_doc_det .doc_name {
+    font-size: 19px;
+    font-weight: 700;
+}
+.sin_doc_det .doc_spec {
+    margin-bottom: 10px;
+}
+.doc_sm_list {}
+.doc_sm_list li {
+    display: inline-block;
+    margin: 0 5px;
+}
+.doc_sm_list li a {
+    display: table-cell;
+    vertical-align: middle;
+    width: 34px;
+    height: 34px;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 50%;
+}
+.doc_sm_list li a.facebook_lk {background-color: #3c5a99}
+.doc_sm_list li a.twitter_lk {background-color: #55adee}
+.doc_sm_list li a.google-plus_lk {background-color: #dd4d3f}
+/*Our Team Section End*/
+/* =================================== Testimonial Slider Start =================================== */
+.testim_sec {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.testim_ttle {
+    font-size: 32px;
+    text-transform: uppercase;
+    color: #e31e2a;
+    font-weight: 700;
+}
+.testim_slider {
+
+}
+.sin_patient_testim {
+    float: left;
+    margin-left: 50px;
+    color: #2a3780;
+    font-family: 'Helvetica Neue Light', 'Droid Arabic Kufi', "Helvetica Neue", sans-serif;
+    font-size: 18px;
+    width: 300px;
+    text-align: center;
+}
+.sin_testim_silde {
+    height: 400px;
+    display: table-cell;
+    vertical-align: middle;
+}
+.testim_slider .swiper-button-prev, .testim_slider .swiper-button-next {
+    width: 20px;
+    height: 30px;
+    background-size: 20px 30px;
+}
+.testim_slider .swiper-button-prev {
+    left: 0;
+}
+.testim_slider .swiper-button-next {
+    right: 0;
+}
+.patient_txt {
+    padding: 50px 0;
+}
+.patient_txt:before, .patient_txt:after {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 19px;
+    background: url(../../img/home_page/testim_slider/ss1.png) no-repeat center center;
+    background-size: contain;
+}
+.patient_txt:before {
+    margin-right: 10px;
+}
+.patient_txt:after {
+    margin-left: 10px;
+    -moz-transform: scale(-1, -1) translateY(-5px);
+    -webkit-transform: scale(-1, -1) translateY(-5px);
+    -o-transform: scale(-1, -1) translateY(-5px);
+    -ms-transform: scale(-1, -1) translateY(-5px);
+    transform: scale(-1, -1) translateY(-5px);
+}
+.patient_job {
+    font-size: 16px;
+}
+/*Testimonial Slider End*/
+/* =================================== Message - FAQ Section Start =================================== */
+.mess_faq_sec {
+    background-color: #00aeef;
+}
+.msg_faq_con {
+    color: #fff;
+    font-family: 'Helvetica Neue Light', 'Droid Arabic Kufi', "Helvetica Neue", sans-serif;
+}
+.msg_faq_intro {
+    margin-bottom: 40px;
+}
+.msg_faq_ttle {
+    font-size: 32px;
+    font-weight: 700;
+    font-family: 'Droid Arabic Kufi', "Helvetica Neue", sans-serif;
+}
+/*message form*/
+.msg_frm_cont {
+    padding: 0 20px;
+}
+.form_ipt_cont {
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 15px;
+}
+.form_ipt_cont label {
+    margin: 0;
+    width: 80px;
+    font-weight: 400;
+}
+.form_ipt_cont input[type="text"], .form_ipt_cont input[type="email"] {
+    height: 40px;
+    width: calc(100% - 89px);
+    border: 0;
+    padding: 0 10px;
+    outline: 0;
+    color: #000;
+}
+.frm_confirm {
+    text-align: right;
+}
+.frm_confirm .main_btn {
+    font-weight: 700;
+    padding: 0 30px;
+    font-family: 'Droid Arabic Kufi', "Helvetica Neue", sans-serif;
+    margin-right: 5px;
+}
+/*Accordion*/
+.sin_accdn:not(:nth-last-of-type(1)) {
+    margin-bottom: 15px;
+}
+.acc_desc, .acc_ttle {
+    padding: 10px 40px 10px 20px;
+}
+.acc_ttle {
+    position: relative;
+    background-color: #fff;
+    color: #000;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.acc_ttle.active {
+    background-color: transparent;
+    color: #fff;
+}
+.acc_ttle:after {
+    content: '\f067';
+    font-family: Font Awesome\ 5 Free;
+    font-weight: 700;
+    position: absolute;
+    top: calc(50% - 10px);
+    right: 20px;
+}
+.acc_ttle.active:after {
+    content: '\f068';
+}
+.acc_desc {
+    display: none;
+}
+.sin_accdn:nth-of-type(1) .acc_desc {
+    display: block;
+}
+/*Message - FAQ Section End*/
+/* =================================== Location Section Start =================================== */
+.map_cont {
+    height: 400px;
+}
+#loc_map {
+    width: 100%;
+    height: 100%;
+}
+.boh_work_time {
+    background-color: #e61e25;
+    padding: 10px 0;
+    color: #fff;
+}
+.sin_wday, .sin_wday span, .wday_ico {
+    display: inline-block;
+}
+.wday_ico img {
+    width: 20px;
+    display: inline-block;
+}
+.sin_wday {
+    margin: 0 3px;
+}
+/*Location Section End*/
+/* =================================== Footer Start =================================== */
+.main_footer {
+    background-color: #0066b3;
+    color: #fff;
+}
+.footer_cont {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.sin_ftr_sec {
+    font-size: 16px;
+}
+.ftr_ttle {
+    border-bottom: 1px solid #fff;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.ftr_soc_md_list {
+    padding: 10px 0;
+}
+.ftr_soc_md_list > li {
+    display: inline-block;
+}
+.ftr_soc_md_list > li > a {
+    display: block;
+    color: #fff;
+    width: 44px;
+    height: 44px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
+}
+.ftr_soc_md_list > li > a:hover {
+    background-color: #fff;
+    color: #0069a1;
+}
+.ftr_soc_md_list > li > a > i {
+    width: 42px;
+    height: 42px;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 30px;
+    text-align: center;
+}
+.footer_cpyright {
+    padding: 10px 0;
+    font-size: 17px;
+    text-align: center;
+    background-color: #1d398d;
+}
+.footer_cpyright a {
+    color: #fff;
+}
+/*Footer End*/
+/* =================================== departments & services Pages Start =================================== */
+.subpage_header {
+    height: 700px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.subpage_header .hd_main_cont {
+    overflow: hidden;
+}
+.subpage_header .header_content {
+    height: 700px;
+    display: table-cell;
+    vertical-align: middle;
+    margin-top: 200px;
+    width: 440px;
+    color: #fff;
+}
+#doctors_page .header_content {
+    width: 640px;
+}
+#hr_page .header_content {
+    width: 800px;
+}
+#facilities_page .header_content {
+    width: 580px;
+}
+.subpage_header .header_content .header_ttle {
+    font-size: 50px;
+    text-transform: capitalize;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+#hr_page .hr_hd_text {
+    font-size: 35px;
+    font-weight: 700;
+}
+#hr_page .hr_hd_text .text1 {
+    margin-bottom: 50px;
+    padding-right: 130px;
+}
+#doctors_page .header_ttle {
+    font-size: 35px;
+}
+#facilities_page .facil_hd_text {
+    font-size: 36px;
+    font-weight: 700;
+}
+.subpage_header .header_content .header_desc {
+    font-size: 22px;
+    text-align: justify;
+    font-family: 'Helvetica Neue Light', 'Droid Arabic Kufi', "Helvetica Neue", sans-serif;
+}
+.sin_dep_cont:not(:nth-last-of-type(1)) {
+    margin-bottom: 40px;
+}
+.sin_dep_ttle {
+    text-transform: capitalize;
+    font-size: 32px;
+    font-weight: 700;
+    color: #e51e26;
+    margin-bottom: 20px;
+}
+.sin_dep_desc {
+    color: #273482;
+    font-family: 'Helvetica Neue Light', 'Droid Arabic Kufi', "Helvetica Neue", sans-serif;
+    font-size: 16px;
+}
+.dep_sin_doc {
+    position: relative;
+    border: 1px solid #1471ae;
+    padding: 10px 0;
+    color: #222d7d;
+    margin-bottom: 20px;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
+}
+.dep_sin_doc:hover {
+    border: 1px solid #25a3f5;
+}
+.dep_sin_doc .dep_ttle {
+    font-weight: 700;
+}
+.dep_sin_doc .doc_img {
+    height: 200px;
+    width: 200px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+.dep_sin_doc .doc_detls {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    background-color: #1471ae;
+    color: #fff;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
+}
+.dep_sin_doc:hover .doc_detls {
+    background-color: #25a3f5;
+}
+.doc_detls .doc_detls_name {
+    font-weight: 700;
+}
+.doc_detls .doc_detls_spec {
+    font-size: 13px;
+}
+/*departments & services Pages End*/
+/* =================================== Doctors Page Start =================================== */
+.doctors_fdet .dep_sin_doc .doc_img {
+    width: 300px;
+    height: 300px;
+}
+.doctors_fdet .dep_sin_doc .doc_detls {
+    height: 80px;
+}
+/*Doctors Page End*/
+/* =================================== Doctor Details page Start =================================== */
+.doc_fdet_sec {
+    color: #222d7d;
+}
+.doc_fdet_card {
+    position: relative;
+    margin-bottom: 60px;
+}
+.doc_fdet_img img {
+    margin-top: -320px;
+    box-shadow: 0 0 31px 4px rgba(35, 41, 100, 0.5);
+}
+.doc_fdet_bio {
+    font-size: 25px;
+}
+.doc_fdet_bio .doc_fdet_name {
+    font-size: 35px;
+    font-weight: 700;
+}
+.doc_fdet_text {
+    font-size: 16px;
+}
+/*Doctor Details page End*/
+/* =================================== Administration Page Start =================================== */
+.hres_ttle {
+    text-transform: capitalize;
+    font-size: 32px;
+    font-weight: 700;
+    color: #e51e26;
+    margin-bottom: 20px;
+}
+.h_res_cont {
+    width: 900px;
+    margin: 0 auto;
+}
+.sin_hr_sec {
+    overflow: hidden;
+    padding: 20px 0;
+}
+.sin_hr_sec:not(:nth-last-of-type(1)) {
+    border-bottom: 1px solid #e51e26;
+}
+.sin_admin_img, .sin_admin_info {
+    float: left;
+}
+.sin_admin_img {
+    width: 100px;
+    margin-right: 20px;
+    border: 1px solid #0079bb;
+}
+.sin_admin_info {
+    height: 100px;
+    width: calc(100% - 120px);
+    color: #222d7d;
+}
+.admin_info_cont {
+    height: 100px;
+    display: table-cell;
+    vertical-align: middle;
+}
+.adm_name {
+    font-size: 23px;
+    font-weight: 700;
+}
+.adm_pos {
+    font-size: 20px;
+}
+/*Administration Page End*/
+/* =================================== Careers Page Start =================================== */
+.sin_job_ttle {
+    font-size: 26px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #222d7d;
+    text-transform: capitalize;
+}
+.sin_job_req {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #222d7d;
+}
+.job_apply_con {
+    overflow: hidden;
+    height: 30px;
+    line-height: 30px;
+}
+.sin_job_code {
+    float: left;
+    color: #e51e26;
+    font-size: 18px;
+}
+.job_apply_btn {
+    float: right;
+}
+/*Career Form*/
+.job_ipt {
+    font-size: 22px;
+    border: 0;
+    width: 400px;
+    color: #222d7d;
+    border-bottom: 1px solid #222d7d;
+    height: 40px;
+    outline: 0;
+    margin-bottom: 50px;
+}
+.job_ipt.job_ipt_odd {
+    float: left;
+}
+.job_ipt.job_ipt_even {
+    float: right;
+}
+.job_ipt::placeholder {color: #222d7d;opacity: 1;}
+.job_ipt:-ms-input-placeholder {color: #222d7d;}
+.job_ipt::-ms-input-placeholder {color: #222d7d;}
+.gend_sel {
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.cv_lbl {
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 22px;
+    color: #e51e26;
+}
+.cv_upld_ipt {
+    float: left;
+    width: 100%;
+    border-bottom: 2px solid #222d7d;
+    height: 40px;
+    margin-bottom: 50px;
+}
+.job_form .main_btn {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+}
+/*Careers Page End*/
+/* =================================== Facilities Page Start =================================== */
+.facil_ttle {
+    text-transform: capitalize;
+    font-size: 32px;
+    font-weight: 700;
+    color: #e51e26;
+    margin-bottom: 20px;
+}
+.facil_tab_btns {
+    margin-bottom: 40px;
+}
+.fac_tb_btn {
+    display: inline-block;
+    color: #fff;
+    background-color: #000;
+    width: 200px;
+    height: 50px;
+    margin: 0 5px;
+    font: 25px/50px 'Helvetica Neue Light', 'Droid Arabic Kufi', "Helvetica Neue", sans-serif;
+    cursor: pointer;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.fac_tb_btn.phot_tb_btn {background-color: #222d7d}
+.fac_tb_btn.vid_tb_btn {background-color: #e51e26}
+.fac_tb_btn.active {color: #c1c1c1}
+.fac_tb_cont:not(:nth-of-type(1)){
+    display: none;
+}
+.fac_sld_btns {
+    margin-bottom: 20px;
+}
+/*Tabs Slider*/
+.faci_slider {
+}
+.sld_tab_btn {
+    width: auto;
+    margin: 0 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    color: #222d7d;
+    cursor: pointer;
+}
+.sld_tab_btn.active {
+    border-bottom: 3px solid #e51e26;
+}
+.fac_sld_btns .swiper-button-prev, .fac_sld_btns .swiper-button-next {
+    position: absolute;
+    top: 0;
+    width: 60px;
+    height: 40px;
+    margin-top: 0;
+    z-index: 2;
+    cursor: pointer;
+    color: #222d7d;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
+}
+.fac_sld_btns .swiper-button-prev {
+    left: 0;
+    background: #ffffff;
+    background: -moz-linear-gradient(left, #ffffff 66%, transparent 100%);
+    background: -webkit-linear-gradient(left, #ffffff 66%,transparent 100%);
+    background: linear-gradient(to right, #ffffff 66%,transparent 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='transparent',GradientType=1 );
+}
+.fac_sld_btns .swiper-button-next {
+    right: 0;
+    background: -moz-linear-gradient(left, transparent 0%, #ffffff 37%);
+    background: -webkit-linear-gradient(left, transparent 0%,#ffffff 37%);
+    background: linear-gradient(to right, transparent 0%,#ffffff 37%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='transparent', endColorstr='#ffffff',GradientType=1 );
+}
+.fac_sld_btns .swiper-button-prev.swiper-button-disabled, .fac_sld_btns .swiper-button-next.swiper-button-disabled {
+    opacity: 0;
+}
+
+.fac_sld_btns .swiper-button-prev:before, .fac_sld_btns .swiper-button-next:after {
+    font-family: Font Awesome\ 5 Free;
+    font-weight: 700;
+    font-size: 20px;
+    display: table-cell;
+    vertical-align: middle;
+    width: 60px;
+    height: 40px;
+    text-align: center;
+}
+.fac_sld_btns .swiper-button-prev:before {
+    text-align: left;
+    content: '\f053';
+    left: 0;
+}
+.fac_sld_btns .swiper-button-next:after {
+    text-align: right;
+    content: '\f054';
+    right: 0;
+}
+
+.sin_sld_cont:not(:nth-of-type(1)) {
+    display: none;
+}
+.sin_sld_cont .row > div {
+    padding: 0;
+}
+.vid_pl_ico {
+    background-image: url(../../img/facilities/vid_pl_ico.png);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70px;
+    z-index: 2;
+    cursor: pointer;
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
+}
+.fci_sin_med:hover .vid_pl_ico {
+    visibility: hidden;
+    opacity: 0;
+}
+.sin_sld_cont a[data-fancybox]:focus {
+    outline: 0;
+}
+.sin_sld_cont .hidden_content {
+    display: none;
+}
+.fci_sin_med {
+    height: 260px;
+    display: table;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.vid_tb_cont .fci_sin_med:before {
+
+}
+.fci_sin_med_text {
+    height: 260px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    background-color: rgba(34, 45, 125, 0.65);
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Helvetica Neue Light', 'Droid Arabic Kufi', "Helvetica Neue", sans-serif;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
+}
+.fci_sin_med:hover .fci_sin_med_text {
+    visibility: visible;
+    opacity: 1;
+}
+/*popup*/
+.sin_sld_cont .faci_hidden_cont {
+    display: none;
+}
+.faci_hidden_cont {
+    overflow: hidden;
+    margin: 10px 0;
+    padding: 0;
+    width: 1000px;
+    height: 500px;
+    background-color: transparent;
+}
+.faci_ppup_img {
+    float: left;
+    position: relative;
+    width: 70%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #000;
+}
+.med_desc {
+    position: relative;
+    float: left;
+    width: 29%;
+    margin-left: 1%;
+    background-color: #fff;
+    padding: 20px;
+    height: 100%;
+    font-size: 16px;
+}
+.med_ttle {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.med_share {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+}
+.med_share li {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    font-size: 25px;
+    margin: 0 5px;
+}
+.med_share li a {
+    width: 35px;
+    height: 35px;
+    display: table-cell;
+    vertical-align: middle;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+}
+.med_share li a.facebook_lk {background-color: #3c5a99}
+.med_share li a.twitter_lk {background-color: #55adee}
+.med_share li a.google-plus_lk {background-color: #dd4d3f}
+/*Facilities Page End*/
+/* =================================== Common Diseases Start =================================== */
+.dep_sin_diseases {
+    padding: 0;
+}
+.dep_sin_diseases > a {
+    display: block;
+    cursor: pointer;
+}
+.dep_sin_diseases .doc_img {
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    height: 240px;
+}
+.dis_hidden_content {
+    display: none;
+}
+/*popup*/
+.com_dis_ppcont {
+    font-family: 'Droid Arabic Kufi', "Helvetica Neue",Helvetica,Arial,sans-serif;
+    max-width: 1000px;
+    padding: 10px 20px;
+    text-align: left;
+}
+.dis_det_img {
+    margin-bottom: 30px;
+}
+.dis_det_img img {
+    border: 2px solid #273482;
+}
+.dis_det_desc {
+    color: #273482;
+    font-size: 16px;
+}
+.dis_name_ttle {
+    text-transform: capitalize;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.sin_dis_sec:not(:nth-last-of-type(1)) {
+    margin-bottom: 20px;
+}
+.sin_dis_ttle {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+/*Common Diseases Page End*/

@@ -1,13 +1,5 @@
 <?php
 
-Assets::add_css(array(
-    'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css',
-    'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css',
-    'bootstrap.min.css',
-    'bootstrap_1.css',
-    'bootstrap-responsive.min.css',
-    'media.css'));
-
 Assets::add_js('js/jquery.js');
 Assets::add_js('bootstrap.min.js');
 
@@ -31,7 +23,7 @@ Assets::add_js($inline, 'inline');
     echo Assets::js('modernizr-2.5.3.js');
     ?>
     <?php echo Assets::css(); ?>
-    <link rel="shortcut icon" href="<?php echo base_url(); ?>favicons.ico">
+    <link rel="shortcut icon" href="<?php echo assets_path() . 'images/'; ?>favicon.ico">
 </head>
 
     

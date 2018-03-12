@@ -1,5 +1,5 @@
 <?php echo theme_view('header'); ?>
-<div class="container"><!-- Start of Main Container -->
+<div class="container-fluid"><!-- Start of Main Container -->
     <?php
     echo theme_view('_sitenav');
 
