@@ -16,7 +16,12 @@ class Migration_Install_photo_gallery extends Migration
 			'constraint' => 11,
 			'auto_increment' => true,
 		),
-        'section' => array(
+        'en_section' => array(
+            'type'       => 'VARCHAR',
+            'constraint' => 255,
+            'null'       => false,
+        ),
+        'ar_section' => array(
             'type'       => 'VARCHAR',
             'constraint' => 255,
             'null'       => false,

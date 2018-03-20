@@ -18,7 +18,7 @@
                             <span>Add files...</span>
                             <input type="file" name="files[]" multiple>
                             <input type="hidden" name="id" id='folder_id' value="<?php echo $photo_gallery->id;?>">
-                            <input type="hidden" name="name" id='folder_name' value="<?php echo $photo_gallery->section;?>">
+                            <input type="hidden" name="name" id='folder_name' value="<?php echo $photo_gallery->en_section;?>">
                         </span>
                         <button type="submit" class="btn btn-primary start">
                             <i class="glyphicon glyphicon-upload"></i>

@@ -53,7 +53,8 @@ $lang['photo_gallery_module_description'] = 'Your module description';
 $lang['photo_gallery_area_title'] = 'Photo Gallery';
 
 // Fields
-$lang['photo_gallery_field_section'] = 'Section';
+$lang['photo_gallery_field_en_section'] = 'English Section';
+$lang['photo_gallery_field_ar_section'] = 'Arabic Section';
 $lang['photo_gallery_field_weight'] = 'Weight';
 $lang['photo_gallery_field_status'] = 'Status';
 $lang['photo_gallery_field_photos'] = 'Photos';

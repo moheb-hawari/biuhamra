@@ -42,21 +42,6 @@ class Facilities extends Admin_Controller
                         
         Assets::add_js( assets_path().'globals/plugins/datatables/media/js/jquery.dataTables.min.js');
         Assets::add_js( assets_path().'globals/plugins/datatables/themes/bootstrap/dataTables.bootstrap.js');
-        Assets::add_js( assets_path().'globals/plugins/multi_upload/js/vendor/jquery.ui.widget.js');
-        Assets::add_js( 'https://blueimp.github.io/JavaScript-Templates/js/tmpl.min.js');
-        Assets::add_js( 'https://blueimp.github.io/JavaScript-Load-Image/js/load-image.all.min.js');
-        Assets::add_js( 'https://blueimp.github.io/JavaScript-Canvas-to-Blob/js/canvas-to-blob.min.js');
-        Assets::add_js( 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js');
-        Assets::add_js( 'https://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js');
-        Assets::add_js( assets_path().'globals/plugins/multi_upload/js/jquery.iframe-transport.js');
-        Assets::add_js( assets_path().'globals/plugins/multi_upload/js/jquery.fileupload.js');
-        Assets::add_js( assets_path().'globals/plugins/multi_upload/js/jquery.fileupload-process.js');
-        Assets::add_js( assets_path().'globals/plugins/multi_upload/js/jquery.fileupload-image.js');
-        Assets::add_js( assets_path().'globals/plugins/multi_upload/js/jquery.fileupload-audio.js');
-        Assets::add_js( assets_path().'globals/plugins/multi_upload/js/jquery.fileupload-video.js');
-        Assets::add_js( assets_path().'globals/plugins/multi_upload/js/jquery.fileupload-validate.js');
-        Assets::add_js( assets_path().'globals/plugins/multi_upload/js/jquery.fileupload-ui.js');
-        Assets::add_js( assets_path().'globals/plugins/multi_upload/js/main.js');
         
         Assets::add_module_js('photo_gallery', 'photo_gallery.js');
     }
@@ -239,6 +224,22 @@ class Facilities extends Admin_Controller
     function uplaod_images($id,$name)
     {
 
+                Assets::add_js( assets_path().'globals/plugins/multi_upload/js/vendor/jquery.ui.widget.js');
+        Assets::add_js( 'https://blueimp.github.io/JavaScript-Templates/js/tmpl.min.js');
+        Assets::add_js( 'https://blueimp.github.io/JavaScript-Load-Image/js/load-image.all.min.js');
+        Assets::add_js( 'https://blueimp.github.io/JavaScript-Canvas-to-Blob/js/canvas-to-blob.min.js');
+        Assets::add_js( 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js');
+        Assets::add_js( 'https://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js');
+        Assets::add_js( assets_path().'globals/plugins/multi_upload/js/jquery.iframe-transport.js');
+        Assets::add_js( assets_path().'globals/plugins/multi_upload/js/jquery.fileupload.js');
+        Assets::add_js( assets_path().'globals/plugins/multi_upload/js/jquery.fileupload-process.js');
+        Assets::add_js( assets_path().'globals/plugins/multi_upload/js/jquery.fileupload-image.js');
+        Assets::add_js( assets_path().'globals/plugins/multi_upload/js/jquery.fileupload-audio.js');
+        Assets::add_js( assets_path().'globals/plugins/multi_upload/js/jquery.fileupload-video.js');
+        Assets::add_js( assets_path().'globals/plugins/multi_upload/js/jquery.fileupload-validate.js');
+        Assets::add_js( assets_path().'globals/plugins/multi_upload/js/jquery.fileupload-ui.js');
+        Assets::add_js( assets_path().'globals/plugins/multi_upload/js/main.js');
+                
         Template::set('photo_gallery', $this->photo_gallery_model->find($id));
 
         Template::set('toolbar_title', lang('photo_gallery_edit_heading'));

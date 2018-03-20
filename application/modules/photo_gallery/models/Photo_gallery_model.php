@@ -46,8 +46,13 @@ class Photo_gallery_model extends BF_Model
 	// be updating a portion of the data.
 	protected $validation_rules 		= array(
 		array(
-			'field' => 'section',
-			'label' => 'lang:photo_gallery_field_section',
+			'field' => 'en_section',
+			'label' => 'lang:photo_gallery_field_en_section',
+			'rules' => 'required|alpha_numeric_spaces|max_length[255]',
+		),
+            array(
+			'field' => 'ar_section',
+			'label' => 'lang:photo_gallery_field_ar_section',
 			'rules' => 'required|max_length[255]',
 		),
 		array(

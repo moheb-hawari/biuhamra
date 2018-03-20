@@ -94,10 +94,10 @@ class Facilities extends Admin_Controller
             'videos.link',
             'videos.thumbnil',
             'videos.status',
-            'departments.en_title',
+            'photo_gallery.en_section',
             );
         $records = $this->videos_model->select($fields)
-                ->join('departments','departments.id = videos.department')
+                ->join('photo_gallery','photo_gallery.id = videos.department')
                 ->find_all();
 
         Template::set('records', $records);

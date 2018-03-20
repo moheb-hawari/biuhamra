@@ -54,7 +54,7 @@ if ($can_delete) {
 					<?php endif;?>
 					
 				<?php if ($can_edit) : ?>
-					<td><?php echo anchor(SITE_AREA . '/facilities/videos/edit/' . $record->id, '<span class="icon-pencil"></span> ' .  $record->en_title); ?></td>
+					<td><?php echo anchor(SITE_AREA . '/facilities/videos/edit/' . $record->id, '<span class="icon-pencil"></span> ' .  $record->en_section); ?></td>
 				<?php else : ?>
 					<td><?php e($record->en_title); ?></td>
 				<?php endif; ?>

@@ -33,7 +33,7 @@ $id = isset($videos->id) ? $videos->id : '';
                 {
                     foreach($photo_gallery as $key => $val)
                     {
-                        $options[$val->id] = $val->section;
+                        $options[$val->id] = $val->en_section;
                     }
                 }
                 echo form_dropdown(array('name' => 'department','class'=>'selectpicker','required' => 'required'), $options, set_value('department', isset($videos->department) ? $videos->department : ''), lang('videos_field_department') . lang('bf_form_label_required'),'','','col-md-6');

@@ -24,7 +24,7 @@ if ($can_delete) {
                         <th class='column-check'><input class='check-all' type='checkbox' /></th>
                     <?php endif; ?>
 
-                    <th><?php echo lang('photo_gallery_field_section'); ?></th>
+                    <th><?php echo lang('photo_gallery_field_en_section'); ?></th>
                     <th><?php echo lang('photo_gallery_field_weight'); ?></th>
                     <th><?php echo lang('photo_gallery_field_status'); ?></th>
                     <th><?php echo lang('photo_gallery_field_photos'); ?></th>
@@ -53,13 +53,13 @@ if ($can_delete) {
                                 <?php endif; ?>
 
                             <?php if ($can_edit) : ?>
-                                <td><?php echo anchor(SITE_AREA . '/facilities/photo_gallery/edit/' . $record->id, '<span class="icon-pencil"></span> ' . $record->section); ?></td>
+                                <td><?php echo anchor(SITE_AREA . '/facilities/photo_gallery/edit/' . $record->id, '<span class="icon-pencil"></span> ' . $record->en_section); ?></td>
                             <?php else : ?>
-                                <td><?php e($record->section); ?></td>
+                                <td><?php e($record->en_section); ?></td>
                             <?php endif; ?>
                             <td><?php e($record->weight); ?></td>
                             <td><?php e($record->status == 0 ? 'Active' : 'Inactive'); ?></td>
-                            <td><?php echo anchor(SITE_AREA . '/facilities/photo_gallery/uplaod_images/' . $record->id. '/' . $record->section,'<span class="icon-pencil"><i class="fa fa-plus-circle"></i></span>'); ?></td>
+                            <td><?php echo anchor(SITE_AREA . '/facilities/photo_gallery/uplaod_images/' . $record->id. '/' . str_replace(' ','_',$record->en_section),'<span class="icon-pencil"><i class="fa fa-plus-circle"></i></span>'); ?></td>
                         </tr>
                         <?php
                     endforeach;
