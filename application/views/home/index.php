@@ -215,9 +215,13 @@ if(!empty($patients_say)){
 </section>
 <!-- Message - FAQ Section End -->
         <!-- ========================================= Location Section Start ========================================= -->
+         <?php
+                if(!empty($locations)){ ?>
 <div class="map_cont">
     <div id="loc_map"></div>
 </div>
+        
+                <?php } ?>
 <div class="boh_work_time text-center">
     <div class="container">
         <div class="wday_ico"><img class="img-responsive" src="<?php echo assets_path() . 'images/home_page/wday_ico.png';?>"></div>
