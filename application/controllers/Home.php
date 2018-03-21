@@ -106,7 +106,7 @@ class Home extends MX_Controller {
         Template::set('about', $this->about_model->limit(3)->find_all());
         Template::set('meet_our_team', $this->meet_our_team_model->limit(1)->find_all());
         Template::set('doctors', $this->doctors_model->order_by('weight')->limit(6)->find_all());
-        Template::set('patients_say', $this->patients_say_model->order_by('weight')->find_all());
+        Template::set('patients_say', $this->patients_say_model->where(['status'=>0])->order_by('weight')->find_all());
         Template::set('faq', $this->faq_model->order_by('weight')->limit(3)->find_all());
         Template::set('locations', $this->locations_model->find_all());
         Template::set('information', $this->information_model->find(1));

@@ -75,7 +75,7 @@
                                 <div class="tab_detail">
                                     <div class="tab_det_ttle" title="<?php echo $val->{$lang.'_title'};?>"><?php echo $val->{$lang.'_title'};?></div>
                                     <div class="tab_det_desc"><?php echo $val->{$lang.'_description'};?></div>
-                                    <a href="#" class="main_btn tab_read_more"><?= lang('bf_read_more');?></a>
+                                    <a href="<?php echo site_url().'/'.lang('bf_language_direction').'/departments/index/'.$val->id; ?>" class="main_btn tab_read_more"><?= lang('bf_read_more');?></a>
                                 </div>
                                 <div class="tab_img" style="background-image: url('<?php echo assets_path() . 'images/dep_image/'.$val->id.'/'.$val->dep_image;?>');"></div>
                             </div>
@@ -93,7 +93,7 @@
             <div class="our_team_intro">
                 <div class="our_team_ttle"><?= lang('bf_meet');?> <b><?= lang('bf_our_team');?></b></div>
                 <div class="our_team_desc"><?php echo $meet_our_team[0]->{$lang.'_home_description'};?></div>
-                <div class="rd_more_btn_cont"><a href="#" class="main_btn"><?= lang('bf_read_more');?></a></div>
+                <div class="rd_more_btn_cont"><a href="<?php echo site_url().'/'.lang('bf_language_direction').'/doctors'; ?>" class="main_btn"><?= lang('bf_read_more');?></a></div>
 
             </div>
             <div class="our_team_imgs">
@@ -107,9 +107,9 @@
                                 <div class="doc_spec"><?php echo $val->{$lang.'_academic'};?></div>
                                 <div class="doc_soc_md">
                                     <ul class="doc_sm_list">
-                                        <li><a href="#" target="_blank" class="facebook_lk"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#" target="_blank" class="twitter_lk"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#" target="_blank" class="google-plus_lk"><i class="fab fa-google-plus-g"></i></a></li>
+                                        <li><a href="<?php echo $val->facebook;?>" target="_blank" class="facebook_lk"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="<?php echo $val->twitter;?>" target="_blank" class="twitter_lk"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="<?php echo $val->google;?>" target="_blank" class="google-plus_lk"><i class="fab fa-google-plus-g"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -122,7 +122,12 @@
 </section>
 <!-- Our Team Section End -->
 
-        <!-- ========================================= Testimonial Slider Start ========================================= -->
+
+<?php 
+if(!empty($patients_say)){ 
+    
+    ?>
+<!-- ========================================= Testimonial Slider Start ========================================= -->
 <section class="main_sction testim_sec" style="background-image: url(<?php echo assets_path() . 'images/home_page/testim_slider/01.jpg';?>);">
     <div class="sec_overlay">
         <div class="container">
@@ -149,6 +154,8 @@
         </div>
     </div>
 </section>
+
+<?php } ?>
 <!-- Testimonial Slider End -->
         <!-- ========================================= Message - FAQ Section Start ========================================= -->
 <section class="main_sction mess_faq_sec">
