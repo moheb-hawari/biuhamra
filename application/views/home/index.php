@@ -43,8 +43,8 @@
 <section class="main_sction about_clinic_sec" id="about_clinic">
     <div class="container">
         <div class="abt_clin_cont">
-            <h1 class="sec_title text-center"><?=site_text('about the clinic', 'عن العيادة');?></h1>
-            <div class="abt_clin_desc"><?=site_text('As one of the leading clinic in Kuwait, Bouhamra Clinic continues to expand in response to the growing health care needs of the people in Kuwait. Our value statement is Not just Healthcare.', 'باعتبارها إحدى العيادات الرائدة في الكويت، تواصل عيادة بوحمرة التوسع في تلبية احتياجات الرعاية الصحية المتزايدة للشعب الكويتي. بيان القيمة لدينا ليس فقط الرعاية الصحية.');?></div>
+            <h1 class="sec_title text-center"><?php echo $about_us->{$lang.'_title'};?></h1>
+            <div class="abt_clin_desc"><?php echo $about_us->{$lang.'_description'};?></div>
         </div>
     </div>
 </section>

@@ -68,6 +68,7 @@ class Home extends MX_Controller {
         $this->load->model('faq/faq_model');
         $this->load->model('locations/locations_model');
         $this->load->model('information/information_model');
+        $this->load->model('about_us/about_us_model');
         
         
         Assets::add_css(assets_path() . 'css/bootstrap.min.css');
@@ -109,6 +110,7 @@ class Home extends MX_Controller {
         Template::set('faq', $this->faq_model->order_by('weight')->limit(3)->find_all());
         Template::set('locations', $this->locations_model->find_all());
         Template::set('information', $this->information_model->find(1));
+        Template::set('about_us', $this->about_us_model->find(1));
         
         Template::render();
     }
