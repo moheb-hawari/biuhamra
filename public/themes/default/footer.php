@@ -1,6 +1,5 @@
     <?php if ( ! isset($show) || $show == true) : ?>
 
-<br>
 <footer class="main_footer">
     <div class="container">
         <div class="footer_cont">

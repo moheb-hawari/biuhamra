@@ -30,16 +30,21 @@ $(function () {
     });
     // ===================== Sliders ===================== //
     var header_slider = new Swiper('.header_slider', {
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false
+        },
         speed: 400,
         loop: true,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev'
-        }
+        },
+
     });
     var testim_slider = new Swiper('.testim_slider', {
         speed: 400,
-        loop: true,
+        loop: true
        /* effect: 'fade',*/
     });
     var faci_slider = new Swiper('.faci_slider', {
