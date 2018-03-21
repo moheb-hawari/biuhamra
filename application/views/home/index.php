@@ -2,7 +2,7 @@
         <!--Header Slider-->
         <div class="swiper-container header_slider">
             <div class="swiper-wrapper">
-            <?php 
+            <?php
             if(!empty($slider)){
                 foreach($slider as $key => $val){ ?>
                         <div class="swiper-slide">
@@ -18,27 +18,26 @@
                             </div>
                         </div>
             <?php } } ?>
-            
+
             </div>
 
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
+            <!--Clinic Bio-->
+            <div class="clinic_discip">
+                <?php
+                if(!empty($about)){
+                    foreach($about as $key => $val){ ?>
+                        <div class="sin_discip">
+                            <div class="discip_ico">
+                                <img class="img-responsive center-block" src="<?php echo assets_path() . 'images/logo/'.$val->id.'/'.$val->logo;?>">
+                            </div>
+                            <div class="discip_ttle"><?php echo $val->{$lang.'_title'};?></div>
+                            <div class="discip_desc"><?php echo $val->{$lang.'_description'};?></div>
+                        </div>
+                    <?php } } ?>
 
-        </div>
-        <!--Clinic Bio-->
-        <div class="clinic_discip">
-             <?php 
-            if(!empty($about)){
-                foreach($about as $key => $val){ ?>
-            <div class="sin_discip">
-                <div class="discip_ico">
-                    <img class="img-responsive center-block" src="<?php echo assets_path() . 'images/logo/'.$val->id.'/'.$val->logo;?>">
-                </div>
-                <div class="discip_ttle"><?php echo $val->{$lang.'_title'};?></div>
-                <div class="discip_desc"><?php echo $val->{$lang.'_description'};?></div>
             </div>
-             <?php } } ?>
-            
         </div>
         <!-- ========================================= About The Clinic Start ========================================= -->
 <section class="main_sction about_clinic_sec" id="about_clinic">
@@ -64,7 +63,7 @@
                     <?php
                         if(!empty($departments_tabs)){ $x =1;
                             foreach($departments_tabs as $key => $val){ ?>
-                                <div class="sin_tab_btn <?php echo $x==1?'active':''; ?>" tab="0<?php echo $x; ?>"><?php echo $val->{$lang.'_title'};?></div>
+                                <div class="sin_tab_btn <?php echo $x==1?'active':''; ?>" tab="0<?php echo $x; ?>"><span class="stab_txt" title="<?php echo $val->{$lang.'_title'};?>"><?php echo $val->{$lang.'_title'};?></span></div>
                     <?php $x++;} } ?>
                 </div>
             </div>
@@ -74,7 +73,7 @@
                         foreach($departments_tabs as $key => $val){ ?>
                             <div class="sin_tab_cont" tab="0<?php echo $x; ?>">
                                 <div class="tab_detail">
-                                    <div class="tab_det_ttle"><?php echo $val->{$lang.'_title'};?></div>
+                                    <div class="tab_det_ttle" title="<?php echo $val->{$lang.'_title'};?>"><?php echo $val->{$lang.'_title'};?></div>
                                     <div class="tab_det_desc"><?php echo $val->{$lang.'_description'};?></div>
                                     <a href="#" class="main_btn tab_read_more"><?= lang('bf_read_more');?></a>
                                 </div>

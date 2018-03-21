@@ -70,13 +70,13 @@ class Home extends MX_Controller {
         $this->load->model('information/information_model');
         
         
-        Assets::add_css( 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css');
+        Assets::add_css(assets_path() . 'css/bootstrap.min.css');
         Assets::add_css(assets_path() . 'css/fontawesome-all.min.css');
         Assets::add_css(assets_path() . 'css/swiper.css');
         Assets::add_css(assets_path() . 'css/main_en.css');
+        Assets::add_css(assets_path() . 'css/main_'.(isset($lang)&&$lang=='ar'?'ar':'').'.css');
         Assets::add_css(assets_path() . 'css/media_en.css');
-        Assets::add_css(assets_path() . 'css/main_'.$lang.'.css');
-        Assets::add_css(assets_path() . 'css/media_'.$lang.'.css');
+        Assets::add_css(assets_path() . 'css/media_'.(isset($lang)&&$lang=='ar'?'ar':'').'.css');
         
         Assets::add_js(assets_path() . 'js/swiper.min.js');
         Assets::add_js(assets_path() . 'js/fancybox.min.js');

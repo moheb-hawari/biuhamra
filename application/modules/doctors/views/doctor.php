@@ -7,14 +7,13 @@
             <div class="doc_fdet_card">
                 <div class="row">
                     <div class="col-xs-12 col-sm-5">
-                        <div class="doc_fdet_img">
-                            <img class="img-responsive center-block" src="<?php echo assets_path() .'images/personal_photo/'.$doctor->id.'/'.$doctor->personal_photo;?>">
-                        </div>
+                        <div class="doc_fdet_img" style="background-image: url('<?php echo assets_path() .'images/personal_photo/'.$doctor->id.'/'.$doctor->personal_photo;?>')"></div>
                     </div>
                     <div class="col-xs-12 col-sm-7">
                         <div class="doc_fdet_bio">
                             <div class="doc_fdet_name"><?php echo $doctor->{$lang.'_name'};?></div>
                             <div class="doc_fdet_pos"><?php echo $doctor->{$lang.'_academic'};?></div>
+                            <div class="doc_fdet_deg"><?=site_text('MD/PhD', 'ماجستير، دكتوراه');?></div><!--add edu degree to cms-->
                         </div>
                     </div>
                 </div>

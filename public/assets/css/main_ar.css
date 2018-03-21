@@ -80,13 +80,12 @@ body {
     border-left-color: transparent;
     border-right-color: #fff;
 }
+.sin_tab_btn .stab_txt {
+    float: right;
+}
 /*tabs contents*/
 .tab_detail, .tab_img {
     float: right;
-}
-.tab_det_ttle {
-    font-size: 31px;
-    line-height: 1.2;
 }
 .tab_read_more {
     right: auto;
