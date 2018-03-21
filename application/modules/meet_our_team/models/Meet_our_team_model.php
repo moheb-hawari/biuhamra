@@ -24,7 +24,7 @@ class Meet_our_team_model extends MY_Model
 	protected $after_insert 	= array();
 	protected $before_update 	= array();
 	protected $after_update 	= array();
-	protected $before_find 	    = array('where_delete');
+	protected $before_find 	    = array();
 	protected $after_find 		= array();
 	protected $before_delete 	= array();
 	protected $after_delete 	= array();

@@ -2,8 +2,8 @@
 
 class Videos_model extends MY_Model
 {
-    protected $table_name	= 'videos';
-	protected $key			= 'id';
+        protected $table_name	= 'videos';
+	protected $key          = 'id';
 	protected $date_format	= 'datetime';
 
 	protected $log_user 	= true;
@@ -12,11 +12,11 @@ class Videos_model extends MY_Model
 	protected $soft_deletes	= true;
 
 	protected $created_field     = 'created_on';
-    protected $created_by_field  = 'created_by';
+        protected $created_by_field  = 'created_by';
 	protected $modified_field    = 'modified_on';
-    protected $modified_by_field = 'modified_by';
-    protected $deleted_field     = 'deleted';
-    protected $deleted_by_field  = 'deleted_by';
+        protected $modified_by_field = 'modified_by';
+        protected $deleted_field     = 'deleted';
+        protected $deleted_by_field  = 'deleted_by';
 
 	// Customize the operations of the model without recreating the insert,
     // update, etc. methods by adding the method names to act as callbacks here.
