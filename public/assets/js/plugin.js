@@ -39,8 +39,7 @@ $(function () {
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev'
-        },
-
+        }
     });
     var testim_slider = new Swiper('.testim_slider', {
         speed: 400,
@@ -128,13 +127,13 @@ function navbarScroll() {
 function scrollToSection(e, tgt_sec) {
     e.preventDefault();
     if($(this).parents().is('.mob_nav')) {
-        $("html, body").animate({
+        $("html, body").stop(true).animate({
             scrollTop: $().offset(tgt_sec).top - $('.mob_nav').outerHeight() - $('.head_smed').outerHeight()
         }, 1000);
         $(".mob_nv_btn").removeClass('active');
         $(".mob_lks_list").stop(true).slideUp(300);
     } else {
-        $("html, body").animate({
+        $("html, body").stop(true).animate({
             scrollTop: $(tgt_sec).offset().top - $('.web_nav').outerHeight() - $('.head_smed').outerHeight()
         }, 1000);
     }

@@ -59,6 +59,9 @@ body {
 .clinic_discip .sin_discip {
     float: right;
 }
+.clinic_discip .discip_desc {
+    max-height: 112px;
+}
 /*Main Header End*/
 /* =================================== Departments Section Start =================================== */
 .tabs_btns_cont, .tabs_contents_cont {
@@ -82,6 +85,9 @@ body {
 }
 .sin_tab_btn .stab_txt {
     float: right;
+}
+.tab_det_desc {
+    max-height: 270px;
 }
 /*tabs contents*/
 .tab_detail, .tab_img {

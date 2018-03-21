@@ -148,6 +148,16 @@
         left: 10px;
     }
     /*Message - FAQ Section End*/
+    /* ================= Administration Page Start ================= */
+    .sin_admin_img, .sin_admin_info {
+        float: none;
+    }
+    .sin_admin_img {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto 10px auto;
+    }
+    /*Administration Page End*/
     /* ================= Facilities Page Start ================= */
     .facil_ttle {
         text-align: center;

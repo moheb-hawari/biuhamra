@@ -41,7 +41,15 @@
                                     </a>
                                     <div class="faci_hidden_cont" id="mt01_st0<?php echo $x; ?>_0<?php echo $z; ?>">
                                         <div class="faci_ppup_img" style="background-image: url('<?php echo base_url().'files/'.$val->id.'/'.basename($image); ?>')"></div>
-                                        
+                                        <div class="med_desc">
+                                            <div class="med_ttle"><?=site_text('Bouhamra Clinic', 'بوحمره كلينك');?></div>
+                                            <div class="med_txt"><?=site_text('Our value is Not just Healthcare.', 'قيمتنا ليست مجرد الرعاية الصحية.');?></div>
+                                            <ul class="med_share text-center">
+                                                <li><a href="#" class="facebook_lk"><i class="fab fa-facebook-f"></i></a></li>
+                                                <li><a href="#" class="twitter_lk"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="#" class="google-plus_lk"><i class="fab fa-google-plus-g"></i></a></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                                         <?php  $z++; } } ?>

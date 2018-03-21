@@ -142,8 +142,6 @@
                             </div>
                             <?php } } ?>
                     </div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
                 </div>
             </div>
         </div>
@@ -151,7 +149,7 @@
 </section>
 <!-- Testimonial Slider End -->
         <!-- ========================================= Message - FAQ Section Start ========================================= -->
-<section class="main_sction mess_faq_sec">
+<section id="cont_clinic" class="main_sction mess_faq_sec">
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-6">

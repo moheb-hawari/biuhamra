@@ -117,6 +117,8 @@
     }
     .clinic_discip .discip_desc {
         font-size: 14px;
+        -webkit-line-clamp: 4;
+        max-height: 83px;
     }
     /*Main Header End*/
     /* ================= Scroll Navbar Start ================= */
@@ -576,6 +578,8 @@
     }
     .clinic_discip .discip_desc {
         font-size: 12px;
+        -webkit-line-clamp: 4;
+        max-height: 70px;
     }
     /*Main Header End*/
     /* ================= Scroll Navbar Start ================= */
@@ -872,6 +876,7 @@
     }
     .sin_admin_img {
         width: 90px;
+        height: 90px;
         margin-right: 15px;
     }
     .sin_admin_info {
@@ -1216,6 +1221,12 @@
     }
     .clinic_discip .discip_desc {
         font-size: 14px;
+        overflow: visible;
+        text-overflow: clip;
+        display: block;
+        -webkit-line-clamp: unset;
+        -webkit-box-orient: unset;
+        max-height: none;
     }
     /*Main Header End*/
     /* ================= About The Clinic Start ================= */
@@ -1283,7 +1294,6 @@
     }
     .tab_det_ttle {
         font-size: 18px;
-        margin-bottom: 5px;
         text-overflow: clip;
         display: block;
         -webkit-line-clamp: unset;
@@ -1577,6 +1587,7 @@
     }
     .sin_admin_img {
         width: 200px;
+        height: 200px;
         margin: 0 auto 10px auto;
     }
     .sin_admin_info {

@@ -318,6 +318,12 @@ h1 {
 }
 .clinic_discip .discip_desc {
     font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    max-height: 114px;
 }
 /*Main Header End*/
 /* =================================== About The Clinic Start =================================== */
@@ -608,7 +614,7 @@ h1 {
     display: inline-block;
     width: 24px;
     height: 19px;
-    background: url(../../img/home_page/testim_slider/ss1.png) no-repeat center center;
+    background: url(../../../public/assets/images/home_page/testim_slider/ss1.png) no-repeat center center;
     background-size: contain;
 }
 .patient_txt:before {
@@ -985,8 +991,12 @@ h1 {
 }
 .sin_admin_img {
     width: 100px;
+    height: 100px;
     margin-right: 20px;
     border: 1px solid #0079bb;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 .sin_admin_info {
     height: 100px;

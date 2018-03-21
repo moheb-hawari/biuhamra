@@ -18,9 +18,7 @@
             <?php if(!empty($doctors)){ 
                 foreach($doctors as $key => $val){ ?>
                     <div class="sin_hr_sec">
-                        <div class="sin_admin_img">
-                            <img class="img-responsive center-block" src="<?php echo assets_path() .'images/personal_photo/'.$val->id.'/'.$val->personal_photo;?>">
-                        </div>
+                        <div class="sin_admin_img" style="background-image: url('<?php echo assets_path() .'images/personal_photo/'.$val->id.'/'.$val->personal_photo;?>')"></div>
                         <div class="sin_admin_info">
                             <div class="admin_info_cont">
                                 <div class="adm_name"><?php echo $val->{$lang.'_name'};?></div>

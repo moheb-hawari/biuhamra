@@ -82,7 +82,7 @@ class Front_Controller extends Base_Controller
         Assets::add_css(assets_path() . 'css/media_en.css');
         Assets::add_css(assets_path() . 'css/main_'.$lang.'.css');
         Assets::add_css(assets_path() . 'css/media_'.$lang.'.css');
-        
+
         Assets::add_js(assets_path() . 'js/swiper.min.js');
         Assets::add_js(assets_path() . 'js/fancybox.min.js');
         Assets::add_js(assets_path() . 'js/plugin.js');
