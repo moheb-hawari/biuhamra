@@ -1,16 +1,18 @@
-<div class="subpage_header" style="background-image: url('<?php echo assets_path() .'images/dep_image/'.$department->id.'/'.$department->dep_image;?>')">
-            <div class="container">
-                <div class="hd_main_cont">
-                    <div class="header_content">
-                        <div class="header_ttle"><?php echo $department->{$lang.'_image_title'};?></div>
-                        <div class="header_desc"><?php echo $department->{$lang.'_image_description'};?></div>
-                    </div>
+<div class="mn_head_cont">
+    <div class="subpage_header" style="background-image: url('<?php echo assets_path() . 'images/dep_image/' . $department->id . '/' . $department->dep_image; ?>')">
+        <div class="container">
+            <div class="hd_main_cont">
+                <div class="header_content">
+                    <div class="header_ttle"><?php echo $department->{$lang . '_image_title'}; ?></div>
+                    <div class="header_desc"><?php echo $department->{$lang . '_image_description'}; ?></div>
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
 <section class="main_sction">
     <div class="container">
-        
         <div class="sin_dep_cont">
             <div class="sin_dep_ttle"><?php echo $department->{$lang.'_title'};?></div>
             <div class="sin_dep_desc">
@@ -23,11 +25,11 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-4 col-md-3">
                         <div class="dep_sin_doc text-center">
-                            <div class="dep_ttle"><?=site_text('Dermatology', 'الأمراض الجلدية');?></div>
+                            <div class="dep_ttle"><?=site_text('Dermatology Dermatology Dermatology Dermatology Dermatology Dermatology', 'الأمراض الجلدية الأمراض الجلدية الأمراض الجلدية الأمراض الجلدية الأمراض الجلدية');?></div>
                             <div class="doc_img" style="background-image: url('<?php echo assets_path() .'images/depart_serv/dep_doc_01.jpg';?>')"></div>
                             <div class="doc_detls">
-                                <div class="doc_detls_name"><?=site_text('Dr. Halwani Bahja', 'د. حلواني بهجة');?></div>
-                                <div class="doc_detls_spec"><?=site_text('Dermatology Specialist', 'اخصائي امراض جلدية');?></div>
+                                <div class="doc_detls_name"><?=site_text('Dr. Halwani Bahja Halwani Bahja Halwani Bahja Halwani Bahja Halwani Bahja', 'د. حلواني بهجة حلواني بهجة حلواني بهجة حلواني بهجة حلواني بهجة');?></div>
+                                <div class="doc_detls_spec"><?=site_text('Dermatology Specialist Dermatology Specialist Dermatology Specialist Dermatology Specialist', 'اخصائي امراض جلدية اخصائي امراض جلدية اخصائي امراض جلدية اخصائي امراض جلدية');?></div>
                             </div>
                         </div>
                     </div>

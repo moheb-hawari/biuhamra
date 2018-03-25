@@ -1,6 +1,7 @@
-<div id="doctors_page" class="subpage_header doc_fdet_hd" style="background-image: url('<?php echo assets_path() .'images/cover_image/'.$doctor->id.'/'.$doctor->cover_image;?>')">
-            
-        </div>
+<div class="mn_head_cont">
+    <div id="doctors_page" class="subpage_header doc_fdet_hd" style="background-image: url('<?php echo assets_path() .'images/cover_image/'.$doctor->id.'/'.$doctor->cover_image;?>')"></div>
+</div>
+
 <section class="main_sction doc_fdet_sec">
     <div class="container">
         <div class="doc_fdet_cont">

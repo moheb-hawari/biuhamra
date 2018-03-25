@@ -1,45 +1,47 @@
 <!-- ========================================= Homepage ========================================= -->
         <!--Header Slider-->
-        <div class="swiper-container header_slider">
-            <div class="swiper-wrapper">
+<div class="mn_head_cont">
+    <div class="swiper-container header_slider">
+        <div class="swiper-wrapper">
             <?php
             if(!empty($slider)){
                 foreach($slider as $key => $val){ ?>
-                        <div class="swiper-slide">
-                            <div class="sin_slide" style="background-image: url(<?php echo assets_path() . 'images/image/'.$val->id.'/'.$val->image; ?>">
-                                <div class="container">
-                                    <div class="sin_slide_cont">
-                                        <div class="sin_slide_text">
-                                            <div class="slide_ttle"><?php echo $val->{$lang.'_title'};?></div>
-                                            <div class="slide_desc"><?php echo $val->{$lang.'_description'};?></div>
-                                        </div>
+                    <div class="swiper-slide">
+                        <div class="sin_slide" style="background-image: url(<?php echo assets_path() . 'images/image/'.$val->id.'/'.$val->image; ?>">
+                            <div class="container">
+                                <div class="sin_slide_cont">
+                                    <div class="sin_slide_text">
+                                        <div class="slide_ttle"><?php echo $val->{$lang.'_title'};?></div>
+                                        <div class="slide_desc"><?php echo $val->{$lang.'_description'};?></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-            <?php } } ?>
+                    </div>
+                <?php } } ?>
 
-            </div>
-
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-            <!--Clinic Bio-->
-            <div class="clinic_discip">
-                <?php
-                if(!empty($about)){
-                    foreach($about as $key => $val){ ?>
-                        <div class="sin_discip">
-                            <div class="discip_ico">
-                                <img class="img-responsive center-block" src="<?php echo assets_path() . 'images/logo/'.$val->id.'/'.$val->logo;?>">
-                            </div>
-                            <div class="discip_ttle"><?php echo $val->{$lang.'_title'};?></div>
-                            <div class="discip_desc"><?php echo $val->{$lang.'_description'};?></div>
-                        </div>
-                    <?php } } ?>
-
-            </div>
         </div>
-        <!-- ========================================= About The Clinic Start ========================================= -->
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <!--Clinic Bio-->
+        <div class="clinic_discip">
+            <?php
+            if(!empty($about)){
+                foreach($about as $key => $val){ ?>
+                    <div class="sin_discip">
+                        <div class="discip_ico">
+                            <img class="img-responsive center-block" src="<?php echo assets_path() . 'images/logo/'.$val->id.'/'.$val->logo;?>">
+                        </div>
+                        <div class="discip_ttle"><?php echo $val->{$lang.'_title'};?></div>
+                        <div class="discip_desc"><?php echo $val->{$lang.'_description'};?></div>
+                    </div>
+                <?php } } ?>
+
+        </div>
+    </div>
+</div>
+<!-- ========================================= About The Clinic Start ========================================= -->
 <section class="main_sction about_clinic_sec" id="about_clinic">
     <div class="container">
         <div class="abt_clin_cont">
@@ -147,8 +149,6 @@ if(!empty($patients_say)){
                             </div>
                             <?php } } ?>
                     </div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
                 </div>
             </div>
         </div>
@@ -158,7 +158,7 @@ if(!empty($patients_say)){
 <?php } ?>
 <!-- Testimonial Slider End -->
         <!-- ========================================= Message - FAQ Section Start ========================================= -->
-<section class="main_sction mess_faq_sec">
+<section id="cont_clinic" class="main_sction mess_faq_sec">
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-6">

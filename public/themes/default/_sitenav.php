@@ -34,7 +34,7 @@ $pageName = 'home';
                     <div class="nav_lks">
                         <ul class="nav_lk_list">
                             <li<?=($this->uri->segment(2) == null)?' class="active"':'';?>><a href="<?php echo site_url().'/'.lang('bf_language_direction'); ?>"><span><?= lang('bf_home_nav_title');?></span></a></li>
-                            <li class="scroll_to_sec about_clinic" <?=($this->uri->segment(2) == 'about')?' class="active"':'';?>><a href="<?php echo site_url().'/'.lang('bf_language_direction').'#about_clinic'; ?>"><span><?= lang('bf_about_nav_title');?></span></a></li>
+                            <li class="scroll_to_sec<?=($this->uri->segment(2) == null)?' about_clinic':'';?>"><a href="<?php echo site_url().'/'.lang('bf_language_direction').'?id=about_clinic';?>" <?=($this->uri->segment(2) == null)?'class="scroll_lk"':'';?>><span><?= lang('bf_about_nav_title');?></span></a></li>
                             <li<?=($this->uri->segment(2) == 'departments')?' class="active"':'';?>>
                                 <div class="sub_menu">
                                     <a class="sub_mneu_ttle"><span><?= lang('departments_nav_title');?></span></a>
@@ -61,7 +61,7 @@ $pageName = 'home';
                                     </ul>
                                 </div>
                             </li>
-                            <li<?=($this->uri->segment(2) == 'contact_us')?' class="active"':'';?>><a href="<?php echo site_url().'/'.lang('bf_language_direction'); ?>" class="scroll_lk"><span><?= lang('bf_contact_nav_title');?></span></a></li>
+                            <li class="scroll_to_sec<?=($this->uri->segment(2) == null)?' cont_clinic':'';?>"><a href="<?php echo site_url().'/'.lang('bf_language_direction').'?id=cont_clinic'; ?>" <?=($this->uri->segment(2) == null)?'class="scroll_lk"':'';?>><span><?= lang('bf_contact_nav_title');?></span></a></li>
                         </ul>
                     </div>
                     <div class="clearfix"></div>
@@ -82,7 +82,7 @@ $pageName = 'home';
                     <div class="mob_nv_btn"><i class="fas fa-bars"></i></div>
                     <ul class="mob_lks_list">
                         <li<?=($this->uri->segment(2) == null)?' class="active"':'';?>><a href="<?php echo site_url().'/'.lang('bf_language_direction'); ?>"><span><?= lang('bf_home_nav_title');?></span></a></li>
-                        <li><?=($this->uri->segment(2) == 'about')?' class="active"':'';?>><a href="<?php echo site_url().'/'.lang('bf_language_direction').'/about'; ?>"><span><?= lang('bf_about_nav_title');?></span></a></li>
+                        <li class="scroll_to_sec<?=($this->uri->segment(2) == null)?' about_clinic':'';?>"><a href="<?php echo site_url().'/'.lang('bf_language_direction').'?id=about_clinic';?>" <?=($this->uri->segment(2) == null)?'class="scroll_lk"':'';?>><span><?= lang('bf_about_nav_title');?></span></a></li>
                         <li<?=($this->uri->segment(2) == 'departments')?' class="active"':'';?> id="sub_item_menu">
                             <div class="sub_menu">
                                 <a class="sub_mneu_ttle"><span><?= lang('bf_departments_nav_title');?></span></a>
@@ -111,7 +111,7 @@ $pageName = 'home';
                                 </ul>
                             </div>
                         </li>
-                        <li<?=($this->uri->segment(2) == 'contact_us')?' class="active"':'';?>><a href="<?php echo site_url().'/'.lang('bf_language_direction').'/contact_us'; ?>" class="scroll_lk"><span><?= lang('bf_contact_nav_title');?></span></a></li>
+                        <li class="scroll_to_sec<?=($this->uri->segment(2) == null)?' cont_clinic':'';?>"><a href="<?php echo site_url().'/'.lang('bf_language_direction').'?id=cont_clinic'; ?>" <?=($this->uri->segment(2) == null)?'class="scroll_lk"':'';?>><span><?= lang('bf_contact_nav_title');?></span></a></li>
                     </ul>
                 </div>
                 <div class="clearfix"></div>

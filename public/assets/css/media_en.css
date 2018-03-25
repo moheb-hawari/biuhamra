@@ -82,6 +82,7 @@
     }
     .header_slider .sin_slide_text {
         width: 300px;
+        margin-top: 120px;
     }
     .header_slider .slide_ttle {
         font-size: 35px;
@@ -117,6 +118,8 @@
     }
     .clinic_discip .discip_desc {
         font-size: 14px;
+        -webkit-line-clamp: 4;
+        max-height: 83px;
     }
     /*Main Header End*/
     /* ================= Scroll Navbar Start ================= */
@@ -325,6 +328,7 @@
     }
     .subpage_header .header_content .header_desc {
         font-size: 18px;
+        max-height: 205px;
     }
     .sin_dep_ttle {
         font-size: 29px;
@@ -332,11 +336,20 @@
     .sin_dep_cont:not(:nth-last-of-type(1)) {
         margin-bottom: 30px;
     }
+    .dep_sin_doc .dep_ttle {
+        height: 39px;
+        font-size: 13px;
+    }
+    .dep_sin_doc .doc_img {
+        height: 210px;
+    }
+    .doc_detls .doc_detls_name {
+        font-size: 13px;
+    }
     /*departments & services Pages End*/
     /* ================= Doctors Page Start ================= */
     .doctors_fdet .dep_sin_doc .doc_img {
-        width: 280px;
-        height: 280px;
+        height: 292px;
     }
     .doctors_fdet .dep_sin_doc .doc_detls {
         height: auto;
@@ -353,10 +366,10 @@
         margin-bottom: 50px;
     }
     .doc_fdet_bio {
-        font-size: 20px;
+        font-size: 18px;
     }
     .doc_fdet_bio .doc_fdet_name {
-        font-size: 30px;
+        font-size: 25px;
     }
     /*Doctor Details page End*/
     /* ================= Administration Page Start ================= */
@@ -576,6 +589,8 @@
     }
     .clinic_discip .discip_desc {
         font-size: 12px;
+        -webkit-line-clamp: 4;
+        max-height: 70px;
     }
     /*Main Header End*/
     /* ================= Scroll Navbar Start ================= */
@@ -830,6 +845,7 @@
     }
     .subpage_header .header_content .header_desc {
         font-size: 15px;
+        max-height: 172px;
     }
     .sin_dep_ttle {
         font-size: 27px;
@@ -837,6 +853,23 @@
     }
     .sin_dep_cont:not(:nth-last-of-type(1)) {
         margin-bottom: 30px;
+    }
+    .dep_sin_doc .dep_ttle {
+        height: 36px;
+        font-size: 12px;
+    }
+    .dep_sin_doc .doc_img {
+        height: 220px;
+    }
+    .doc_detls .doc_detls_name {
+        font-size: 12px;
+    }
+    .doc_detls .doc_detls_spec {
+        font-size: 11px;
+        height: 33px;
+    }
+    .doctors_fdet .dep_sin_doc .doc_img {
+        height: 343px;
     }
     /*departments & services Pages End*/
     /* ================= Doctor Details page Start ================= */
@@ -850,10 +883,10 @@
         width: 283px;
     }
     .doc_fdet_bio {
-        font-size: 16px;
+        font-size: 17px;
     }
     .doc_fdet_bio .doc_fdet_name {
-        font-size: 25px;
+        font-size: 20px;
     }
     .doc_fdet_text {
         font-size: 14px;
@@ -872,6 +905,7 @@
     }
     .sin_admin_img {
         width: 90px;
+        height: 90px;
         margin-right: 15px;
     }
     .sin_admin_info {
@@ -1166,7 +1200,7 @@
     }
     .header_slider .sin_slide_text {
         float: none;
-        margin-top: 160px;
+        margin-top: 70px;
         width: auto;
         margin-left: 0;
     }
@@ -1177,6 +1211,7 @@
     .header_slider .slide_desc {
         font-size: 14px;
         text-align: center;
+        max-height: 168px;
     }
     .header_slider .swiper-button-prev, .header_slider .swiper-button-next {
         top: 135px;
@@ -1216,6 +1251,12 @@
     }
     .clinic_discip .discip_desc {
         font-size: 14px;
+        overflow: visible;
+        text-overflow: clip;
+        display: block;
+        -webkit-line-clamp: unset;
+        -webkit-box-orient: unset;
+        max-height: none;
     }
     /*Main Header End*/
     /* ================= About The Clinic Start ================= */
@@ -1283,7 +1324,6 @@
     }
     .tab_det_ttle {
         font-size: 18px;
-        margin-bottom: 5px;
         text-overflow: clip;
         display: block;
         -webkit-line-clamp: unset;
@@ -1505,12 +1545,15 @@
     }
     .subpage_header .header_content .header_ttle {
         font-size: 30px;
+        line-height: 1.2;
+        max-height: 113px;
     }
     #doctors_page .header_ttle {
         font-size: 22px;
     }
     .subpage_header .header_content .header_desc {
         font-size: 14px;
+        max-height: 164px;
     }
     .sin_dep_ttle {
         font-size: 25px;
@@ -1524,10 +1567,25 @@
     .sin_dep_cont:not(:nth-last-of-type(1)) {
         margin-bottom: 20px;
     }
+    .dep_sin_doc {
+        max-width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .dep_sin_doc .dep_ttle {
+        text-overflow: clip;
+        display: block;
+        -webkit-line-clamp: unset;
+        -webkit-box-orient: unset;
+        height: auto;
+        margin-top: 5px;
+    }
+    .dep_sin_doc .doc_img {
+        height: 290px;
+    }
     /* ================= Doctors Page Start ================= */
     .doctors_fdet .dep_sin_doc .doc_img {
-        width: 280px;
-        height: 280px;
+        height: 290px;
     }
     .doctors_fdet .dep_sin_doc .doc_detls {
         height: auto;
@@ -1549,11 +1607,11 @@
         max-width: 290px;
     }
     .doc_fdet_bio {
-        font-size: 17px;
+        font-size: 15px;
         text-align: center;
     }
     .doc_fdet_bio .doc_fdet_name {
-        font-size: 25px;
+        font-size: 18px;
     }
     .doc_fdet_text {
         font-size: 14px;
@@ -1577,6 +1635,7 @@
     }
     .sin_admin_img {
         width: 200px;
+        height: 200px;
         margin: 0 auto 10px auto;
     }
     .sin_admin_info {
