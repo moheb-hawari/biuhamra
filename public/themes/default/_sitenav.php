@@ -11,12 +11,13 @@ $pageName = 'home';
                 <div class="hd_sm_cont">
                     <div class="site_lang"><a href="#" onclick="change_lang()"><?php e(lang('bf_nav_language')); ?></a></div>
                     <ul class="hd_sm_list">
-                        <li><a href="<?php echo $social_media->facebook; ?>" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="<?php echo $social_media->twitter; ?>" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="<?php echo $social_media->google; ?>" target="_blank"><i class="fab fa-google-plus-g"></i></a></li>
-                        <li><a href="<?php echo $social_media->linkedin; ?>" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                        <li><a href="<?php echo $social_media->pinterest; ?>" target="_blank"><i class="fab fa-snapchat-ghost"></i></a></li>
-                        <li><a href="<?php echo $social_media->instagram; ?>" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <?php echo ($social_media->facebook != '')?'<li><a href="'.$social_media->facebook.'" target="_blank"><i class="fab fa-facebook-f"></i></a></li>':''; ?>
+                            <?php echo ($social_media->twitter != '')?'<li><a href="'.$social_media->twitter.'" target="_blank"><i class="fab fa-twitter"></i></a></li>':''; ?>
+                            <?php echo ($social_media->google != '')?'<li><a href="'.$social_media->google.'" target="_blank"><i class="fab fa-google-plus-g"></i></a></li>':''; ?>
+                            <?php echo ($social_media->linkedin != '')?'<li><a href="'.$social_media->linkedin.'" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>':''; ?>
+                            <?php echo ($social_media->pinterest != '')?'<li><a href="'.$social_media->pinterest.'" target="_blank"><i class="fab fa-snapchat-ghost"></i></a></li>':''; ?>
+                            <?php echo ($social_media->instagram != '')?'<li><a href="'.$social_media->instagram.'" target="_blank"><i class="fab fa-instagram"></i></a></li>':''; ?>
+
                     </ul>
                 </div>
             </div>
