@@ -38,7 +38,7 @@
             </div>
         </div>
     </div>
-    <div class="footer_cpyright"><?=site_text('All rights reserved', 'جميع الحقوق محفوظة');?> <a href="index.php">bouhamraclinickw.com</a> &copy; <?=date("Y");?></div>
+    <div class="footer_cpyright"><?=site_text('All rights reserved', 'جميع الحقوق محفوظة');?> <a href="<?php echo site_url().'/'.lang('bf_language_direction'); ?>">bouhamraclinickw.com</a> &copy; <?=date("Y");?></div>
     </footer>
 
 
