@@ -1,6 +1,6 @@
 <?php
 
-Assets::add_js('js/jquery.js');
+Assets::add_js('js/jquery-3.3.1.min.js');
 Assets::add_js('bootstrap.min.js');
 
 $inline  = '$(".dropdown-toggle").dropdown();';

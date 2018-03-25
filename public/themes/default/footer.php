@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-4 col-md-2">
                     <div class="sin_ftr_sec">
-                        <div class="ftr_ttle"><?= lang('bf_hot_line');?></div>
+                        <div class="ftr_ttle"><?= lang('bf_address');?></div>
                         <div class="ftr_desc"><?php echo $information->{$lang.'_ddress'};?></div>
                     </div>
                 </div>

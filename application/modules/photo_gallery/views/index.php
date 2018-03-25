@@ -1,3 +1,14 @@
+<div class="mn_head_cont">
+    <div id="facilities_page" class="subpage_header" style="background-image: url('<?=assets_path();?>images/facilities/facil_hd_bg.jpg')">
+       <div class="container">
+           <div class="hd_main_cont">
+               <div class="header_content">
+                   <div class="facil_hd_text"><?=site_text('“The art of medicine consists of amusing the patient while nature cures the disease.”', '“فن الطب هي التخفيف عن المريض في حين يشفى المريض طبيعيا من المرض.”');?></div>
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
 <section class="main_sction facilities_sec">
     <div class="container">
         <div class="facil_main_cont">
