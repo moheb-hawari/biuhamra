@@ -220,22 +220,7 @@ if(!empty($patients_say)){
 <div class="map_cont">
     <div id="loc_map"></div>
 </div>
-        
-                <?php } ?>
-<div class="boh_work_time text-center">
-    <div class="container">
-        <div class="wday_ico"><img class="img-responsive" src="<?php echo assets_path() . 'images/home_page/wday_ico.png';?>"></div>
-        <div class="sin_wday">
-            <span><?=site_text('Saturday to Thursday :', 'السبت الى الخميس: ');?></span>
-            <span>08:30 - 12:30, 16:30 - 20:30</span>
-        </div>
-        <div class="sin_wday">
-            <span><?=site_text('Friday :', 'الجمعة :');?></span>
-            <span><?=site_text('Closed', 'عطلة');?></span>
-        </div>
-    </div>
-</div>
-<script>
+        <script>
     function bouhamraMap() {
         var mapProp= {
             center:new google.maps.LatLng(<?php echo $locations[0]->latitude;?>, <?php echo $locations[0]->longitude;?>),
@@ -256,5 +241,20 @@ if(!empty($patients_say)){
         });
     }
 </script>
+                <?php } ?>
+<div class="boh_work_time text-center">
+    <div class="container">
+        <div class="wday_ico"><img class="img-responsive" src="<?php echo assets_path() . 'images/home_page/wday_ico.png';?>"></div>
+        <div class="sin_wday">
+            <span><?=site_text('Saturday to Thursday :', 'السبت الى الخميس: ');?></span>
+            <span>08:30 - 12:30, 16:30 - 20:30</span>
+        </div>
+        <div class="sin_wday">
+            <span><?=site_text('Friday :', 'الجمعة :');?></span>
+            <span><?=site_text('Closed', 'عطلة');?></span>
+        </div>
+    </div>
+</div>
+
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBj2BpkNnoDi2jn8kOqX-uEsdPqbShXhqM&callback=bouhamraMap"></script>
 <!-- Location Section End -->

@@ -1,8 +1,8 @@
 <?php
 
-$num_columns	= 14;
+$num_columns	= 4;
 $can_delete	= $this->auth->has_permission('Departments.Content.Delete');
-$can_edit		= $this->auth->has_permission('Departments.Content.Edit');
+$can_edit	= $this->auth->has_permission('Departments.Content.Edit');
 $has_records	= isset($records) && is_array($records) && count($records);
 
 if ($can_delete) {
@@ -22,7 +22,7 @@ if ($can_delete) {
 			<thead>
 				<tr>
 					<?php if ($can_delete && $has_records) : ?>
-					<th class='column-check'><input class='check-all' type='checkbox' /></th>
+					<th class='column-check'><input class='check-all' type='checkbox'/></th>
 					<?php endif;?>
 					
 					<th><?php echo lang('departments_field_en_title'); ?></th>

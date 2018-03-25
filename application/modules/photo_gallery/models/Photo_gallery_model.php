@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') || exit('No direct script access allowed');
 
-class Photo_gallery_model extends BF_Model
+class Photo_gallery_model extends MY_Model
 {
     protected $table_name	= 'photo_gallery';
 	protected $key			= 'id';

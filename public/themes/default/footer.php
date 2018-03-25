@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-4 col-md-2">
                     <div class="sin_ftr_sec">
-                        <div class="ftr_ttle"><?= lang('bf_hot_line');?></div>
+                        <div class="ftr_ttle"><?= lang('bf_address');?></div>
                         <div class="ftr_desc"><?php echo $information->{$lang.'_ddress'};?></div>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
             </div>
         </div>
     </div>
-    <div class="footer_cpyright"><?=site_text('All rights reserved', 'جميع الحقوق محفوظة');?> <a href="index.php">bouhamraclinickw.com</a> &copy; <?=date("Y");?></div>
+    <div class="footer_cpyright"><?=site_text('All rights reserved', 'جميع الحقوق محفوظة');?> <a href="<?php echo site_url().'/'.lang('bf_language_direction'); ?>">bouhamraclinickw.com</a> &copy; <?=date("Y");?></div>
     </footer>
 
 
