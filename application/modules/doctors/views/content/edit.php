@@ -136,6 +136,33 @@ $id = isset($doctors->id) ? $doctors->id : '';
                     <span class='help-inline'><?php echo form_error('personal_photo'); ?></span>
                 </div>
             </div>
+                
+                 <div class="inputer floating-label control-group<?php echo form_error('facebook') ? ' error' : ''; ?>">
+                <?php echo form_label(lang('doctors_field_facebook') . lang('bf_form_label_required'), 'facebook', array('class' => 'control-label')); ?>
+                <div class='input-wrapper controls'>
+                    <input class='form-control' id='facebook' type='text' required='required' name='facebook' maxlength='255' value="<?php echo set_value('facebook', isset($doctors->facebook) ? $doctors->facebook : ''); ?>" />
+                        <label for='ar_academic'><?php echo lang('doctors_field_facebook'); ?></label>
+                    <span class='help-inline'><?php echo form_error('facebook'); ?></span>
+                </div>
+            </div>
+            <div class="inputer floating-label control-group<?php echo form_error('twitter') ? ' error' : ''; ?>">
+                <?php echo form_label(lang('doctors_field_twitter') . lang('bf_form_label_required'), 'twitter', array('class' => 'control-label')); ?>
+                <div class='input-wrapper controls'>
+                    <input class='form-control' id='twitter' type='text' required='required' name='twitter' maxlength='255' value="<?php echo set_value('twitter', isset($doctors->twitter) ? $doctors->twitter : ''); ?>" />
+                        <label for='ar_academic'><?php echo lang('doctors_field_twitter'); ?></label>
+                    <span class='help-inline'><?php echo form_error('twitter'); ?></span>
+                </div>
+            </div>
+            <div class="inputer floating-label control-group<?php echo form_error('google') ? ' error' : ''; ?>">
+                <?php echo form_label(lang('doctors_field_google') . lang('bf_form_label_required'), 'google', array('class' => 'control-label')); ?>
+                <div class='input-wrapper controls'>
+                    <input class='form-control' id='google' type='text' required='required' name='google' maxlength='255' value="<?php echo set_value('google', isset($doctors->google) ? $doctors->google : ''); ?>" />
+                        <label for='ar_academic'><?php echo lang('doctors_field_google'); ?></label>
+                    <span class='help-inline'><?php echo form_error('google'); ?></span>
+                </div>
+            </div>
+                
+                
                 <?php // Change the values in this array to populate your dropdown as required
                     $options = array(
                     0 => 'Participant',

@@ -68,16 +68,18 @@ class Home extends MX_Controller {
         $this->load->model('faq/faq_model');
         $this->load->model('locations/locations_model');
         $this->load->model('information/information_model');
+        $this->load->model('about_us/about_us_model');
         
         
         Assets::add_css(assets_path() . 'css/bootstrap.min.css');
         Assets::add_css(assets_path() . 'css/fontawesome-all.min.css');
         Assets::add_css(assets_path() . 'css/swiper.css');
         Assets::add_css(assets_path() . 'css/main_en.css');
-        Assets::add_css(assets_path() . 'css/main_'.(isset($lang)&&$lang=='ar'?'ar':'').'.css');
+        if(isset($lang)&&$lang=='ar'){Assets::add_css(assets_path() . 'css/main_'.$lang.'.css');}
         Assets::add_css(assets_path() . 'css/media_en.css');
-        Assets::add_css(assets_path() . 'css/media_'.(isset($lang)&&$lang=='ar'?'ar':'').'.css');
-        
+        if(isset($lang)&&$lang=='ar'){Assets::add_css(assets_path() . 'css/media_'.$lang.'.css');}
+
+        //Assets::add_js(assets_path() . 'js/jquery-3.3.1.min.js');
         Assets::add_js(assets_path() . 'js/swiper.min.js');
         Assets::add_js(assets_path() . 'js/fancybox.min.js');
         Assets::add_js(assets_path() . 'js/plugin.js');
@@ -105,10 +107,11 @@ class Home extends MX_Controller {
         Template::set('about', $this->about_model->limit(3)->find_all());
         Template::set('meet_our_team', $this->meet_our_team_model->limit(1)->find_all());
         Template::set('doctors', $this->doctors_model->order_by('weight')->limit(6)->find_all());
-        Template::set('patients_say', $this->patients_say_model->order_by('weight')->find_all());
+        Template::set('patients_say', $this->patients_say_model->where(['status'=>0])->order_by('weight')->find_all());
         Template::set('faq', $this->faq_model->order_by('weight')->limit(3)->find_all());
         Template::set('locations', $this->locations_model->find_all());
         Template::set('information', $this->information_model->find(1));
+        Template::set('about_us', $this->about_us_model->find(1));
         
         Template::render();
     }

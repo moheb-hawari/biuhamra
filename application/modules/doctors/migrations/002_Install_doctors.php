@@ -64,6 +64,21 @@ class Migration_Install_doctors extends Migration
             'constraint' => 255,
             'null'       => true,
         ),
+            'facebook' => array(
+            'type'       => 'VARCHAR',
+            'constraint' => 255,
+            'null'       => true,
+        ),
+            'twitter' => array(
+            'type'       => 'VARCHAR',
+            'constraint' => 255,
+            'null'       => true,
+        ),
+            'google' => array(
+            'type'       => 'VARCHAR',
+            'constraint' => 255,
+            'null'       => true,
+        ),
         'weight' => array(
             'type'       => 'INT',
             'constraint' => 11,

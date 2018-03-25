@@ -1,50 +1,52 @@
 <!-- ========================================= Homepage ========================================= -->
         <!--Header Slider-->
-        <div class="swiper-container header_slider">
-            <div class="swiper-wrapper">
+<div class="mn_head_cont">
+    <div class="swiper-container header_slider">
+        <div class="swiper-wrapper">
             <?php
             if(!empty($slider)){
                 foreach($slider as $key => $val){ ?>
-                        <div class="swiper-slide">
-                            <div class="sin_slide" style="background-image: url(<?php echo assets_path() . 'images/image/'.$val->id.'/'.$val->image; ?>">
-                                <div class="container">
-                                    <div class="sin_slide_cont">
-                                        <div class="sin_slide_text">
-                                            <div class="slide_ttle"><?php echo $val->{$lang.'_title'};?></div>
-                                            <div class="slide_desc"><?php echo $val->{$lang.'_description'};?></div>
-                                        </div>
+                    <div class="swiper-slide">
+                        <div class="sin_slide" style="background-image: url(<?php echo assets_path() . 'images/image/'.$val->id.'/'.$val->image; ?>">
+                            <div class="container">
+                                <div class="sin_slide_cont">
+                                    <div class="sin_slide_text">
+                                        <div class="slide_ttle"><?php echo $val->{$lang.'_title'};?></div>
+                                        <div class="slide_desc"><?php echo $val->{$lang.'_description'};?></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-            <?php } } ?>
+                    </div>
+                <?php } } ?>
 
-            </div>
-
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-            <!--Clinic Bio-->
-            <div class="clinic_discip">
-                <?php
-                if(!empty($about)){
-                    foreach($about as $key => $val){ ?>
-                        <div class="sin_discip">
-                            <div class="discip_ico">
-                                <img class="img-responsive center-block" src="<?php echo assets_path() . 'images/logo/'.$val->id.'/'.$val->logo;?>">
-                            </div>
-                            <div class="discip_ttle"><?php echo $val->{$lang.'_title'};?></div>
-                            <div class="discip_desc"><?php echo $val->{$lang.'_description'};?></div>
-                        </div>
-                    <?php } } ?>
-
-            </div>
         </div>
-        <!-- ========================================= About The Clinic Start ========================================= -->
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <!--Clinic Bio-->
+        <div class="clinic_discip">
+            <?php
+            if(!empty($about)){
+                foreach($about as $key => $val){ ?>
+                    <div class="sin_discip">
+                        <div class="discip_ico">
+                            <img class="img-responsive center-block" src="<?php echo assets_path() . 'images/logo/'.$val->id.'/'.$val->logo;?>">
+                        </div>
+                        <div class="discip_ttle"><?php echo $val->{$lang.'_title'};?></div>
+                        <div class="discip_desc"><?php echo $val->{$lang.'_description'};?></div>
+                    </div>
+                <?php } } ?>
+
+        </div>
+    </div>
+</div>
+<!-- ========================================= About The Clinic Start ========================================= -->
 <section class="main_sction about_clinic_sec" id="about_clinic">
     <div class="container">
         <div class="abt_clin_cont">
-            <h1 class="sec_title text-center"><?=site_text('about the clinic', 'عن العيادة');?></h1>
-            <div class="abt_clin_desc"><?=site_text('As one of the leading clinic in Kuwait, Bouhamra Clinic continues to expand in response to the growing health care needs of the people in Kuwait. Our value statement is Not just Healthcare.', 'باعتبارها إحدى العيادات الرائدة في الكويت، تواصل عيادة بوحمرة التوسع في تلبية احتياجات الرعاية الصحية المتزايدة للشعب الكويتي. بيان القيمة لدينا ليس فقط الرعاية الصحية.');?></div>
+            <h1 class="sec_title text-center"><?php echo $about_us->{$lang.'_title'};?></h1>
+            <div class="abt_clin_desc"><?php echo $about_us->{$lang.'_description'};?></div>
         </div>
     </div>
 </section>
@@ -75,7 +77,7 @@
                                 <div class="tab_detail">
                                     <div class="tab_det_ttle" title="<?php echo $val->{$lang.'_title'};?>"><?php echo $val->{$lang.'_title'};?></div>
                                     <div class="tab_det_desc"><?php echo $val->{$lang.'_description'};?></div>
-                                    <a href="#" class="main_btn tab_read_more"><?= lang('bf_read_more');?></a>
+                                    <a href="<?php echo site_url().'/'.lang('bf_language_direction').'/departments/index/'.$val->id; ?>" class="main_btn tab_read_more"><?= lang('bf_read_more');?></a>
                                 </div>
                                 <div class="tab_img" style="background-image: url('<?php echo assets_path() . 'images/dep_image/'.$val->id.'/'.$val->dep_image;?>');"></div>
                             </div>
@@ -93,7 +95,7 @@
             <div class="our_team_intro">
                 <div class="our_team_ttle"><?= lang('bf_meet');?> <b><?= lang('bf_our_team');?></b></div>
                 <div class="our_team_desc"><?php echo $meet_our_team[0]->{$lang.'_home_description'};?></div>
-                <div class="rd_more_btn_cont"><a href="#" class="main_btn"><?= lang('bf_read_more');?></a></div>
+                <div class="rd_more_btn_cont"><a href="<?php echo site_url().'/'.lang('bf_language_direction').'/doctors'; ?>" class="main_btn"><?= lang('bf_read_more');?></a></div>
 
             </div>
             <div class="our_team_imgs">
@@ -107,9 +109,9 @@
                                 <div class="doc_spec"><?php echo $val->{$lang.'_academic'};?></div>
                                 <div class="doc_soc_md">
                                     <ul class="doc_sm_list">
-                                        <li><a href="#" target="_blank" class="facebook_lk"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#" target="_blank" class="twitter_lk"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#" target="_blank" class="google-plus_lk"><i class="fab fa-google-plus-g"></i></a></li>
+                                        <li><a href="<?php echo $val->facebook;?>" target="_blank" class="facebook_lk"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="<?php echo $val->twitter;?>" target="_blank" class="twitter_lk"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="<?php echo $val->google;?>" target="_blank" class="google-plus_lk"><i class="fab fa-google-plus-g"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -122,7 +124,12 @@
 </section>
 <!-- Our Team Section End -->
 
-        <!-- ========================================= Testimonial Slider Start ========================================= -->
+
+<?php 
+if(!empty($patients_say)){ 
+    
+    ?>
+<!-- ========================================= Testimonial Slider Start ========================================= -->
 <section class="main_sction testim_sec" style="background-image: url(<?php echo assets_path() . 'images/home_page/testim_slider/01.jpg';?>);">
     <div class="sec_overlay">
         <div class="container">
@@ -147,6 +154,8 @@
         </div>
     </div>
 </section>
+
+<?php } ?>
 <!-- Testimonial Slider End -->
         <!-- ========================================= Message - FAQ Section Start ========================================= -->
 <section id="cont_clinic" class="main_sction mess_faq_sec">
@@ -206,9 +215,13 @@
 </section>
 <!-- Message - FAQ Section End -->
         <!-- ========================================= Location Section Start ========================================= -->
+         <?php
+                if(!empty($locations)){ ?>
 <div class="map_cont">
     <div id="loc_map"></div>
 </div>
+        
+                <?php } ?>
 <div class="boh_work_time text-center">
     <div class="container">
         <div class="wday_ico"><img class="img-responsive" src="<?php echo assets_path() . 'images/home_page/wday_ico.png';?>"></div>

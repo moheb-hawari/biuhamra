@@ -66,3 +66,7 @@ $lang['doctors_field_personal_photo'] = 'Personal Photo';
 $lang['doctors_field_weight'] = 'Weight';
 $lang['doctors_field_status'] = 'Status';
 $lang['doctors_field_type'] = 'Type';
+
+$lang['doctors_field_facebook'] = 'Facebook';
+$lang['doctors_field_twitter'] = 'Twitter';
+$lang['doctors_field_google'] = 'Google';

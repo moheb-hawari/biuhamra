@@ -8,10 +8,10 @@ $(function () {
     navbarScroll();
     // ===================== Scroll To About US ===================== //
     $('.about_clinic').click(function (e) {
-        scrollToSection(e, '.about_clinic_sec');
+        scrollToSection('.about_clinic_sec');
     });
     $('.cont_clinic').click(function (e) {
-        scrollToSection(e, '.mess_faq_sec');
+        scrollToSection('.mess_faq_sec');
     });
     var param_scroll = getParameterByName('id');
     if(param_scroll){
@@ -31,7 +31,7 @@ $(function () {
     // ===================== Sliders ===================== //
     var header_slider = new Swiper('.header_slider', {
         autoplay: {
-            delay: 5000,
+            delay: 50000,
             disableOnInteraction: false
         },
         speed: 400,
@@ -69,7 +69,7 @@ $(function () {
     // ===================== Scroll To Footer ===================== //
     $('.scroll_lk').click(function (e) {
         e.preventDefault();
-        $('html, body').stop(true).animate({scrollTop: $('.main_footer').offset().top}, 1000);
+        //$('html, body').stop(true).animate({scrollTop: $('.main_footer').offset().top}, 1000);
     });
     // ===================== Facilities Tabs ===================== //
     $('.sld_tab_btn').click(function () {
@@ -115,7 +115,7 @@ function siteTabs(btn, attr, targetCont) {
     $(targetCont+'['+attr+'='+ btn_attr +']').stop(true).fadeIn(300).siblings().hide();
 }
 function navbarScroll() {
-    var main_hd = $('.main_header'),
+    var main_hd = $('.mn_head_cont'),
         sm_wbnv_cont = $('.sm_wbnv_cont'),
         header_hght = main_hd.offset().top + main_hd.outerHeight();
     if($(window).scrollTop() > header_hght && !sm_wbnv_cont.hasClass('scrollNavbar')){
@@ -124,17 +124,16 @@ function navbarScroll() {
         sm_wbnv_cont.removeClass('scrollNavbar');
     }
 }
-function scrollToSection(e, tgt_sec) {
-    e.preventDefault();
-    if($(this).parents().is('.mob_nav')) {
+function scrollToSection(tgt_sec) {
+    if($(window).width() <= 767 ) {
         $("html, body").stop(true).animate({
-            scrollTop: $().offset(tgt_sec).top - $('.mob_nav').outerHeight() - $('.head_smed').outerHeight()
+            scrollTop: $(tgt_sec).offset().top - $('.mob_nav').outerHeight() - $('.head_smed').outerHeight()
         }, 1000);
         $(".mob_nv_btn").removeClass('active');
         $(".mob_lks_list").stop(true).slideUp(300);
     } else {
         $("html, body").stop(true).animate({
-            scrollTop: $(tgt_sec).offset().top - $('.web_nav').outerHeight() - $('.head_smed').outerHeight()
+            scrollTop: $(tgt_sec).offset().top - $('.sm_wbnv_cont').outerHeight()
         }, 1000);
     }
 }

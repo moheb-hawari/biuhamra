@@ -206,12 +206,19 @@ body {
 }
 .subpage_header .header_content .header_ttle {
     font-size: 45px;
+    max-height: 137px;
 }
 .subpage_header .header_content .header_desc {
-    font-size: 19px;
+    max-height: 221px;
 }
 .dep_doc_cont .row > div {
     float: right;
+}
+.dep_sin_doc .dep_ttle {
+    height: 41px;
+}
+.doc_detls .doc_detls_spec {
+    font-weight: 400;
 }
 /*departments & services Pages End*/
 /* =================================== Doctor Details page Start =================================== */

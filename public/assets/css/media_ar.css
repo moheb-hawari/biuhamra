@@ -45,6 +45,22 @@
         padding-left: 100px;
     }
     /*Careers Page End*/
+    /* ================= departments & services Pages Start ================= */
+    .subpage_header .header_content .header_ttle {
+        max-height: 112px;
+    }
+    .subpage_header .header_content .header_desc {
+        line-height: 1.5;
+        max-height: 193px;
+    }
+    .dep_sin_doc .dep_ttle {
+        height: 37px;
+    }
+    .doc_detls .doc_detls_spec {
+        font-size: 11px;
+        height: 32px;
+    }
+    /*departments & services Pages End*/
 }
 @media (min-width: 768px) and (max-width: 991px) {
     /* ================= Departments Section Start ================= */
@@ -99,6 +115,22 @@
         padding-left: 100px;
     }
     /*Careers Page End*/
+    /* ================= departments & services Pages Start ================= */
+    .subpage_header .header_content .header_ttle {
+        font-size: 32px;
+        max-height: 133px;
+    }
+    .subpage_header .header_content .header_desc {
+        max-height: 170px;
+    }
+    .dep_sin_doc .dep_ttle {
+        height: 35px;
+    }
+    .doc_detls .doc_detls_spec {
+        font-size: 10px;
+        height: 29px;
+    }
+    /*departments & services Pages End*/
 }
 @media (max-width: 767px) {
     /* ================= Main Header Start ================= */
@@ -148,6 +180,14 @@
         left: 10px;
     }
     /*Message - FAQ Section End*/
+    /* ================= departments & services Pages Start ================= */
+    .subpage_header .header_content .header_ttle {
+        max-height: 118px;
+        line-height: 1.3;
+    }
+    .subpage_header .header_content .header_desc {
+        max-height: 162px;
+    }
     /* ================= Administration Page Start ================= */
     .sin_admin_img, .sin_admin_info {
         float: none;
