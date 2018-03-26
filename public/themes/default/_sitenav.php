@@ -74,7 +74,7 @@ $pageName = 'home';
         <div class="container">
             <div class="mob_nv_cont">
                 <div class="nav_logo">
-                    <a href="index.php">
+                    <a href="<?php echo site_url().'/'.lang('bf_language_direction'); ?>">
                         <img class="img-responsive center-block" src="<?php echo assets_path() . 'images/home_page/nav_log.png';?>">
                     </a>
                 </div>
