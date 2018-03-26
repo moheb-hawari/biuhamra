@@ -4,6 +4,9 @@
         right: auto;
         left: -38px;
     }
+    .tab_det_desc {
+        max-height: 261px;
+    }
     .tab_read_more {
         right: auto;
         left: 20px;
@@ -67,6 +70,9 @@
     .sin_tab_btn.active:before {
         right: auto;
         left: -31px;
+    }
+    .tab_det_desc {
+        max-height: 101px;
     }
     .tab_read_more {
         right: auto;
@@ -151,6 +157,11 @@
         margin-right: 0;
     }
     /*Main Header End*/
+    /* ================= Departments Section Start ================= */
+    .tab_det_desc {
+        max-height: 141px;
+    }
+    /*Departments Section End*/
     /* ================= Testimonial Slider Start ================= */
     .sin_patient_testim {
         float: none;

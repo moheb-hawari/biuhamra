@@ -205,7 +205,8 @@
         max-height: 50px;
     }
     .tab_det_desc {
-        max-height: 315px;
+        -webkit-line-clamp: 13;
+        max-height: 263px;
     }
     .tab_read_more {
         right: 20px;
@@ -687,9 +688,8 @@
         max-height: 48px;
     }
     .tab_det_desc {
-        font-size: 13px;
-        line-height: 1.4;
-        max-height: 120px;
+        -webkit-line-clamp: 5;
+        max-height: 103px;
     }
     .tab_read_more {
         right: 15px;
@@ -1333,12 +1333,8 @@
         text-align: center;
     }
     .tab_det_desc {
-        overflow: visible;
-        text-overflow: clip;
-        display: block;
-        -webkit-line-clamp: unset;
-        -webkit-box-orient: unset;
-        max-height: none;
+        -webkit-line-clamp: 7;
+        max-height: 143px;
     }
     .tab_read_more {
         position: static;
