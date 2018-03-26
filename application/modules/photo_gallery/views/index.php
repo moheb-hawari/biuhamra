@@ -1,5 +1,5 @@
 <div class="mn_head_cont">
-    <div id="facilities_page" class="subpage_header" style="background-image: url('<?=assets_path();?>images/facilities/facil_hd_bg.jpg')">
+    <div id="facilities_page" class="subpage_header facil_bg_header" style="background-image: url('<?=assets_path();?>images/facilities/facil_hd_bg_<?=lang('bf_language_direction');?>.jpg')">
        <div class="container">
            <div class="hd_main_cont">
                <div class="header_content">

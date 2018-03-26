@@ -1212,6 +1212,7 @@
         font-size: 14px;
         text-align: center;
         max-height: 168px;
+        padding: 5px;
     }
     .header_slider .swiper-button-prev, .header_slider .swiper-button-next {
         top: 135px;
