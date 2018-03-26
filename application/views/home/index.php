@@ -76,7 +76,7 @@
                             <div class="sin_tab_cont" tab="0<?php echo $x; ?>">
                                 <div class="tab_detail">
                                     <div class="tab_det_ttle" title="<?php echo $val->{$lang.'_title'};?>"><?php echo $val->{$lang.'_title'};?></div>
-                                    <div class="tab_det_desc"><?php echo $val->{$lang.'_description'};?></div>
+                                    <div class="tab_det_desc"><?php echo strip_tags($val->{$lang.'_description'});?></div>
                                     <a href="<?php echo site_url().'/'.lang('bf_language_direction').'/departments/index/'.$val->id; ?>" class="main_btn tab_read_more"><?= lang('bf_read_more');?></a>
                                 </div>
                                 <div class="tab_img" style="background-image: url('<?php echo assets_path() . 'images/dep_image/'.$val->id.'/'.$val->dep_image;?>');"></div>
