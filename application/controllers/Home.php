@@ -104,8 +104,8 @@ class Home extends MX_Controller {
         Template::set('departments', $this->departments_model->order_by('weight')->where(['status'=>0])->find_all());
         Template::set('departments_tabs', $this->departments_model->order_by('weight')->where(['status'=>0])->limit(6)->find_all());
         Template::set('slider', $this->slider_model->order_by('weight')->where(['status'=>0])->find_all());
-        Template::set('about', $this->about_model->limit(3)->where(['status'=>0])->find_all());
-        Template::set('meet_our_team', $this->meet_our_team_model->limit(1)->where(['status'=>0])->find_all());
+        Template::set('about', $this->about_model->limit(3)->find_all());
+        Template::set('meet_our_team', $this->meet_our_team_model->limit(1)->find_all());
         Template::set('doctors', $this->doctors_model->order_by('weight')->where(['status'=>0])->limit(6)->find_all());
         Template::set('patients_say', $this->patients_say_model->where(['status'=>0])->where(['status'=>0])->order_by('weight')->find_all());
         Template::set('faq', $this->faq_model->order_by('weight')->where(['status'=>0])->limit(3)->find_all());

@@ -633,7 +633,7 @@ h1 {
     display: inline-block;
     width: 24px;
     height: 19px;
-    background: url(../../../public/assets/images/home_page/testim_slider/ss1.png) no-repeat center center;
+    background: url(/assets/images/home_page/testim_slider/ss1.png) no-repeat center center;
     background-size: contain;
 }
 .patient_txt:before {
