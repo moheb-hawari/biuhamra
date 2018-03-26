@@ -38,7 +38,7 @@ class Utility extends Admin_Controller
         Assets::add_js(assets_path().'globals/plugins/datatables/themes/bootstrap/dataTables.bootstrap.js');
         Assets::add_js(assets_path().'globals/scripts/tables-datatables.js');
         Assets::add_js(assets_path().'globals/plugins/jasny-bootstrap/dist/js/jasny-bootstrap.min.js');
-        Assets::add_js(assets_path().'globals/plugins/components-summernote/dist/summernote.min.js');
+        Assets::add_js(assets_path().'globals/plugins/components-summernote/dist/summernote.js');
         
         Assets::add_module_js('about_us', 'about_us.js');
     }

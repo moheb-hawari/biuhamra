@@ -631,17 +631,9 @@
 
       // default toolbar
       toolbar: [
-        ['style', ['style']],
         ['font', ['bold', 'italic', 'underline', 'clear']],
-        ['fontname', ['fontname']],
-        // ['fontsize', ['fontsize']], Still buggy
-        ['color', ['color']],
-        ['para', ['ul', 'ol', 'paragraph']],
-        ['height', ['height']],
-        ['table', ['table']],
-        ['insert', ['link', 'picture', 'video']],
-        ['view', ['fullscreen', 'codeview']],
-        ['help', ['help']]
+        ['para', ['paragraph']],
+        ['insert', ['link']],
       ],
 
       // callbacks

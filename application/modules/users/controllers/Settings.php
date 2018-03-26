@@ -51,7 +51,7 @@ class Settings extends Admin_Controller
         Assets::add_css(assets_path().'globals/plugins/select2/select2.css');
         Assets::add_css(assets_path().'globals/plugins/select2/select2-bootstrap.css');
         Assets::add_css( assets_path().'globals/plugins/components-summernote/dist/summernote.css');
-        Assets::add_js(assets_path().'globals/plugins/components-summernote/dist/summernote.min.js');
+        Assets::add_js(assets_path().'globals/plugins/components-summernote/dist/summernote.js');
         Assets::add_js(assets_path().'globals/plugins/datatables/media/js/jquery.dataTables.min.js');
         Assets::add_js(assets_path().'globals/plugins/datatables/themes/bootstrap/dataTables.bootstrap.js');
         Assets::add_js(assets_path().'globals/scripts/tables-datatables.js');
