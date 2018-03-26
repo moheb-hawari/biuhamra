@@ -34,7 +34,7 @@ class MY_Model extends BF_Model
 
     function where_delete()
     {
-        $where = array($this->table_name.'.deleted'=>0,$this->table_name.'.status'=>0);
+        $where = array($this->table_name.'.deleted'=>0);
 
         
         $this->db->where($where);

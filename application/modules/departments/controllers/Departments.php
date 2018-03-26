@@ -30,7 +30,7 @@ class Departments extends Front_Controller
      */
     public function index($id)
     {
-        Template::set('department', $this->departments_model->order_by('weight')->find($id));
+        Template::set('department', $this->departments_model->order_by('weight')->where(['status'=>0])->find($id));
 
         Template::render();
     }

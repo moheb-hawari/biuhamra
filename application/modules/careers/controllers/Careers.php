@@ -32,7 +32,7 @@ class Careers extends Front_Controller
     public function index()
     {
         
-        Template::set('careers', $this->careers_model->order_by('weight')->find_all());
+        Template::set('careers', $this->careers_model->order_by('weight')->where(['status'=>0])->find_all());
         Template::render();
     }
     

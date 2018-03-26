@@ -32,7 +32,7 @@ class Administration extends Front_Controller
      */
     public function index()
     {
-        Template::set('doctors', $this->doctors_model->order_by('weight')->where(['type'=>1])->find_all());
+        Template::set('doctors', $this->doctors_model->order_by('weight')->where(['type'=>1,'status'=>0])->find_all());
 
         Template::render();
     }
