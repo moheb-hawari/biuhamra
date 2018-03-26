@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') || exit('No direct script access allowed');
 
-class About_model extends MY_Model
+class About_model extends BF_Model
 {
     protected $table_name	= 'about';
 	protected $key			= 'id';

@@ -31,7 +31,7 @@ class Doctors extends Front_Controller
     public function index()
     {
 
-        Template::set('doctors', $this->doctors_model->order_by('weight')->find_all());
+        Template::set('doctors', $this->doctors_model->order_by('weight')->where(['status'=>0])->find_all());
 
 
 
@@ -40,7 +40,7 @@ class Doctors extends Front_Controller
     
     public function doctor($id)
     {
-        Template::set('doctor', $this->doctors_model->order_by('weight')->find($id));
+        Template::set('doctor', $this->doctors_model->order_by('weight')->where(['status'=>0])->find($id));
         Template::render();
     }
    

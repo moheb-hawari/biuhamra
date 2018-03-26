@@ -36,7 +36,7 @@ class Humanresources extends Admin_Controller
         Assets::add_js(assets_path().'globals/plugins/components-summernote/dist/summernote.min.js');
         Assets::add_js( assets_path().'globals/plugins/datatables/media/js/jquery.dataTables.min.js');
         Assets::add_js(assets_path().'globals/plugins/datatables/themes/bootstrap/dataTables.bootstrap.js');
-        Assets::add_js(assets_path().'globals/plugins/jasny-bootstrap/dist/js/jasny-bootstrap.min.js');
+        Assets::add_js(assets_path().'globals/plugins/jasny-bootstrap/dist/js/jasny-bootstrap.js');
         Assets::add_js(assets_path().'globals/scripts/tables-datatables.js');
         
         Assets::add_module_js('careers', 'careers.js');

@@ -33,7 +33,7 @@ class Photo_gallery extends Front_Controller
      */
     public function index()
     {
-        Template::set('photo_gallery', $this->photo_gallery_model->order_by('weight')->find_all());
+        Template::set('photo_gallery', $this->photo_gallery_model->order_by('weight')->where(['status'=>0])->find_all());
 
         Template::render();
     }

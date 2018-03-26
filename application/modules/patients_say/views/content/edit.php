@@ -48,8 +48,8 @@ $id = isset($patients_say->id) ? $patients_say->id : '';
             </div>
                 <div class="control-group<?php echo form_error('en_comment') ? ' error' : ''; ?>">
                 <?php echo form_label(lang('patients_say_field_en_comment') . lang('bf_form_label_required'), 'en_comment', array('class' => 'control-label')); ?>
-                    <div class="rtl-support">
-                        <textarea  class="summernote summernote-default" id="en_comment" name='en_comment'><?php echo set_value('en_comment', isset($patients_say->en_comment) ? $patients_say->en_comment : ''); ?></textarea>
+                    <div class="input-wrapper controls rtl-support">
+                        <textarea cols="80" rows="5"  class="" id="en_comment" name='en_comment'><?php echo set_value('en_comment', isset($patients_say->en_comment) ? $patients_say->en_comment : ''); ?></textarea>
                     </div> 
                     <span class='help-inline'><?php echo form_error('en_comment'); ?></span>
             </div>
@@ -80,8 +80,8 @@ $id = isset($patients_say->id) ? $patients_say->id : '';
 
             <div class="control-group<?php echo form_error('ar_comment') ? ' error' : ''; ?>">
                 <?php echo form_label(lang('patients_say_field_ar_comment') . lang('bf_form_label_required'), 'ar_comment', array('class' => 'control-label')); ?>
-                <div class="rtl-support">
-                        <textarea  class="summernote summernote-default" id="ar_comment" name='ar_comment'><?php echo set_value('ar_comment', isset($patients_say->ar_comment) ? $patients_say->ar_comment : ''); ?></textarea>
+                <div class="input-wrapper controls rtl-support">
+                        <textarea cols="80" rows="5" class="" id="ar_comment" name='ar_comment'><?php echo set_value('ar_comment', isset($patients_say->ar_comment) ? $patients_say->ar_comment : ''); ?></textarea>
                     </div> 
                 <span class='help-inline'><?php echo form_error('ar_comment'); ?></span>
             </div>
