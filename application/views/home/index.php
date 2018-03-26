@@ -93,7 +93,7 @@
     <div class="container">
         <div class="our_tm_cont">
             <div class="our_team_intro">
-                <div class="our_team_ttle"><?= lang('bf_meet');?> <b><?= lang('bf_our_team');?></b></div>
+                <div class="our_team_ttle"><?= lang('bf_meet');?> <b><?= lang('bf_our_teams');?></b></div>
                 <div class="our_team_desc"><?php echo $meet_our_team[0]->{$lang.'_home_description'};?></div>
                 <div class="rd_more_btn_cont"><a href="<?php echo site_url().'/'.lang('bf_language_direction').'/doctors'; ?>" class="main_btn"><?= lang('bf_read_more');?></a></div>
 

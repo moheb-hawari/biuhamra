@@ -345,11 +345,6 @@ $lang['bf_patients_say'] = 'اقوال المرضى';
 
 $lang['bf_send_message'] = 'راسلنا';
 $lang['bf_send_desc'] = 'يمكنك أن ترسل لنا رسالة مع أي استفسار يمكن أن يخطر لك.';
-$lang['bf_patients_say'] = 'الاسم الكامل';
-$lang['bf_patients_say'] = 'عنوان البريد الالكتروني';
-$lang['bf_patients_say'] = 'رقم الموبايل';
-$lang['bf_patients_say'] = 'الرسالة';
-$lang['bf_patients_say'] = 'ارسال';
 
 $lang['bf_contact_name_place'] = 'الاسم الكامل';
 $lang['bf_contact_email_place'] = 'عنوان البريد الالكتروني';

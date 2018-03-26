@@ -349,6 +349,7 @@ $lang['bf_read_more'] = 'Read More';
 
 $lang['bf_meet'] = 'Meet';
 $lang['bf_our_team'] = 'Our Team';
+$lang['bf_our_teams'] = 'Our Team';
 
 $lang['bf_patients_say'] = 'Happy Patients Say';
 

@@ -51,8 +51,8 @@ $pageName = 'home';
                                 </div>
                             </li>
                             <li<?=($this->uri->segment(2) == 'doctors')?' class="active"':'';?>><a href="<?php echo site_url().'/'.lang('bf_language_direction').'/doctors'; ?>"><span><?= lang('bf_doctors_nav_title');?></span></a></li>
-                            <li<?=($this->uri->segment(2) == 'administration' || $this->uri->segment(2) == 'careers')?' class="active"':'';?>><a href="<?php echo site_url().'/'.lang('bf_language_direction').'/photo_gallery'; ?>"><span><?= lang('bf_facilities_nav_title');?></span></a></li>
-                            <li<?=(isset($pageName) && $pageName == 'human_res')?' class="active"':'';?>>
+                            <li<?=($this->uri->segment(2) == 'photo_gallery' )?' class="active"':'';?>><a href="<?php echo site_url().'/'.lang('bf_language_direction').'/photo_gallery'; ?>"><span><?= lang('bf_facilities_nav_title');?></span></a></li>
+                            <li<?=($this->uri->segment(2) == 'administration' || $this->uri->segment(2) == 'careers' )?' class="active"':'';?>>
                                 <div class="sub_menu">
                                     <a class="sub_mneu_ttle"><span><?= lang('bf_human_nav_title');?></span></a>
                                     <ul class="web_sbmnu_lst">
