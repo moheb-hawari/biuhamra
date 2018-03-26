@@ -222,23 +222,32 @@ if(!empty($patients_say)){
 </div>
         <script>
     function bouhamraMap() {
+        
+        
+         var locations = [
+             <?php
+             if(!empty($locations)){ 
+                    foreach($locations as $key => $val){ $x = 1 ; ?>
+                ['<?php echo $val->{$lang.'_title'};?>', <?php echo $val->latitude;?>, <?php echo $val->longitude;?>, <?php echo $x;?>],   
+            <?php } $x++; } ?>
+         ];
+        
         var mapProp= {
             center:new google.maps.LatLng(<?php echo $locations[0]->latitude;?>, <?php echo $locations[0]->longitude;?>),
-            zoom:17
+            zoom:12
         };
+                            
+                             
         var map=new google.maps.Map(document.getElementById("loc_map"),mapProp);
-        var myLatLng = {
-            <?php
-                if(!empty($locations)){ 
-                    foreach($locations as $key => $val){ ?>
-                        lat: <?php echo $val->latitude;?>, lng: <?php echo $val->longitude;?>
-            <?php } } ?>
-        };
-        var marker = new google.maps.Marker({
-            position: myLatLng,
-            map: map,
-            title: 'Bouhamra Clinic'
-        });
+
+        for (i = 0; i < locations.length; i++) {  
+            marker = new google.maps.Marker({
+                position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                map: map,
+                title: locations[i][0]
+            });
+        }
+       
     }
 </script>
                 <?php } ?>
