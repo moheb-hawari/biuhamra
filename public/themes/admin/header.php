@@ -151,9 +151,11 @@ $title = lang($controller.'_module_name');
                             'templateSubMenu' => '<li><a href="javascript:;">{display}</a><ul class="child-menu">{view}</ul></li>',
                             'templateContextEnd' => '',
                             'child_class' => 'child-menu',
+                            'requiredContexts' => array(),
                 ));
+                
                 echo Contexts::context_nav('content');
-                Contexts::set_contexts(['facilities','humanresources','utility','reports','developer','settings']);
+                Contexts::set_contexts(['homepage','facilities','humanresources','utility']);
                 echo Contexts::render_menu('text', 'normal');
                 ?>
                 

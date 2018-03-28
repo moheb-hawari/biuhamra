@@ -329,6 +329,8 @@ $lang['bf_context_humanresources'] = 'Human Resources';
 
 $lang['bf_context_utility'] = 'Site Meta';
 
+$lang['bf_context_homepage'] = 'Home Page';
+
 $lang['bf_language_tab_english'] = 'English';
 $lang['bf_language_tab_arabic'] = 'Arabic';
 $lang['bf_nav_language'] = 'العربية';

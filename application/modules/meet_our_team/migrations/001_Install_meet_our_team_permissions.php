@@ -7,23 +7,23 @@ class Migration_Install_meet_our_team_permissions extends Migration
 	 */
 	private $permissionValues = array(
 		array(
-			'name' => 'Meet_our_team.Content.View',
-			'description' => 'View Meet_our_team Content',
+			'name' => 'Meet_our_team.Homepage.View',
+			'description' => 'View Meet_our_team Homepage',
 			'status' => 'active',
 		),
 		array(
-			'name' => 'Meet_our_team.Content.Create',
-			'description' => 'Create Meet_our_team Content',
+			'name' => 'Meet_our_team.Homepage.Create',
+			'description' => 'Create Meet_our_team Homepage',
 			'status' => 'active',
 		),
 		array(
-			'name' => 'Meet_our_team.Content.Edit',
-			'description' => 'Edit Meet_our_team Content',
+			'name' => 'Meet_our_team.Homepage.Edit',
+			'description' => 'Edit Meet_our_team Homepage',
 			'status' => 'active',
 		),
 		array(
-			'name' => 'Meet_our_team.Content.Delete',
-			'description' => 'Delete Meet_our_team Content',
+			'name' => 'Meet_our_team.Homepage.Delete',
+			'description' => 'Delete Meet_our_team Homepage',
 			'status' => 'active',
 		),
     );

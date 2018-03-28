@@ -7,23 +7,23 @@ class Migration_Install_about_permissions extends Migration
 	 */
 	private $permissionValues = array(
 		array(
-			'name' => 'About.Content.View',
-			'description' => 'View About Content',
+			'name' => 'About.Homepage.View',
+			'description' => 'View About Homepage',
 			'status' => 'active',
 		),
 		array(
-			'name' => 'About.Content.Create',
-			'description' => 'Create About Content',
+			'name' => 'About.Homepage.Create',
+			'description' => 'Create About Homepage',
 			'status' => 'active',
 		),
 		array(
-			'name' => 'About.Content.Edit',
-			'description' => 'Edit About Content',
+			'name' => 'About.Homepage.Edit',
+			'description' => 'Edit About Homepage',
 			'status' => 'active',
 		),
 		array(
-			'name' => 'About.Content.Delete',
-			'description' => 'Delete About Content',
+			'name' => 'About.Homepage.Delete',
+			'description' => 'Delete About Homepage',
 			'status' => 'active',
 		),
     );

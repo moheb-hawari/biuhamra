@@ -7,23 +7,23 @@ class Migration_Install_faq_permissions extends Migration
 	 */
 	private $permissionValues = array(
 		array(
-			'name' => 'Faq.Content.View',
-			'description' => 'View Faq Content',
+			'name' => 'Faq.Homepage.View',
+			'description' => 'View Faq Homepage',
 			'status' => 'active',
 		),
 		array(
-			'name' => 'Faq.Content.Create',
-			'description' => 'Create Faq Content',
+			'name' => 'Faq.Homepage.Create',
+			'description' => 'Create Faq Homepage',
 			'status' => 'active',
 		),
 		array(
-			'name' => 'Faq.Content.Edit',
-			'description' => 'Edit Faq Content',
+			'name' => 'Faq.Homepage.Edit',
+			'description' => 'Edit Faq Homepage',
 			'status' => 'active',
 		),
 		array(
-			'name' => 'Faq.Content.Delete',
-			'description' => 'Delete Faq Content',
+			'name' => 'Faq.Homepage.Delete',
+			'description' => 'Delete Faq Homepage',
 			'status' => 'active',
 		),
     );

@@ -13,7 +13,7 @@
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="sin_ftr_sec">
                         <div class="ftr_ttle"><?= lang('bf_support');?></div>
-                        <div class="ftr_desc"><?php echo $information->support;?></div>
+                        <div class="ftr_desc"><a class="mailto" style="color: white" href="mailto:<?php echo $information->support;?>"><?php echo $information->support;?></a></div>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-4 col-md-2">

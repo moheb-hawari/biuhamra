@@ -7,23 +7,23 @@ class Migration_Install_slider_permissions extends Migration
 	 */
 	private $permissionValues = array(
 		array(
-			'name' => 'Slider.Content.View',
-			'description' => 'View Slider Content',
+			'name' => 'Slider.Homepage.View',
+			'description' => 'View Slider Homepage',
 			'status' => 'active',
 		),
 		array(
-			'name' => 'Slider.Content.Create',
-			'description' => 'Create Slider Content',
+			'name' => 'Slider.Homepage.Create',
+			'description' => 'Create Slider Homepage',
 			'status' => 'active',
 		),
 		array(
-			'name' => 'Slider.Content.Edit',
-			'description' => 'Edit Slider Content',
+			'name' => 'Slider.Homepage.Edit',
+			'description' => 'Edit Slider Homepage',
 			'status' => 'active',
 		),
 		array(
-			'name' => 'Slider.Content.Delete',
-			'description' => 'Delete Slider Content',
+			'name' => 'Slider.Homepage.Delete',
+			'description' => 'Delete Slider Homepage',
 			'status' => 'active',
 		),
     );

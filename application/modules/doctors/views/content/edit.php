@@ -168,7 +168,7 @@ $id = isset($doctors->id) ? $doctors->id : '';
                     0 => 'Participant',
                     1 => 'Administrator',
                 );
-                echo form_dropdown(array('name' => 'type','class'=>'selectpicker','required' => 'required'), $options, set_value('administrator', isset($doctors->administrator) ? $doctors->administrator : ''), lang('doctors_field_type') . lang('bf_form_label_required'),'','','col-md-6');
+                echo form_dropdown(array('name' => 'type','class'=>'selectpicker','required' => 'required'), $options, set_value('type', isset($doctors->type) ? $doctors->type : ''), lang('doctors_field_type') . lang('bf_form_label_required'),'','','col-md-6');
             ?>
                 <?php // Change the values in this array to populate your dropdown as required
                 $options = [0];

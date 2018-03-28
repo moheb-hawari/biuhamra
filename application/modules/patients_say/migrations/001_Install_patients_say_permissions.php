@@ -7,23 +7,23 @@ class Migration_Install_patients_say_permissions extends Migration
 	 */
 	private $permissionValues = array(
 		array(
-			'name' => 'Patients_say.Content.View',
-			'description' => 'View Patients_say Content',
+			'name' => 'Patients_say.Homepage.View',
+			'description' => 'View Patients_say Homepage',
 			'status' => 'active',
 		),
 		array(
-			'name' => 'Patients_say.Content.Create',
-			'description' => 'Create Patients_say Content',
+			'name' => 'Patients_say.Homepage.Create',
+			'description' => 'Create Patients_say Homepage',
 			'status' => 'active',
 		),
 		array(
-			'name' => 'Patients_say.Content.Edit',
-			'description' => 'Edit Patients_say Content',
+			'name' => 'Patients_say.Homepage.Edit',
+			'description' => 'Edit Patients_say Homepage',
 			'status' => 'active',
 		),
 		array(
-			'name' => 'Patients_say.Content.Delete',
-			'description' => 'Delete Patients_say Content',
+			'name' => 'Patients_say.Homepage.Delete',
+			'description' => 'Delete Patients_say Homepage',
 			'status' => 'active',
 		),
     );
