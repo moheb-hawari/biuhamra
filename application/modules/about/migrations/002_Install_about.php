@@ -34,14 +34,7 @@ class Migration_Install_about extends Migration
             'type'       => 'TEXT',
             'null'       => false,
         ),
-        'en_hours' => array(
-            'type'       => 'TEXT',
-            'null'       => false,
-        ),
-        'ar_hours' => array(
-            'type'       => 'TEXT',
-            'null'       => false,
-        ),
+        
         'logo' => array(
             'type'       => 'VARCHAR',
             'constraint' => 255,

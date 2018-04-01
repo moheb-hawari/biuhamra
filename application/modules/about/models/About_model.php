@@ -65,16 +65,7 @@ class About_model extends BF_Model
 			'label' => 'lang:about_field_ar_description',
 			'rules' => 'required',
 		),
-		array(
-			'field' => 'en_hours',
-			'label' => 'lang:about_field_en_hours',
-			'rules' => 'required',
-		),
-		array(
-			'field' => 'ar_hours',
-			'label' => 'lang:about_field_ar_hours',
-			'rules' => 'required',
-		),
+		
 
 	);
 	protected $insert_validation_rules  = array();

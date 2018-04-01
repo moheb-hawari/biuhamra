@@ -258,12 +258,7 @@ if(!empty($patients_say)){
     <div class="container">
         <div class="wday_ico"><img class="img-responsive" src="<?php echo assets_path() . 'images/home_page/wday_ico.png';?>"></div>
         <div class="sin_wday">
-            <span><?=site_text('Saturday to Thursday :', 'السبت الى الخميس: ');?></span>
-            <span>08:30 - 12:30, 16:30 - 20:30</span>
-        </div>
-        <div class="sin_wday">
-            <span><?=site_text('Friday :', 'الجمعة :');?></span>
-            <span><?=site_text('Closed', 'عطلة');?></span>
+            <span><?php echo $about_us->{$lang.'_hours'};?></span>
         </div>
     </div>
 </div>

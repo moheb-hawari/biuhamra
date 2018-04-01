@@ -34,6 +34,14 @@ class Migration_Install_about_us extends Migration
             'type'       => 'TEXT',
             'null'       => false,
         ),
+            'en_hours' => array(
+            'type'       => 'TEXT',
+            'null'       => false,
+        ),
+        'ar_hours' => array(
+            'type'       => 'TEXT',
+            'null'       => false,
+        ),
         'deleted' => array(
             'type'       => 'TINYINT',
             'constraint' => 1,

@@ -57,3 +57,5 @@ $lang['about_us_field_en_title'] = 'Title English';
 $lang['about_us_field_ar_title'] = 'Arabic Title';
 $lang['about_us_field_en_description'] = 'English Description';
 $lang['about_us_field_ar_description'] = 'Arabic Description';
+$lang['about_field_en_hours'] = 'English Hours';
+$lang['about_field_ar_hours'] = 'Arabic Hours';

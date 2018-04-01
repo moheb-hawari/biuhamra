@@ -63,6 +63,24 @@ $id = isset($about_us->id) ? $about_us->id : '';
                         <span class='help-inline'><?php echo form_error('ar_description'); ?></span>
                     </div>
                 </div>
+            <div class="control-group<?php echo form_error('en_hours') ? ' error' : ''; ?>">
+                    <?php echo form_label(lang('about_field_en_hours') . lang('bf_form_label_required'), 'en_hours', array('class' => 'control-label')); ?>
+                    <div class=''>
+                        <div class="rtl-support">
+                            <textarea  class="summernote summernote-default" id="en_hours" name='en_hours'><?php echo set_value('en_hours', isset($about_us->en_hours) ? $about_us->en_hours : ''); ?></textarea>
+                        </div>
+                        <span class='help-inline'><?php echo form_error('en_hours'); ?></span>
+                    </div>
+                </div>
+            <div class="control-group<?php echo form_error('ar_hours') ? ' error' : ''; ?>">
+                    <?php echo form_label(lang('about_field_ar_hours') . lang('bf_form_label_required'), 'ar_hours', array('class' => 'control-label')); ?>
+
+                    <div class="rtl-support">
+                            <textarea  class="summernote summernote-default" id="ar_hours" name='ar_hours'><?php echo set_value('ar_hours', isset($about_us->ar_hours) ? $about_us->ar_hours : ''); ?></textarea>
+                        </div>
+                    <span class='help-inline'><?php echo form_error('ar_hours'); ?></span>
+
+                </div>
 
             
         </fieldset>
