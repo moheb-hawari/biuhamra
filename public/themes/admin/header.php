@@ -37,7 +37,7 @@ $title = lang($controller.'_module_name');
         <link rel="stylesheet" href="<?php echo assets_path() . 'globals/css/plugins.css'; ?>" >
         
         <link rel="stylesheet" href="<?php echo assets_path() . 'css/style.css'; ?>" >
-        <link rel="shortcut icon" href="<?php echo assets_path() . 'globals/img/icons/favicon.ico'; ?>">
+        <link rel="shortcut icon" href="<?php echo assets_path() . 'images/'; ?>favicon.ico">
         <link rel="apple-touch-icon" href="<?php echo assets_path() . 'globals/img/icons/apple-touch-icon.png'; ?>">
 
         <script src="<?php echo assets_path() . 'globals/plugins/modernizr/modernizr.min.js'; ?>"></script>
@@ -153,7 +153,7 @@ $title = lang($controller.'_module_name');
                             'child_class' => 'child-menu',
                             'requiredContexts' => array(),
                 ));
-                
+                //,'reports','developer','settings'
                 echo Contexts::context_nav('content');
                 Contexts::set_contexts(['homepage','facilities','humanresources','utility']);
                 echo Contexts::render_menu('text', 'normal');

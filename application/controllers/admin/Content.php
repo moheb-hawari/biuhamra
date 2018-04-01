@@ -53,6 +53,7 @@ class Content extends Admin_Controller
 	 */
 	public function index()
 	{
+            redirect(site_url().'/admin/content/dashboard');
 		Template::set_view('admin/content/index');
 		Template::render();
 	}//end index()

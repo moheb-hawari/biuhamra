@@ -103,6 +103,7 @@ class Auth
      */
     public function login($login, $password,$role, $remember = false)
     {
+        
         if (empty($login) || empty($password)) {
             Template::set_message(
                 sprintf(
@@ -850,6 +851,8 @@ class Auth
 
         $this->ci->load->helper('cookie');
         $cookie = get_cookie('autologin', true);
+        
+
         if (! $cookie) {
             return;
         }
