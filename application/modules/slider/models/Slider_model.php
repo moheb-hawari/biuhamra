@@ -53,7 +53,7 @@ class Slider_model extends MY_Model
 		array(
 			'field' => 'ar_title',
 			'label' => 'lang:slider_field_ar_title',
-			'rules' => 'max_length[255]',
+			'rules' => 'required|max_length[255]',
 		),
 		array(
 			'field' => 'en_description',

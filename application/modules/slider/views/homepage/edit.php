@@ -49,7 +49,7 @@ $id = isset($slider->id) ? $slider->id : '';
             </div>
             <div id="arabic-content" class="col-md-12">
                 <div class="inputer floating-label control-group<?php echo form_error('ar_title') ? ' error' : ''; ?>">
-                <?php echo form_label(lang('slider_field_ar_title'), 'ar_title', array('class' => 'control-label')); ?>
+                <?php echo form_label(lang('slider_field_ar_title'). lang('bf_form_label_required'), 'ar_title', array('class' => 'control-label')); ?>
                 <div class='input-wrapper controls'>
                     <input class='form-control' id='ar_title' type='text' name='ar_title' maxlength='255' value="<?php echo set_value('ar_title', isset($slider->ar_title) ? $slider->ar_title : ''); ?>" />
                         <label for='ar_title'><?php echo lang('slider_field_ar_title'); ?></label>

@@ -70,9 +70,7 @@ $title = lang($controller.'_module_name');
                 </div><!--.hamburger-->
             </div><!--.nav-menu-->
 
-            <div class="nav-search">
-                <span class="search"></span>
-            </div><!--.nav-search-->
+           
             <!--.nav-user-->
             <div class="nav-user">
 			<div class="user">
@@ -169,86 +167,15 @@ $title = lang($controller.'_module_name');
             <!-- BEGIN USER LAYER -->
             <div class="user-layer">
                 <ul class="nav nav-tabs nav-justified" role="tablist">
-                    <li class="active"><a href="#messages" data-toggle="tab">Messages</a></li>
-                    <li><a href="#notifications" data-toggle="tab">Notifications <span class="badge">2</span></a></li>
+                   
                     <li><a href="#settings" data-toggle="tab">Settings</a></li>
                 </ul>
 
                 <div class="row no-gutters tab-content">
 
-                    <div class="tab-pane fade in active" id="messages">
-                        <div class="col-md-4">
-                            <div class="message-list-overlay"></div>
+                    
 
-                           
-                        </div><!--.col-->
-                        <div class="col-md-8">
-                            <div class="message-send-container">
-
-                                <!--.messages-->
-
-                                <div class="send-message">
-                                    <div class="input-group">
-                                        <div class="inputer inputer-blue">
-                                            <div class="input-wrapper">
-                                                <textarea rows="1" id="send-message-input" class="form-control js-auto-size" placeholder="Message"></textarea>
-                                            </div>
-                                        </div><!--.inputer-->
-                                        <span class="input-group-btn">
-                                            <button id="send-message-button" class="btn btn-blue" type="button">Send</button>
-                                        </span>
-                                    </div>
-                                </div><!--.send-message-->
-
-                            </div><!--.message-send-container-->
-                        </div><!--.col-->
-
-                        <div class="mobile-back">
-                            <div class="mobile-back-button"><i class="ion-android-arrow-back"></i></div>
-                        </div><!--.mobile-back-->
-                    </div><!--.tab-pane #messages-->
-
-                    <div class="tab-pane fade" id="notifications">
-
-                        <div class="col-md-6 col-md-offset-3">
-
-                            <ul class="list-material has-hidden">
-                                <li class="has-action-left has-action-right has-long-story">
-                                    <a href="#" class="hidden"><i class="ion-android-delete"></i></a>
-                                    <a href="#" class="visible">
-                                        <div class="list-action-left">
-                                            <i class="ion-bag icon text-indigo"></i>
-                                        </div>
-                                        <div class="list-content">
-                                            <span class="caption">Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits.</span>
-                                        </div>
-                                        <div class="list-action-right">
-                                            <span class="top">2 hr</span>
-                                            <i class="ion-record text-green bottom"></i>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="has-action-left has-action-right has-long-story">
-                                    <a href="#" class="hidden"><i class="ion-android-delete"></i></a>
-                                    <a href="#" class="visible">
-                                        <div class="list-action-left">
-                                            <i class="ion-image text-green icon"></i>
-                                        </div>
-                                        <div class="list-content">
-                                            <span class="caption">Dramatically visualize customer directed convergence without revolutionary ROI. Efficiently unleash cross-media information without cross-media value.</span>
-                                        </div>
-                                        <div class="list-action-right">
-                                            <span class="top">16:55</span>
-                                            <i class="ion-record text-green bottom"></i>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-
-                        </div><!--.col-->
-                    </div><!--.tab-pane #notifications-->
-
-                    <div class="tab-pane fade" id="settings">
+                    <div class="tab-pane fade in active" id="settings">
                         <div class="col-md-6 col-md-offset-3">
 
                             <div class="settings-panel">

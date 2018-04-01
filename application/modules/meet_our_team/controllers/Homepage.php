@@ -193,6 +193,7 @@ class Homepage extends Admin_Controller
 
         // Validate the data
         $this->form_validation->set_rules($this->meet_our_team_model->get_validation_rules());
+        
         if ($this->form_validation->run() === false) {
             return false;
         }
