@@ -15,6 +15,7 @@
         <div class="hres_ttle"><?=site_text('careers', 'الوظائف');?></div>
         <div class="h_res_cont">
             <?php if(!empty($careers)){ 
+                $x=0;
                 foreach($careers as $key => $val){ ?>
             <div class="sin_hr_sec">
                 <div class="sin_job_ttle"><?php echo $val->{$lang.'_title'};?></div>
@@ -22,12 +23,38 @@
                 <div class="job_apply_con">
                     <div class="sin_job_code"><?=site_text('Job Code : '. $val->job_code, 'رمز الوظيفة : '. $val->job_code);?></div>
                     <div class="job_apply_btn">
-                        <a href="career_form.php" class="main_btn"><?=site_text('Apply  Now', 'قدم الآن');?></a>
+                    <div class="sin_job_code">
+                        <div class="job_apply_btn">
+                            <button class="main_btn" data-toggle="modal" data-target="#panel-modal<?php echo $x; ?>"><?=site_text('Apply  Now', 'قدم الآن');?></button>
+                        </div><!--.col-md-9-->
+                    </div><!--.row-->
                     </div>
                 </div>
             </div>
-            <?php } } ?>
+            <div class="modal fade full-height" id="panel-modal<?php echo $x; ?>" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title"><?=site_text('Apply  Now', 'قدم الآن');?></h4>
+                </div>
+                <?php echo form_open_multipart($this->uri->uri_string().'/send_career/', 'class="send_msg_form"'); ?>
+
+                <div class="modal-body">
+                    <input type="file" name='cv' />
+                    <input type="hidden" name='career_number' value="<?php echo $val->id; ?>" />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-flat-primary" data-dismiss="modal"><?=site_text('Cancel', 'إلغاء');?></button>
+                    <button type="submit" name='submit' value="submit" class="btn btn-flat-primary"><?=site_text('Apply  Now', 'قدم الآن');?></button>
+                </div>
+                <?php echo form_close(); ?>
+
+            </div>
+        </div>
+    </div><!--.modal-->
+            <?php } $x++; } ?>
             
         </div>
     </div>
+    
 </section>

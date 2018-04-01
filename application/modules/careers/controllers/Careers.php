@@ -36,5 +36,44 @@ class Careers extends Front_Controller
         Template::render();
     }
     
+    function send_career()
+    {
+        
+        echo 'here';
+        die;
+        $this->load->library('emailer/emailer');
+        $this->load->model('emails/emails_model');
+        $this->load->model('emailer/emailer_model');
+        $this->emailer->enable_debug(true);
+        
+        $this->load->helper(array('form', 'url'));
+
+        $result = $this->emails_model->find(1);
+        
+        $email = $result->contact_email;
+
+        $message = $this->input->post('message') .'<br><br><br> '.lang('emailer_contact_from').$this->input->post('name').'<br> '.lang('emailer_contact_mobile').$this->input->post('phone').'<br>,<br>';
+        
+        $data = array(
+            'to'      => $email,
+            'subject' => sprintf(lang('emailer_contact_mail_subject'),$this->input->post('name')),
+            'message' => $message,
+            'from' => $this->input->post('email'),
+         );
+
+        $success = $this->emailer->send($data, false);
+
+        if($success)
+        {
+            Template::set_message(lang('email_send_success'), 'success');
+        }
+        else
+        {
+            Template::set_message(lang('email_send_failure') . $this->emailer->error, 'error');
+        }
+        
+        redirect(site_url().'/'.lang('bf_language_direction').'/?id=cont_clinic');
+
+    }
       
 }

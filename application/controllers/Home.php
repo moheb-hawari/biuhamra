@@ -152,6 +152,8 @@ class Home extends MX_Controller {
         redirect(site_url().'/'.lang('bf_language_direction').'/?id=cont_clinic');
 
     }
+    
+    
 
 
 }
