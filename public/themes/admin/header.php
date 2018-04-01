@@ -143,11 +143,11 @@ $title = lang($controller.'_module_name');
             <div class="menu-layer">
 
                 <?php
-
+                
                 Contexts::set_attrs(
                         array(
                             'templateContextMenu' => '<li><a href="javascript:;">{text}</a>{content}</li>',
-                            '$templateMenu' => '<li><a href="javascript:;" >{display}</a></li>',
+                            'templateMenu' => '<li ><a {extra} href="{url}" >{display}</a></li>',
                             'templateSubMenu' => '<li><a href="javascript:;">{display}</a><ul class="child-menu">{view}</ul></li>',
                             'templateContextEnd' => '',
                             'child_class' => 'child-menu',
@@ -163,32 +163,7 @@ $title = lang($controller.'_module_name');
             <!-- END OF MENU LAYER -->
             
             <!-- BEGIN SEARCH LAYER -->
-            <div class="search-layer">
-                <div class="search">
-                    <form action="pages-search-results.html">
-                        <div class="form-group">
-                            <input type="text" id="input-search" onkeyup="search()" class="form-control" value="" placeholder="type something">
-                            <button type="submit" class="btn btn-default disabled"><i class="ion-search"></i></button>
-                        </div>
-                    </form>
-                </div><!--.search-->
-                <div class="results">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div id="patients_search" class="result result-users">
-                                <h4>Users <small>(0)</small></h4>
-
-                                <ul class="list-material">
-                                    <li><p>No results were found</p></li>
-                                </ul>
-
-                            </div><!--.results-user-->
-                        </div><!--.col-->
-                        
-
-                    </div><!--.row-->
-                </div><!--.results-->
-            </div><!--.search-layer-->
+            
             <!-- END OF SEARCH LAYER -->
 
             <!-- BEGIN USER LAYER -->
