@@ -157,8 +157,9 @@ if(!empty($patients_say)){
 
 <?php } ?>
 <!-- Testimonial Slider End -->
-        <!-- ========================================= Message - FAQ Section Start ========================================= -->
+     <!-- ========================================= Message - FAQ Section Start ========================================= -->
 <section id="cont_clinic" class="main_sction mess_faq_sec">
+    <?php echo Template::message(); ?>
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-6">
@@ -167,28 +168,30 @@ if(!empty($patients_say)){
                         <div class="msg_faq_ttle"><?= lang('bf_send_message');?></div>
                         <div class="msg_faq_bio"><?= lang('bf_send_desc');?></div>
                     </div>
+
                     <!--Send Us Message Form-->
-                    <form class="send_msg_form">
+                    <?php echo form_open($this->uri->uri_string().'/home/send_contact/', 'class="send_msg_form"'); ?>
+
                         <div class="form_ipt_cont">
                             <label><?= lang('bf_contact_name');?></label>
-                            <input name="name" type="text" placeholder="<?= lang('bf_contact_name_place');?>">
+                            <input name="name" type="text" placeholder="<?= lang('bf_contact_name_place');?>" required="">
                         </div>
                         <div class="form_ipt_cont">
                             <label><?= lang('bf_contact_email');?></label>
-                            <input name="email" type="email" placeholder="<?= lang('bf_contact_email_place');?>">
+                            <input name="email" type="email" placeholder="<?= lang('bf_contact_email_place');?>" required="">
                         </div>
                         <div class="form_ipt_cont">
                             <label><?= lang('bf_contact_mobile');?></label>
-                            <input name="phone" type="text" placeholder="<?= lang('bf_contact_mobile_place');?>">
+                            <input style="width:75%; color:black; height: 40px;" name="phone" type="number" placeholder="<?= lang('bf_contact_mobile_place');?>" required="">
                         </div>
                         <div class="form_ipt_cont">
                             <label><?= lang('bf_contact_message');?></label>
-                            <input type="text" name="message" placeholder="<?= lang('bf_contact_message_place');?>"></input>
+                            <input type="text" name="message" placeholder="<?= lang('bf_contact_message_place');?>" required=""></input>
                         </div>
                         <div class="frm_confirm">
                             <input type="submit" class="main_btn" value="<?= lang('bf_contact_send');?>">
                         </div>
-                    </form>
+                    <?php echo form_close(); ?>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-6">

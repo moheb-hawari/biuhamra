@@ -351,6 +351,11 @@ $lang['bf_contact_email_place'] = 'عنوان البريد الالكتروني'
 $lang['bf_contact_mobile_place'] = 'رقم الموبايل';
 $lang['bf_contact_message_place'] = 'الرسالة';
 
+$lang['bf_contact_name'] = 'الاسم الكامل';
+$lang['bf_contact_email'] =  ' البريد الالكتروني';
+$lang['bf_contact_mobile'] = 'رقم الموبايل';
+$lang['bf_contact_message'] = 'الرسالة';
+
 $lang['bf_have_question'] = 'لديك اسئلة ؟';
 $lang['bf_have_question_desc'] = 'قد تجد الكثير من الإجابات على الأسئلة الشائعة';
 
