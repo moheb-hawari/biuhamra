@@ -42,8 +42,8 @@ $id = isset($departments->id) ? $departments->id : '';
             </div>
                 <div class="control-group<?php echo form_error('en_description') ? ' error' : ''; ?>">
                 <?php echo form_label(lang('departments_field_en_description') . lang('bf_form_label_required'), 'en_description', array('class' => 'control-label')); ?>
-                    <div class="rtl-support">
-                        <textarea  class="summernote summernote-default" id="en_description" name='en_description'><?php echo set_value('en_description', isset($departments->en_description) ? $departments->en_description : ''); ?></textarea>
+                    <div class="input-wrapper controls rtl-support">
+                        <textarea cols="80" rows="5"  class=""  id="en_description" name='en_description'><?php echo set_value('en_description', isset($departments->en_description) ? $departments->en_description : ''); ?></textarea>
                     </div>   
                     <span class='help-inline'><?php echo form_error('en_description'); ?></span>
             </div>
@@ -57,8 +57,8 @@ $id = isset($departments->id) ? $departments->id : '';
             </div>
                 <div class="control-group<?php echo form_error('en_image_description') ? ' error' : ''; ?>">
                 <?php echo form_label(lang('departments_field_en_image_description'), 'en_image_description', array('class' => 'control-label')); ?>
-                    <div class="rtl-support">
-                        <textarea  class="summernote summernote-default" id="en_image_description" name='en_image_description'><?php echo set_value('en_image_description', isset($departments->en_image_description) ? $departments->en_image_description : ''); ?></textarea>
+                    <div class="input-wrapper controls rtl-support">
+                        <textarea cols="80" rows="5"  class=""  id="en_image_description" name='en_image_description'><?php echo set_value('en_image_description', isset($departments->en_image_description) ? $departments->en_image_description : ''); ?></textarea>
                     </div>  
                     <span class='help-inline'><?php echo form_error('en_image_description'); ?></span>
             </div>
@@ -79,8 +79,8 @@ $id = isset($departments->id) ? $departments->id : '';
 
             <div class="control-group<?php echo form_error('ar_description') ? ' error' : ''; ?>">
                 <?php echo form_label(lang('departments_field_ar_description') . lang('bf_form_label_required'), 'ar_description', array('class' => 'control-label')); ?>
-                <div class="rtl-support">
-                        <textarea  class="summernote summernote-default" id="ar_description" name='ar_description'><?php echo set_value('ar_description', isset($departments->ar_description) ? $departments->ar_description : ''); ?></textarea>
+                <div class="input-wrapper controls rtl-support">
+                        <textarea cols="80" rows="5"  class=""  id="ar_description" name='ar_description'><?php echo set_value('ar_description', isset($departments->ar_description) ? $departments->ar_description : ''); ?></textarea>
                     </div>  
                 <span class='help-inline'><?php echo form_error('ar_description'); ?></span>
             </div>
@@ -97,8 +97,8 @@ $id = isset($departments->id) ? $departments->id : '';
             </div>
                 <div class="control-group<?php echo form_error('ar_image_description') ? ' error' : ''; ?>">
                 <?php echo form_label(lang('departments_field_ar_image_description'), 'ar_image_description', array('class' => 'control-label')); ?>
-                <div class="rtl-support">
-                        <textarea  class="summernote summernote-default" id="ar_image_description" name='ar_image_description'><?php echo set_value('ar_image_description', isset($departments->ar_image_description) ? $departments->ar_image_description : ''); ?></textarea>
+                <div class="input-wrapper controls rtl-support">
+                        <textarea cols="80" rows="5"  class=""  id="ar_image_description" name='ar_image_description'><?php echo set_value('ar_image_description', isset($departments->ar_image_description) ? $departments->ar_image_description : ''); ?></textarea>
                     </div>  
                 <span class='help-inline'><?php echo form_error('ar_image_description'); ?></span>
             </div>

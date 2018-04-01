@@ -40,15 +40,15 @@ $id = isset($meet_our_team->id) ? $meet_our_team->id : '';
             </div>
                 <div class="control-group<?php echo form_error('en_home_description') ? ' error' : ''; ?>">
                 <?php echo form_label(lang('meet_our_team_field_en_home_description') . lang('bf_form_label_required'), 'en_home_description', array('class' => 'control-label')); ?>
-                    <div class="rtl-support">
-                        <textarea  class="summernote summernote-default" id="en_home_description" name='en_home_description'><?php echo set_value('en_home_description', isset($meet_our_team->en_home_description) ? $meet_our_team->en_home_description : ''); ?></textarea>
+                    <div class="input-wrapper controls rtl-support">
+                        <textarea cols="80" rows="5"  class=""  id="en_home_description" name='en_home_description'><?php echo set_value('en_home_description', isset($meet_our_team->en_home_description) ? $meet_our_team->en_home_description : ''); ?></textarea>
                     </div>   
                     <span class='help-inline'><?php echo form_error('en_home_description'); ?></span>
             </div>
                 <div class="control-group<?php echo form_error('en_description') ? ' error' : ''; ?>">
                 <?php echo form_label(lang('meet_our_team_field_en_description'), 'en_description', array('class' => 'control-label')); ?>
-                    <div class="rtl-support">
-                        <textarea  class="summernote summernote-default" id="en_description" name='en_description'><?php echo set_value('en_description', isset($meet_our_team->en_description) ? $meet_our_team->en_description : ''); ?></textarea>
+                    <div class="input-wrapper controls rtl-support">
+                        <textarea cols="80" rows="5"  class=""  id="en_description" name='en_description'><?php echo set_value('en_description', isset($meet_our_team->en_description) ? $meet_our_team->en_description : ''); ?></textarea>
                     </div>  
                     <span class='help-inline'><?php echo form_error('en_description'); ?></span>
             </div>
@@ -65,15 +65,15 @@ $id = isset($meet_our_team->id) ? $meet_our_team->id : '';
 
             <div class="control-group<?php echo form_error('ar_home_description') ? ' error' : ''; ?>">
                 <?php echo form_label(lang('meet_our_team_field_ar_home_description') . lang('bf_form_label_required'), 'ar_home_description', array('class' => 'control-label')); ?>
-                <div class="rtl-support">
-                        <textarea  class="summernote summernote-default" id="ar_home_description" name='ar_home_description'><?php echo set_value('ar_home_description', isset($meet_our_team->ar_home_description) ? $meet_our_team->ar_home_description : ''); ?></textarea>
+                <div class="input-wrapper controls rtl-support">
+                        <textarea cols="80" rows="5"  class=""  id="ar_home_description" name='ar_home_description'><?php echo set_value('ar_home_description', isset($meet_our_team->ar_home_description) ? $meet_our_team->ar_home_description : ''); ?></textarea>
                     </div> 
                 <span class='help-inline'><?php echo form_error('ar_home_description'); ?></span>
             </div>
             <div class="control-group<?php echo form_error('ar_description') ? ' error' : ''; ?>">
                 <?php echo form_label(lang('meet_our_team_field_ar_description'), 'ar_description', array('class' => 'control-label')); ?>
-                    <div class="rtl-support">
-                        <textarea  class="summernote summernote-default" id="ar_description" name='ar_description'><?php echo set_value('ar_description', isset($meet_our_team->ar_description) ? $meet_our_team->ar_description : ''); ?></textarea>
+                    <div class="input-wrapper controls rtl-support">
+                        <textarea cols="80" rows="5"  class=""  id="ar_description" name='ar_description'><?php echo set_value('ar_description', isset($meet_our_team->ar_description) ? $meet_our_team->ar_description : ''); ?></textarea>
                     </div> 
                     <span class='help-inline'><?php echo form_error('ar_description'); ?></span>
             </div>

@@ -39,8 +39,8 @@ $id = isset($faq->id) ? $faq->id : '';
                 </div>
                 <div class="control-group<?php echo form_error('en_description') ? ' error' : ''; ?>">
                     <?php echo form_label(lang('faq_field_en_description') . lang('bf_form_label_required'), 'en_description', array('class' => 'control-label')); ?>
-                    <div class="rtl-support">
-                        <textarea  class="summernote summernote-default" id="en_description" name='en_description'><?php echo set_value('en_description', isset($faq->en_description) ? $faq->en_description : ''); ?></textarea>
+                    <div class="input-wrapper controls rtl-support">
+                        <textarea cols="80" rows="5"  class=""  id="en_description" name='en_description'><?php echo set_value('en_description', isset($faq->en_description) ? $faq->en_description : ''); ?></textarea>
                     </div>
                     <span class='help-inline'><?php echo form_error('en_description'); ?></span>
                 </div>
@@ -61,8 +61,8 @@ $id = isset($faq->id) ? $faq->id : '';
 
                 <div class="control-group<?php echo form_error('ar_description') ? ' error' : ''; ?>">
                     <?php echo form_label(lang('faq_field_ar_description') . lang('bf_form_label_required'), 'ar_description', array('class' => 'control-label')); ?>
-                    <div class="rtl-support">
-                        <textarea  class="summernote summernote-default" id="ar_description" name='ar_description'><?php echo set_value('ar_description', isset($faq->ar_description) ? $faq->ar_description : ''); ?></textarea>
+                    <div class="input-wrapper controls rtl-support">
+                        <textarea cols="80" rows="5"  class=""  id="ar_description" name='ar_description'><?php echo set_value('ar_description', isset($faq->ar_description) ? $faq->ar_description : ''); ?></textarea>
                     </div>                    
                     <span class='help-inline'><?php echo form_error('ar_description'); ?></span>
                 </div>
