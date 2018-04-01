@@ -220,6 +220,11 @@ class Homepage extends Admin_Controller
             if (is_numeric($id)) {
                 $images = do_upload($id);
                 if(isset($images)){
+                    if(isset($images['error'])){
+                    
+                        Template::set_message($images['error'],'danger');
+                        redirect(SITE_AREA . '/homepage/slider/edit/'.$id);
+                    }
                 $this->slider_model->skip_validation(true);
                 $this->slider_model->update($id, $images);
                 }
@@ -228,7 +233,13 @@ class Homepage extends Admin_Controller
         } elseif ($type == 'update') {
             $return = $this->slider_model->update($id, $data);
              $images = do_upload($id);
-            if(isset($images)){ $this->slider_model->update($id, $images);}
+            if(isset($images)){ 
+                if(isset($images['error'])){
+                    
+                        Template::set_message($images['error'],'danger');
+                        redirect(SITE_AREA . '/homepage/slider/edit/'.$id);
+                    }
+                $this->slider_model->update($id, $images);}
         }
 
         return $return;

@@ -230,6 +230,11 @@ class Facilities extends Admin_Controller
             if (is_numeric($id)) {
                 $images = do_upload($id);
                 if(isset($images)){
+                    if(isset($images['error'])){
+                    
+                        Template::set_message($images['error'],'danger');
+                        redirect(SITE_AREA . '/facilities/videos/edit/'.$id);
+                    }
                 $this->videos_model->skip_validation(true);
                 $this->videos_model->update($id, $images);
                 }
@@ -238,7 +243,13 @@ class Facilities extends Admin_Controller
         } elseif ($type == 'update') {
             $return = $this->videos_model->update($id, $data);
             $images = do_upload($id);
-            if(isset($images)){ $this->videos_model->update($id, $images);}
+            if(isset($images)){ 
+                if(isset($images['error'])){
+                    
+                        Template::set_message($images['error'],'danger');
+                        redirect(SITE_AREA . '/facilities/videos/edit/'.$id);
+                    }
+                $this->videos_model->update($id, $images);}
         }
 
         return $return;

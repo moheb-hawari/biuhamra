@@ -33,7 +33,7 @@ function do_upload($id) {
         $config['file_name'] = $new_file_name;
         $val['name'] = $new_file_name;
     
-        $config['allowed_types']        = 'gif|jpg|png|jpeg';
+        $config['allowed_types']        = 'gif|jpg|png|jpeg|bmp|jfif';
         $config['upload_path']          = FCPATH."assets/images/$key/$id";
         
         if (!file_exists($config['upload_path'])) {
@@ -53,8 +53,9 @@ function do_upload($id) {
             
         if ( ! $CI->upload->do_upload($key))
         {
-            Template::set_message($CI->upload->display_errors(), 'error');
-            return false;
+            
+            $data['error'] = $CI->upload->display_errors();
+
         }
         else
         {

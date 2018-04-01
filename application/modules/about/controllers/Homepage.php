@@ -218,6 +218,11 @@ class Homepage extends Admin_Controller
             if (is_numeric($id)) {
                 $images = do_upload($id);
                 if(isset($images)){
+                    if(isset($images['error']))
+                    {
+                        Template::set_message($images['error'], 'error');
+                        redirect(SITE_AREA . '/homepage/about/edit/'.$id);
+                    }
                 $this->about_model->skip_validation(true);
                 $this->about_model->update($id, $images);
                 }
@@ -227,7 +232,16 @@ class Homepage extends Admin_Controller
 
             $return = $this->about_model->update($id, $data);
             $images = do_upload($id);
-            if(isset($images)){ $this->about_model->update($id, $images);}
+            if(isset($images)){ 
+                
+                if(isset($images['error'])){
+                    
+                        Template::set_message($images['error'],'danger');
+                        redirect(SITE_AREA . '/homepage/about/edit/'.$id);
+                    }
+                    $this->about_model->update($id, $images);
+                    
+                    }
             
         }
 
