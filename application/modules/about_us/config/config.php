@@ -1,7 +1,7 @@
 <?php defined('BASEPATH') || exit('No direct script access allowed');
 
 $config['module_config'] = array(
-	'description'	=> 'Your module description',
+	'description'	=> '',
 	'name'		    => 'About Us',
      /*
       * Replace the 'name' entry above with this entry and create the entry in
