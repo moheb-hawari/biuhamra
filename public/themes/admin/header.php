@@ -183,10 +183,10 @@ $title = lang($controller.'_module_name');
 
                                 <div class="legend">Your Settings</div>
                                 <ul>
-                                    <li>
+<!--                                    <li>
                                         <a href="<?php echo site_url('admin/settings/users/profile'); ?>"><?php echo lang('bf_user_settings'); ?></a>
                                                 
-                                    </li>
+                                    </li>-->
                                     <li>
                                         <a href="<?php echo site_url('logout'); ?>"><?php echo lang('bf_action_logout'); ?></a>
                                     </li>
