@@ -1,6 +1,6 @@
 <?php
 
-$num_columns	= 11;
+$num_columns	= 5;
 $can_delete	= $this->auth->has_permission('Patients_Say.Homepage.Delete');
 $can_edit		= $this->auth->has_permission('Patients_Say.Homepage.Edit');
 $has_records	= isset($records) && is_array($records) && count($records);
