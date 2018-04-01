@@ -46,8 +46,6 @@ $id = isset($emails->id) ? $emails->id : '';
         </fieldset>
         <fieldset class='form-actions'>
             <input type='submit' name='save' class='btn btn-primary' value="<?php echo lang('emails_action_edit'); ?>" />
-            <?php echo lang('bf_or'); ?>
-            <?php echo anchor(SITE_AREA . '/utility/emails', lang('emails_cancel'), 'class="btn btn-warning"'); ?>
             
             
         </fieldset>

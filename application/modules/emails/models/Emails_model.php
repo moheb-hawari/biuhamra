@@ -48,12 +48,12 @@ class Emails_model extends MY_Model
 		array(
 			'field' => 'careers_email',
 			'label' => 'lang:emails_field_careers_email',
-			'rules' => 'required|max_length[255]',
+			'rules' => 'required|max_length[255]|valid_email',
 		),
 		array(
 			'field' => 'contact_email',
 			'label' => 'lang:emails_field_contact_email',
-			'rules' => 'required|max_length[255]',
+			'rules' => 'required|max_length[255]|valid_email',
 		),
 	);
 	protected $insert_validation_rules  = array();

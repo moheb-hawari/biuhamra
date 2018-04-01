@@ -48,7 +48,7 @@ class Information_model extends MY_Model
 		array(
 			'field' => 'hot_line',
 			'label' => 'lang:information_field_hot_line',
-			'rules' => 'required|max_length[255]',
+			'rules' => 'required|max_length[255]|numeric',
 		),
 		array(
 			'field' => 'support',
