@@ -56,11 +56,7 @@ if ($can_delete) {
 					<td class='column-check'><input type='checkbox' name='checked[]' value='<?php echo $record->id; ?>' /></td>
 					<?php endif;?>
 					
-				<?php if ($can_edit) : ?>
-					<td><?php echo anchor(SITE_AREA . '/content/doctors/edit/' . $record->id, '<span class="icon-pencil"></span> ' .  $record->en_name); ?></td>
-				<?php else : ?>
 					<td><?php e($record->en_name); ?></td>
-				<?php endif; ?>
 					<td><?php e($record->en_job_title); ?></td>
 					<td><?php e($record->en_academic); ?></td>
 					<td><img width="100px" height="100px" src="<?php e(assets_path().'images/cover_image/'.$record->id.'/'.$record->cover_image) ?>"/></td>

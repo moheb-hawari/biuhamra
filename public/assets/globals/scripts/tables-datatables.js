@@ -4,13 +4,7 @@ var TablesDataTables = {
 		$('.datatables-basic').dataTable({
 			"dom": "<'row'<'col-md-6 col-sm-12'l><'col-md-6 col-sm-12'f>r>t<'row'<'col-md-5 col-sm-12'i><'col-md-7 col-sm-12'p>>",
 		});
-                
-                $(".check-all").toggle(function () { 
-       $("checkboxSelector", dataTable.fnGetNodes()).attr("checked", true); }
-     , function () { 
-         $("checkboxSelector", dataTable.fnGetNodes()).attr("checked", false); 
-     }
- );
+     
 	},
 
 

@@ -2,6 +2,7 @@
 
 if (validation_errors()) :
 ?>
+
 <div class='alert alert-block alert-error fade in'>
     <a class='close' data-dismiss='alert'>&times;</a>
     <div class='alert alert-danger'>
@@ -38,7 +39,19 @@ $id = isset($videos->id) ? $videos->id : '';
                 }
                 echo form_dropdown(array('name' => 'department','class'=>'selectpicker','required' => 'required'), $options, set_value('department', isset($videos->department) ? $videos->department : ''), lang('videos_field_department') . lang('bf_form_label_required'),'','','col-md-6');
             ?>
-
+<style>
+    .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+    width: 300px !important;
+}
+    .bootstrap-select > .dropdown-toggle {
+    width: 150% !important;
+    }
+    
+    .form-inline .bootstrap-select.btn-group, .form-horizontal .bootstrap-select.btn-group, .form-group .bootstrap-select.btn-group {
+    margin-bottom: 0;
+    width:  400px !important;
+}
+</style>
             <div class="inputer floating-label control-group<?php echo form_error('link') ? ' error' : ''; ?>">
                 <?php echo form_label(lang('videos_field_link') . lang('bf_form_label_required'), 'link', array('class' => 'control-label')); ?>
                 <div class='input-wrapper controls'>
