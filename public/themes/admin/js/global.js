@@ -9,7 +9,8 @@ $('.notification a.close').click(function(e){
 	Check All Feature
 */
 $(".check-all").click(function(){
-	$("table input[type=checkbox]").attr('checked', $(this).is(':checked'));
+//	$("table input[type=checkbox]").attr('checked', $(this).is(':checked'));
+$("table input[type=checkbox]").prop('checked', $(this).prop("checked"));
 });
 
 /*

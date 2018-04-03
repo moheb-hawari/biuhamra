@@ -43,7 +43,7 @@ class UploadHandler
     public function __construct($options = null, $initialize = true, $error_messages = null) {
         $this->response = array();
         $this->options = array(
-            'script_url' => $this->get_full_url().'/'.$this->basename($this->get_server_var('SCRIPT_NAME')).'/admin/facilities/photo_gallery/uplaod_images',
+            'script_url' => $this->get_full_url().'/'.$this->basename($this->get_server_var('SCRIPT_NAME')),
             'upload_dir' => dirname($this->get_server_var('SCRIPT_FILENAME')).'/files/',
             'upload_url' => $this->get_full_url().'/files/',
             'input_stream' => 'php://input',
@@ -52,7 +52,7 @@ class UploadHandler
             'param_name' => 'files',
             // Set the following option to 'POST', if your server does not support
             // DELETE requests. This is a parameter sent to the client:
-            'delete_type' => 'POST',
+            'delete_type' => 'DELETE',
             'access_control_allow_origin' => '*',
             'access_control_allow_credentials' => false,
             'access_control_allow_methods' => array(
@@ -168,7 +168,6 @@ class UploadHandler
             ),
             'print_response' => true
         );
-        
         if ($options) {
             $this->options = $options + $this->options;
         }
@@ -216,8 +215,8 @@ class UploadHandler
     }
 
     protected function get_user_id() {
-        //@session_start();
-        return $this->options['gallary_id'];
+        @session_start();
+        return session_id();
     }
 
     protected function get_user_path() {
