@@ -37,7 +37,7 @@ $title = lang($controller.'_module_name');
         <link rel="stylesheet" href="<?php echo assets_path() . 'globals/css/plugins.css'; ?>" >
         
         <link rel="stylesheet" href="<?php echo assets_path() . 'css/style.css'; ?>" >
-        <link rel="shortcut icon" href="<?php echo assets_path() . 'globals/img/icons/favicon.ico'; ?>">
+        <link rel="shortcut icon" href="<?php echo assets_path() . 'images/'; ?>favicon.ico">
         <link rel="apple-touch-icon" href="<?php echo assets_path() . 'globals/img/icons/apple-touch-icon.png'; ?>">
 
         <script src="<?php echo assets_path() . 'globals/plugins/modernizr/modernizr.min.js'; ?>"></script>
@@ -70,9 +70,7 @@ $title = lang($controller.'_module_name');
                 </div><!--.hamburger-->
             </div><!--.nav-menu-->
 
-            <div class="nav-search">
-                <span class="search"></span>
-            </div><!--.nav-search-->
+           
             <!--.nav-user-->
             <div class="nav-user">
 			<div class="user">
@@ -143,17 +141,19 @@ $title = lang($controller.'_module_name');
             <div class="menu-layer">
 
                 <?php
-
+                
                 Contexts::set_attrs(
                         array(
                             'templateContextMenu' => '<li><a href="javascript:;">{text}</a>{content}</li>',
-                            '$templateMenu' => '<li><a href="javascript:;" >{display}</a></li>',
+                            'templateMenu' => '<li ><a {extra} href="{url}" >{display}</a></li>',
                             'templateSubMenu' => '<li><a href="javascript:;">{display}</a><ul class="child-menu">{view}</ul></li>',
                             'templateContextEnd' => '',
                             'child_class' => 'child-menu',
+                            'requiredContexts' => array(),
                 ));
+                //,'reports','developer','settings'
                 echo Contexts::context_nav('content');
-                Contexts::set_contexts(['facilities','humanresources','utility','reports','developer','settings']);
+                Contexts::set_contexts(['homepage','facilities','humanresources','utility']);
                 echo Contexts::render_menu('text', 'normal');
                 ?>
                 
@@ -161,117 +161,21 @@ $title = lang($controller.'_module_name');
             <!-- END OF MENU LAYER -->
             
             <!-- BEGIN SEARCH LAYER -->
-            <div class="search-layer">
-                <div class="search">
-                    <form action="pages-search-results.html">
-                        <div class="form-group">
-                            <input type="text" id="input-search" onkeyup="search()" class="form-control" value="" placeholder="type something">
-                            <button type="submit" class="btn btn-default disabled"><i class="ion-search"></i></button>
-                        </div>
-                    </form>
-                </div><!--.search-->
-                <div class="results">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div id="patients_search" class="result result-users">
-                                <h4>Users <small>(0)</small></h4>
-
-                                <ul class="list-material">
-                                    <li><p>No results were found</p></li>
-                                </ul>
-
-                            </div><!--.results-user-->
-                        </div><!--.col-->
-                        
-
-                    </div><!--.row-->
-                </div><!--.results-->
-            </div><!--.search-layer-->
+            
             <!-- END OF SEARCH LAYER -->
 
             <!-- BEGIN USER LAYER -->
             <div class="user-layer">
                 <ul class="nav nav-tabs nav-justified" role="tablist">
-                    <li class="active"><a href="#messages" data-toggle="tab">Messages</a></li>
-                    <li><a href="#notifications" data-toggle="tab">Notifications <span class="badge">2</span></a></li>
+                   
                     <li><a href="#settings" data-toggle="tab">Settings</a></li>
                 </ul>
 
                 <div class="row no-gutters tab-content">
 
-                    <div class="tab-pane fade in active" id="messages">
-                        <div class="col-md-4">
-                            <div class="message-list-overlay"></div>
+                    
 
-                           
-                        </div><!--.col-->
-                        <div class="col-md-8">
-                            <div class="message-send-container">
-
-                                <!--.messages-->
-
-                                <div class="send-message">
-                                    <div class="input-group">
-                                        <div class="inputer inputer-blue">
-                                            <div class="input-wrapper">
-                                                <textarea rows="1" id="send-message-input" class="form-control js-auto-size" placeholder="Message"></textarea>
-                                            </div>
-                                        </div><!--.inputer-->
-                                        <span class="input-group-btn">
-                                            <button id="send-message-button" class="btn btn-blue" type="button">Send</button>
-                                        </span>
-                                    </div>
-                                </div><!--.send-message-->
-
-                            </div><!--.message-send-container-->
-                        </div><!--.col-->
-
-                        <div class="mobile-back">
-                            <div class="mobile-back-button"><i class="ion-android-arrow-back"></i></div>
-                        </div><!--.mobile-back-->
-                    </div><!--.tab-pane #messages-->
-
-                    <div class="tab-pane fade" id="notifications">
-
-                        <div class="col-md-6 col-md-offset-3">
-
-                            <ul class="list-material has-hidden">
-                                <li class="has-action-left has-action-right has-long-story">
-                                    <a href="#" class="hidden"><i class="ion-android-delete"></i></a>
-                                    <a href="#" class="visible">
-                                        <div class="list-action-left">
-                                            <i class="ion-bag icon text-indigo"></i>
-                                        </div>
-                                        <div class="list-content">
-                                            <span class="caption">Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits.</span>
-                                        </div>
-                                        <div class="list-action-right">
-                                            <span class="top">2 hr</span>
-                                            <i class="ion-record text-green bottom"></i>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="has-action-left has-action-right has-long-story">
-                                    <a href="#" class="hidden"><i class="ion-android-delete"></i></a>
-                                    <a href="#" class="visible">
-                                        <div class="list-action-left">
-                                            <i class="ion-image text-green icon"></i>
-                                        </div>
-                                        <div class="list-content">
-                                            <span class="caption">Dramatically visualize customer directed convergence without revolutionary ROI. Efficiently unleash cross-media information without cross-media value.</span>
-                                        </div>
-                                        <div class="list-action-right">
-                                            <span class="top">16:55</span>
-                                            <i class="ion-record text-green bottom"></i>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-
-                        </div><!--.col-->
-                    </div><!--.tab-pane #notifications-->
-
-                    <div class="tab-pane fade" id="settings">
+                    <div class="tab-pane fade in active" id="settings">
                         <div class="col-md-6 col-md-offset-3">
 
                             <div class="settings-panel">
@@ -279,10 +183,10 @@ $title = lang($controller.'_module_name');
 
                                 <div class="legend">Your Settings</div>
                                 <ul>
-                                    <li>
+<!--                                    <li>
                                         <a href="<?php echo site_url('admin/settings/users/profile'); ?>"><?php echo lang('bf_user_settings'); ?></a>
                                                 
-                                    </li>
+                                    </li>-->
                                     <li>
                                         <a href="<?php echo site_url('logout'); ?>"><?php echo lang('bf_action_logout'); ?></a>
                                     </li>

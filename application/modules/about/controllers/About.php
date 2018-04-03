@@ -1,7 +1,7 @@
 <?php defined('BASEPATH') || exit('No direct script access allowed');
 
 /**
- * Content controller
+ * Homepage controller
  */
 class About extends Front_Controller
 {

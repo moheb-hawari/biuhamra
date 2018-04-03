@@ -85,6 +85,7 @@ class Doctors_model extends MY_Model
 			'label' => 'lang:doctors_field_ar_description',
 			'rules' => 'required',
 		),
+           
 		array(
 			'field' => 'weight',
 			'label' => 'lang:doctors_field_weight',

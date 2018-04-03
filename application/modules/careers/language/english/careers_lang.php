@@ -60,3 +60,6 @@ $lang['careers_field_ar_description'] = 'Arabic Description';
 $lang['careers_field_job_code'] = 'Job Code';
 $lang['careers_field_weight'] = 'Weight';
 $lang['careers_field_status'] = 'Status';
+
+$lang['job_title'] =  'Job Title';
+$lang['job_code'] = 'Job Code';

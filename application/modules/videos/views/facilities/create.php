@@ -2,6 +2,14 @@
 
 if (validation_errors()) :
 ?>
+<style>
+    .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+    width: 300px !important;
+}
+    .bootstrap-select > .dropdown-toggle {
+    width: 150% !important;
+    }
+</style>
 <div class='alert alert-block alert-error fade in'>
     <a class='close' data-dismiss='alert'>&times;</a>
     <div class='alert alert-danger'>

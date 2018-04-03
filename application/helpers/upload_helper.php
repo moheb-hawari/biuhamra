@@ -24,7 +24,16 @@ function do_upload($id) {
     {
         if($val['name'] == null){continue;}
         
-        $config['allowed_types']        = 'gif|jpg|png|jepg';
+        
+
+
+        $file_name = pathinfo($val['name'], PATHINFO_FILENAME);
+        $file_ext = pathinfo($val['name'], PATHINFO_EXTENSION);
+        $new_file_name = date('U').'.'.$file_ext;
+        $config['file_name'] = $new_file_name;
+        $val['name'] = $new_file_name;
+    
+        $config['allowed_types']        = 'gif|jpg|png|jpeg|bmp|jfif';
         $config['upload_path']          = FCPATH."assets/images/$key/$id";
         
         if (!file_exists($config['upload_path'])) {
@@ -44,8 +53,9 @@ function do_upload($id) {
             
         if ( ! $CI->upload->do_upload($key))
         {
-            Template::set_message($CI->upload->display_errors(), 'error');
-            return false;
+            
+            $data['error'] = $CI->upload->display_errors();
+
         }
         else
         {

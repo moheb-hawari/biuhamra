@@ -3,10 +3,7 @@
     </div>
     <div class='panel-body'>
         <div class="display-animation text-bold">
-            <div class="row">
-
-
-
+            <div style="min-height: 400px" class="row">
 
                 <div class="display-animation">
                     <div class="row image-row margin-bottom-40">
@@ -41,7 +38,7 @@
 
                         
 
-                        <div class="col-md-4">
+<!--                        <div class="col-md-4">
                             
                             <?php 
                                 if(!empty($departments))
@@ -52,12 +49,12 @@
                                             <div class="friend-content">
                                                 <p class="title"><?php echo $val->en_title; ?></p>
                                                 <p><a href="user-profile.html"><?php echo $val->status==0?'Active':'Inactive'; ?></a></p>
-                                            </div><!--.friend-content-->
-                                        </div><!--.card-->
+                                            </div>.friend-content
+                                        </div>.card
                                    <?php } } ?>
                             
 
-                        </div><!--.col-->
+                        </div>.col
                         <div class="col-md-4">
                             <?php 
                                 if(!empty($doctor))
@@ -69,12 +66,12 @@
                                     <p class="title"><?php echo $val->en_name; ?></p>
                                     <p><?php echo $val->en_job_title; ?></p>
                                     <p class=""><?php echo $val->en_academic; ?></p>
-                                </div><!--.friend-content-->
-                            </div><!--.card-->
+                                </div>.friend-content
+                            </div>.card
                             <?php } } ?>
                             
                             
-                        </div><!--.col-->
+                        </div>.col
                         <div class="col-md-4">
                              <?php 
                                 if(!empty($patients_say))
@@ -87,11 +84,11 @@
                                     <p class="title"><?php echo $val->en_name; ?></p>
                                     <p><?php echo $val->en_job_title; ?></p>
                                     <p><?php echo strip_tags($val->en_comment); ?></p>
-                                </div><!--.friend-content-->
-                            </div><!--.card-->
+                                </div>.friend-content
+                            </div>.card
                              <?php } } ?>
                             
-                        </div><!--.col-->
+                        </div>.col-->
 
                     </div><!--.row-->
                 </div><!--.display-animation-->

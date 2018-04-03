@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') || exit('No direct script access allowed');
 
-class Photo_gallery_model extends BF_Model
+class Photo_gallery_model extends MY_Model
 {
     protected $table_name	= 'photo_gallery';
 	protected $key			= 'id';
@@ -24,7 +24,7 @@ class Photo_gallery_model extends BF_Model
 	protected $after_insert 	= array();
 	protected $before_update 	= array();
 	protected $after_update 	= array();
-	protected $before_find 	    = array();
+	protected $before_find 	    = array('where_delete');
 	protected $after_find 		= array();
 	protected $before_delete 	= array();
 	protected $after_delete 	= array();

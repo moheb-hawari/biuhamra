@@ -1,105 +1,1811 @@
-@media (max-width: 1199px) {
-    body {
-        padding-top: 51px;
+@media (min-width: 1200px) {
+    /* ================= Scroll Navbar Start ================= */
+    /*Head Social Meadia*/
+    .scrollNavbar .head_smed {
+        height: 30px;
     }
-    #btn3{
-        margin-top: 16px;
+    .scrollNavbar .site_lang {
+        height: 30px;
+        line-height: 30px;
+        font-size: 13px;
     }
-    #about{
-        margin-top: 50px;
+    .scrollNavbar .hd_sm_list {
+        height: 30px;
+        margin: 2px 0;
     }
-    .sec1{
-        margin-top: 300px;
+    .scrollNavbar .hd_sm_list > li > a {
+        width: 26px;
+        height: 26px;
     }
-    #aboutus{
-        margin-top: -68px;
-        margin-bottom: 0;
+    .scrollNavbar .hd_sm_list > li > a > i {
+        height: 24px;
+        width: 24px;
+        font-size: 16px;
     }
-    .jumbotron{
-        margin-top: 30px;
+    /*Web Navbar*/
+    .scrollNavbar .web_nav, .scrollNavbar .nav_lk_list {
+        height: 60px;
     }
+    .scrollNavbar .wb_nv_cont .nav_logo img {
+        height: 40px;
+        margin: 10px 0;
+    }
+    .scrollNavbar .nav_lk_list > li {
+        height: 60px;
+        padding: 15px 10px;
+    }
+    .scrollNavbar .nav_lk_list > li > a > span, .scrollNavbar .wb_nv_cont .sub_mneu_ttle > span {
+        height: 30px;
+        line-height: 30px;
+        font-size: 15px;
+    }
+    .scrollNavbar .nav_lk_list > li.active > a > span, .scrollNavbar .nav_lk_list > li.active .sub_mneu_ttle > span {
+        border-bottom: 2px solid #ec5359;
+    }
+    .scrollNavbar .web_sbmnu_lst {
+        top: 60px;
+    }
+    /*Scroll Navbar End*/
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-    .header-top-agile .s-12 {
-        display: none;
+    /* ================= General Style Start ================= */
+    .main_sction {
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
+    /*General Style End*/
+    /* ================= Main Header Start ================= */
+    /* == Web Navbar == */
+    .wb_nv_cont .nav_logo img {
+        height: 60px;
+        margin: 20px 0;
+    }
+    .nav_lk_list > li {
+        padding: 35px 4px;
+    }
+    .nav_lk_list > li > a, .wb_nv_cont .sub_mneu_ttle {
+        font-size: 14px;
+    }
+    .nav_lk_list > li > a > span, .wb_nv_cont .sub_mneu_ttle > span {
+        height: 30px;
+        line-height: 30px;
+    }
+    .web_sbmnu_lst {
+        min-width: 170px;
+    }
+    .nav_lk_list .web_sbmnu_lst li a {
+        font-size: 12px;
+    }
+    /* == Header Slider == */
+    .header_slider, .header_slider .sin_slide {
+        height: 700px;
+    }
+    .header_slider .sin_slide_text {
+        width: 300px;
+        margin-top: 120px;
+    }
+    .header_slider .slide_ttle {
+        font-size: 35px;
+    }
+    .header_slider .slide_desc {
+        font-size: 16px;
+    }
+    .header_slider .swiper-button-prev, .header_slider .swiper-button-next {
+        top: 200px;
+        width: auto;
+        height: auto;
+    }
+    .header_slider .swiper-button-prev:before, .header_slider .swiper-button-next:before {
+        font-size: 35px;
+        height: auto;
+    }
+    /* == Clinic Bio == */
+    .clinic_discip {
+        height: 250px;
+    }
+    .clinic_discip .sin_discip {
+        height: 250px;
+        padding: 40px 10px 0;
+    }
+    .clinic_discip .discip_ico {
+        margin-bottom: 15px;
+    }
+    .clinic_discip .discip_ico img {
+        height: 60px;
+    }
+    .clinic_discip .discip_ttle {
+        font-size: 17px;
+    }
+    .clinic_discip .discip_desc {
+        font-size: 14px;
+        -webkit-line-clamp: 4;
+        max-height: 83px;
+    }
+    /*Main Header End*/
+    /* ================= Scroll Navbar Start ================= */
+    /*Head Social Meadia*/
+    .scrollNavbar .head_smed {
+        height: 34px;
+    }
+    .scrollNavbar .site_lang {
+        height: 34px;
+        line-height: 34px;
+    }
+    .scrollNavbar .hd_sm_list {
+        height: 34px;
+        margin: 2px 0;
+    }
+    .scrollNavbar .hd_sm_list > li > a {
+        width: 30px;
+        height: 30px;
+    }
+    .scrollNavbar .hd_sm_list > li > a > i {
+        height: 30px;
+        width: 30px;
+        font-size: 20px;
+    }
+    /*Web Navbar*/
+    .scrollNavbar .web_nav, .scrollNavbar .nav_lk_list {
+        height: 50px;
+    }
+    .scrollNavbar .wb_nv_cont .nav_logo img {
+        height: 36px;
+        margin: 7px 0;
+    }
+    .scrollNavbar .nav_lk_list > li {
+        height: 50px;
+        padding: 12px 10px;
+    }
+    .scrollNavbar .nav_lk_list > li > a > span, .scrollNavbar .wb_nv_cont .sub_mneu_ttle > span {
+        height: 26px;
+        line-height: 26px;
+    }
+    .scrollNavbar .nav_lk_list > li.active > a > span, .scrollNavbar .nav_lk_list > li.active .sub_mneu_ttle > span {
+        border-bottom: 2px solid #ec5359;
+    }
+    .scrollNavbar .web_sbmnu_lst {
+        top: 50px;
+    }
+    /*Scroll Navbar End*/
+    /* ================= About The Clinic Start ================= */
+    .abt_clin_cont {
+        width: 550px
+    }
+    .about_clinic_sec .sec_title {
+        font-size: 32px;
+    }
+    /*About The Clinic End*/
+    /* ================= Departments Section Start ================= */
+    .tabs_btns_cont {
+        width: 280px;
+    }
+    .tabs_title {
+        font-size: 31px;
+    }
+    .sin_tab_btn {
+        padding: 0 8px;
+        height: 44px;
+        line-height: 44px;
+    }
+    .sin_tab_btn.active:before {
+        top: 13px;
+        right: -38px;
+        border-width: 9px;
+    }
+    .tabs_contents_cont {
+        width: calc(100% - 280px);
+    }
+    .tab_detail {
+        padding: 25px;
+        width: 330px;
+    }
+    .tab_det_ttle {
+        line-height: 1.2;
+        font-size: 21px;
+        max-height: 50px;
+    }
+    .tab_det_desc {
+        -webkit-line-clamp: 13;
+        max-height: 263px;
+    }
+    .tab_read_more {
+        right: 20px;
+        bottom: 20px;
+    }
+    .tab_img {
+        width: calc(100% - 330px);
+    }
+    /*Departments Section End*/
+    /* ================= Our Team Section Start ================= */
+    .our_tm_cont {
+        width: 900px;
+        margin: 30px auto;
+    }
+    .our_team_intro {
+        width: 260px;
+        padding: 25px;
+    }
+    .our_team_ttle {
+        font-size: 30px;
+    }
+    .our_team_imgs {
+        width: 630px;
+    }
+    .sin_doc_img {
+        margin: 5px;
+    }
+    /*Our Team Section End*/
+    /* ================= Testimonial Slider Start ================= */
+    .testim_ttle {
+        font-size: 30px;
+    }
+    .patient_txt {
+        padding: 40px 0;
+    }
+    .testim_slider .swiper-button-prev, .testim_slider .swiper-button-next {
+        width: 18px;
+        height: 27px;
+        background-size: 18px 28px;
+    }
+    .sin_patient_testim {
+        margin-left: 25px;
+        font-size: 17px;
+        width: 290px;
+    }
+    .patient_txt:before, .patient_txt:after {
+        width: 22px;
+        height: 17px;
+    }
+    .patient_txt:before {
+        margin-right: 7px;
+    }
+    .patient_txt:after {
+        margin-left: 8px;
+        -moz-transform: scale(-1, -1) translateY(-3px);
+        -webkit-transform: scale(-1, -1) translateY(-3px);
+        -o-transform: scale(-1, -1) translateY(-3px);
+        -ms-transform: scale(-1, -1) translateY(-3px);
+        transform: scale(-1, -1) translateY(-3px);
+    }
+    .patient_job {
+        font-size: 14px;
+    }
+    /*Testimonial Slider End*/
+    /* ================= Message - FAQ Section Start ================= */
+    .msg_faq_intro {
+        margin-bottom: 30px;
+    }
+    .msg_faq_ttle {
+        font-size: 30px;
+    }
+    .form_ipt_cont, .sin_accdn:not(:nth-last-of-type(1)) {
+        margin-bottom: 10px;
+    }
+    .acc_desc, .acc_ttle {
+        padding: 10px 30px 10px 15px;
+        font-size: 13px;
+    }
+    .acc_ttle:after {
+        right: 15px;
+    }
+    /*Message - FAQ Section End*/
+    /* ================= Footer Start ================= */
+    .sin_ftr_sec {
+        font-size: 15px;
+    }
+    .ftr_soc_md_list > li > a {
+        width: 40px;
+        height: 40px;
+    }
+    .ftr_soc_md_list > li > a > i {
+        width: 38px;
+        height: 38px;
+        font-size: 26px;
+    }
+    .footer_cpyright {
+        font-size: 16px;
+    }
+    /*Footer End*/
+    /* ================= departments & services Pages Start ================= */
+    .subpage_header, .subpage_header .header_content {
+        height: 500px;
+    }
+    .subpage_header .header_content {
+        width: 360px;
+    }
+    #hr_page .header_content {
+        width: 730px;
 
-    #about .aboutdet{
-    padding-top:20px;
-    padding-right: 10px;
-}
-    .contact{
-        width: 95%;
-        height: 95%;
     }
-    textarea {
-        width:370px;
-
+    #hr_page .hr_hd_text {
+        font-size: 30px;
     }
-    #aboutus{
-        margin-top: -111px;
-        margin-bottom: 0;
+    #hr_page .hr_hd_text .text1 {
+        margin-bottom: 40px;
+        padding-right: 100px;
     }
-    .jumbotron{
-        margin-top: 30px;
+    .subpage_header .header_content .header_ttle {
+        font-size: 40px;
     }
-
+    .subpage_header .header_content .header_desc {
+        font-size: 18px;
+        max-height: 205px;
+    }
+    .sin_dep_ttle {
+        font-size: 29px;
+    }
+    .sin_dep_cont:not(:nth-last-of-type(1)) {
+        margin-bottom: 30px;
+    }
+    .dep_sin_doc .dep_ttle {
+        height: 39px;
+        font-size: 13px;
+    }
+    .dep_sin_doc .doc_img {
+        height: 210px;
+    }
+    .doc_detls .doc_detls_name {
+        font-size: 13px;
+    }
+    /*departments & services Pages End*/
+    /* ================= Doctors Page Start ================= */
+    .doctors_fdet .dep_sin_doc .doc_img {
+        height: 292px;
+    }
+    .doctors_fdet .dep_sin_doc .doc_detls {
+        height: auto;
+    }
+    /*Doctors Page End*/
+    /* ================= Doctor Details page Start ================= */
+    .doc_fdet_img {
+        margin-top: -260px;
+        box-shadow: 0 0 27px 3px rgba(35, 41, 100, 0.5);
+        height: 374px;
+        width: 374px;
+    }
+    .doc_fdet_card {
+        margin-bottom: 50px;
+    }
+    .doc_fdet_bio {
+        font-size: 18px;
+    }
+    .doc_fdet_bio .doc_fdet_name {
+        font-size: 25px;
+    }
+    /*Doctor Details page End*/
+    /* ================= Administration Page Start ================= */
+    .h_res_cont {
+        width: 800px;
+    }
+    .hres_ttle {
+        font-size: 28px;
+    }
+    .adm_name {
+        font-size: 21px;
+    }
+    .adm_pos {
+        font-size: 18px;
+    }
+    /*Administration Page End*/
+    /* ================= Careers Page Start ================= */
+    .sin_job_ttle {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+    .sin_job_req {
+        font-size: 17px;
+        margin-bottom: 15px;
+    }
+    .sin_job_code {
+        font-size: 17px;
+    }
+    /*Career Form*/
+    .job_ipt {
+        font-size: 19px;
+        width: 350px;
+        margin-bottom: 35px;
+    }
+    .cv_lbl {
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
+    .cv_upld_ipt {
+        margin-bottom: 35px;
+    }
+    /*Careers Page End*/
+    /* ================= Facilities Page Start ================= */
+    #facilities_page .header_content {
+        width: 500px;
+    }
+    #facilities_page .facil_hd_text {
+        font-size: 30px;
+    }
+    .facil_ttle {
+        font-size: 28px;
+    }
+    .facil_tab_btns {
+        margin-bottom: 30px;
+    }
+    .fac_tb_btn {
+        height: 45px;
+        line-height: 45px;
+        font-size: 22px;
+        padding: 0 60px;
+    }
+    .sld_tab_btn {
+        margin: 0 15px;
+        font-size: 16px;
+    }
+    .fci_sin_med_text {
+        font-size: 18px;
+    }
+    /*popup*/
+    .faci_hidden_cont {
+        width: 900px;
+        height: 450px;
+    }
+    .med_desc {
+        padding: 15px;
+        font-size: 15px;
+    }
+    .med_ttle {
+        font-size: 23px;
+    }
+    /*Facilities Page End*/
+    /* ================= Common Diseases Start ================= */
+    .com_dis_ppcont {
+        max-width: 900px;
+        padding: 5px 10px;
+    }
+    .dis_det_img {
+        margin-bottom: 25px;
+    }
+    .dis_det_desc {
+        font-size: 15px;
+    }
+    .dis_name_ttle {
+        font-size: 29px;
+        margin-bottom: 15px;
+    }
+    .sin_dis_sec:not(:nth-last-of-type(1)) {
+        margin-bottom: 15px;
+    }
+    .sin_dis_ttle {
+        font-size: 19px;
+    }
+    /*Common Diseases End*/
 }
 @media (min-width: 768px) and (max-width: 991px) {
-    .header-top-agile .s-12 {
-        display: none;
+    /* ================= General Style Start ================= */
+    body {
+        padding-top: 106px;
     }
-
-    textarea {
-        width:260px;
+    .main_sction {
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
-    #btn3{
-        margin-top: 0px;
+    /*General Style End*/
+    /* ================= Main Header Start ================= */
+    /* == Header Social Media == */
+    .head_smed {
+        height: 36px;
     }
-    .sec1{
-        margin-top: 250px;
+    .hd_sm_list {
+        height: 30px;
     }
-    #about .aboutdet{
-        padding-top:20px;
-        padding-right: 35px;
+    .hd_sm_list > li > a {
+        width: 30px;
+        height: 30px;
     }
-    #about img{
-        width: 90%;
+    .hd_sm_list > li > a > i {
+        height: 30px;
+        width: 30px;
+        font-size: 17px;
     }
-    #aboutus{
-        margin-top: -158px;
-        margin-bottom: 0;
+    /*Lang Selector*/
+    .site_lang {
+        height: 36px;
+        line-height: 36px;
+        font-size: 13px;
     }
-    .jumbotron{
-        margin-top: 30px;
+    /* == Web Navbar == */
+    .web_nav {
+        height: 70px;
     }
-
+    .wb_nv_cont .nav_logo img {
+        height: 40px;
+        margin: 15px 0;
+    }
+    .nav_lk_list {
+        height: 70px;
+    }
+    .nav_lk_list > li {
+        height: 70px;
+        padding: 20px 3px;
+    }
+    .nav_lk_list > li > a, .wb_nv_cont .sub_mneu_ttle {
+        font-size: 12px;
+    }
+    .nav_lk_list > li.active > a > span, .nav_lk_list > li.active .sub_mneu_ttle > span {
+        border-bottom: 2px solid #ec5359;
+    }
+    .nav_lk_list > li > a > span, .wb_nv_cont .sub_mneu_ttle > span {
+        height: 30px;
+        line-height: 30px;
+    }
+    .nav_lk_list .web_sbmnu_lst {
+        top: 70px;
+        min-width: 160px;
+        box-shadow: 0 4px 4px 1px rgba(0, 0, 0, 0.3);
+    }
+    .nav_lk_list .web_sbmnu_lst li a {
+        font-size: 11px;
+    }
+    .nav_lk_list .web_sbmnu_lst li a:hover {
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -o-transform: translateX(0);
+        transform: translateX(0);
+        color: #293881;
+    }
+    /* == Header Slider == */
+    .header_slider, .header_slider .sin_slide {
+        height: 600px;
+    }
+    .header_slider .sin_slide_text {
+        margin-top: 100px;
+        width: 300px;
+    }
+    .header_slider .slide_ttle {
+        font-size: 30px;
+    }
+    .header_slider .slide_desc {
+        font-size: 16px;
+    }
+    .header_slider .swiper-button-prev, .header_slider .swiper-button-next {
+        top: 180px;
+        width: auto;
+        height: auto;
+    }
+    .header_slider .swiper-button-prev:before, .header_slider .swiper-button-next:before {
+        font-size: 28px;
+        height: auto;
+    }
+    /* == Clinic Bio == */
+    .clinic_discip {
+        height: 200px;
+    }
+    .clinic_discip .sin_discip {
+        height: 200px;
+        padding: 30px 10px 0;
+    }
+    .clinic_discip .discip_ico {
+        margin-bottom: 10px;
+    }
+    .clinic_discip .discip_ico img {
+        height: 50px;
+    }
+    .clinic_discip .discip_ttle {
+        font-size: 16px;
+    }
+    .clinic_discip .discip_desc {
+        font-size: 12px;
+        -webkit-line-clamp: 4;
+        max-height: 70px;
+    }
+    /*Main Header End*/
+    /* ================= Scroll Navbar Start ================= */
+    /*Head Social Meadia*/
+    .scrollNavbar .head_smed {
+        height: 30px;
+    }
+    .scrollNavbar .site_lang {
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+    }
+    .scrollNavbar .hd_sm_list > li > a {
+        width: 24px;
+        height: 24px;
+    }
+    .scrollNavbar .hd_sm_list > li > a > i {
+        height: 24px;
+        width: 24px;
+        font-size: 15px;
+    }
+    /*Web Navbar*/
+    .scrollNavbar .web_nav, .scrollNavbar .nav_lk_list {
+        height: 50px;
+    }
+    .scrollNavbar .wb_nv_cont .nav_logo img {
+        height: 36px;
+        margin: 7px 0;
+    }
+    .scrollNavbar .nav_lk_list > li {
+        height: 50px;
+        padding: 13px 3px;
+    }
+    .scrollNavbar .nav_lk_list > li > a > span, .scrollNavbar .wb_nv_cont .sub_mneu_ttle > span {
+        height: 24px;
+        line-height: 24px;
+        font-size: 12px;
+    }
+    .scrollNavbar .web_sbmnu_lst {
+        top: 50px;
+    }
+    /*Scroll Navbar End*/
+    /* ================= About The Clinic Start ================= */
+    .abt_clin_cont {
+        width: 500px;
+        font-size: 14px;
+    }
+    .about_clinic_sec .sec_title {
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+    /*About The Clinic End*/
+    /* ================= Departments Section Start ================= */
+    .tabs_btns_cont {
+        width: 260px;
+    }
+    .tab_intro {
+        padding: 10px 15px;
+    }
+    .tabs_title {
+        font-size: 28px;
+    }
+    .dep_tabs_btns {
+        padding: 0 15px 15px;
+    }
+    .sin_tab_btn {
+        padding: 0 5px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 13px;
+    }
+    .sin_tab_btn.active:before {
+        top: 12px;
+        right: -31px;
+        border-width: 8px;
+    }
+    .sin_tab_btn .stab_txt {
+        width: calc(100% - 10px);
+    }
+    .tabs_contents_cont {
+        width: calc(100% - 260px);
+    }
+    .tab_detail, .tab_img {
+        float: none;
+        height: 50%;
+        width: auto;
+    }
+    .tab_detail {
+        padding: 10px 15px;
+    }
+    .tab_det_ttle {
+        font-size: 20px;
+        line-height: 1.2;
+        max-height: 48px;
+    }
+    .tab_det_desc {
+        -webkit-line-clamp: 5;
+        max-height: 103px;
+    }
+    .tab_read_more {
+        right: 15px;
+        bottom: 10px;
+        height: 27px;
+        line-height: 27px;
+        font-size: 13px;
+    }
+    /*Departments Section End*/
+    /* ================= Our Team Section Start ================= */
+    .our_tm_cont {
+        width: auto;
+        margin: 30px auto;
+    }
+    .our_team_ttle {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    .our_team_imgs {
+        width: 440px;
+    }
+    /*Our Team Section End*/
+    /* ================= Testimonial Slider Start ================= */
+    .testim_ttle {
+        font-size: 28px;
+    }
+    .patient_txt {
+        padding: 30px 0;
+    }
+    .testim_slider .swiper-button-prev, .testim_slider .swiper-button-next {
+        width: 15px;
+        height: 25px;
+        background-size: 15px 25px;
+    }
+    .sin_patient_testim {
+        margin-left: 20px;
+        font-size: 16px;
+        width: 270px;
+    }
+    .patient_txt:before, .patient_txt:after {
+        width: 20px;
+        height: 16px;
+    }
+    .patient_txt:before {
+        margin-right: 5px;
+    }
+    .patient_txt:after {
+        margin-left: 5px;
+        -moz-transform: scale(-1, -1) translateY(-3px);
+        -webkit-transform: scale(-1, -1) translateY(-3px);
+        -o-transform: scale(-1, -1) translateY(-3px);
+        -ms-transform: scale(-1, -1) translateY(-3px);
+        transform: scale(-1, -1) translateY(-3px);
+    }
+    .patient_job {
+        font-size: 13px;
+    }
+    /*Testimonial Slider End*/
+    /* ================= Message - FAQ Section Start ================= */
+    .msg_faq_intro {
+        margin-bottom: 20px;
+    }
+    .msg_faq_ttle {
+        font-size: 27px;
+    }
+    .msg_faq_bio {
+        font-size: 13px;
+    }
+    .msg_frm_cont {
+        padding: 0;
+    }
+    .form_ipt_cont {
+        height: 35px;
+        line-height: 35px;
+        margin-bottom: 10px;
+    }
+    .form_ipt_cont label {
+        font-size: 13px;
+    }
+    .form_ipt_cont input[type="text"], .form_ipt_cont input[type="email"] {
+        height: 35px;
+        font-size: 13px;
+    }
+    .frm_confirm .main_btn {
+        padding: 0 20px;
+    }
+    .sin_accdn:not(:nth-last-of-type(1)) {
+        margin-bottom: 10px;
+    }
+    .acc_desc, .acc_ttle {
+        padding: 10px 20px 10px 10px;
+        font-size: 13px;
+    }
+    .acc_ttle:after {
+        right: 15px;
+    }
+    /*Message - FAQ Section End*/
+    /* ================= Location Section Start ================= */
+    .map_cont {
+        height: 350px;
+    }
+    /*Location Section End*/
+    /* ================= Footer Start ================= */
+    .footer_cont {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .sin_ftr_sec {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    .ftr_soc_md_list {
+        padding: 0;
+    }
+    .ftr_soc_md_list > li > a {
+        width: 36px;
+        height: 36px;
+    }
+    .ftr_soc_md_list > li > a > i {
+        width: 34px;
+        height: 34px;
+        font-size: 24px;
+    }
+    .footer_cpyright {
+        font-size: 14px;
+    }
+    /*Footer End*/
+    /* ================= departments & services Pages Start ================= */
+    .subpage_header, .subpage_header .header_content {
+        height: 400px;
+    }
+    .subpage_header .header_content {
+        width: 300px;
+    }
+    #doctors_page .header_content {
+        width: 450px;
+    }
+    .subpage_header .header_content .header_ttle {
+        font-size: 35px;
+    }
+    #doctors_page .header_ttle {
+        font-size: 25px;
+    }
+    #hr_page .header_content {
+        width: 600px;
+    }
+    #hr_page .hr_hd_text {
+        font-size: 25px;
+    }
+    #hr_page .hr_hd_text .text1 {
+        margin-bottom: 30px;
+        padding-right: 100px;
+    }
+    .subpage_header .header_content .header_desc {
+        font-size: 15px;
+        max-height: 172px;
+    }
+    .sin_dep_ttle {
+        font-size: 27px;
+        margin-bottom: 15px;
+    }
+    .sin_dep_cont:not(:nth-last-of-type(1)) {
+        margin-bottom: 30px;
+    }
+    .dep_sin_doc .dep_ttle {
+        height: 36px;
+        font-size: 12px;
+    }
+    .dep_sin_doc .doc_img {
+        height: 220px;
+    }
+    .doc_detls .doc_detls_name {
+        font-size: 12px;
+    }
+    .doc_detls .doc_detls_spec {
+        font-size: 11px;
+        height: 33px;
+    }
+    .doctors_fdet .dep_sin_doc .doc_img {
+        height: 343px;
+    }
+    /*departments & services Pages End*/
+    /* ================= Doctor Details page Start ================= */
+    .doc_fdet_card {
+        margin-bottom: 50px;
+    }
+    .doc_fdet_img {
+        margin-top: -200px;
+        box-shadow: 0 0 23px 3px rgba(35, 41, 100, 0.5);
+        height: 283px;
+        width: 283px;
+    }
+    .doc_fdet_bio {
+        font-size: 17px;
+    }
+    .doc_fdet_bio .doc_fdet_name {
+        font-size: 20px;
+    }
+    .doc_fdet_text {
+        font-size: 14px;
+    }
+    /*Doctor Details page End*/
+    /* ================= Administration Page Start ================= */
+    .hres_ttle {
+        font-size: 27px;
+        margin-bottom: 10px;
+    }
+    .h_res_cont {
+        width: 600px;
+    }
+    .sin_hr_sec {
+        padding: 15px 0;
+    }
+    .sin_admin_img {
+        width: 90px;
+        height: 90px;
+        margin-right: 15px;
+    }
+    .sin_admin_info {
+        height: 90px;
+        width: calc(100% - 110px);
+    }
+    .admin_info_cont {
+        height: 90px;
+    }
+    .adm_name {
+        font-size: 19px;
+    }
+    .adm_pos {
+        font-size: 16px;
+    }
+    /*Administration Page End*/
+    /* ================= Careers Page Start ================= */
+    .sin_job_ttle {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .sin_job_req {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .sin_job_code {
+        font-size: 16px;
+    }
+    /*Career Form*/
+    .job_ipt {
+        font-size: 17px;
+        width: 260px;
+        height: 35px;
+        margin-bottom: 20px;
+    }
+    .cv_lbl {
+        margin-bottom: 10px;
+        font-weight: 400;
+        font-size: 19px;
+    }
+    .cv_upld_ipt {
+        height: 35px;
+        margin-bottom: 20px;
+    }
+    .job_form .main_btn {
+        width: 170px;
+        font-size: 16px;
+    }
+    /*Careers Page End*/
+    /* ================= Facilities Page Start ================= */
+    #facilities_page .header_content {
+        width: 450px;
+    }
+    #facilities_page .facil_hd_text {
+        font-size: 25px;
+    }
+    .facil_ttle {
+        font-size: 27px;
+        margin-bottom: 10px;
+    }
+    .facil_tab_btns {
+        margin-bottom: 25px;
+    }
+    .fac_tb_btn {
+        width: auto;
+        height: 40px;
+        line-height: 40px;
+        padding: 0 40px;
+        margin: 0 5px;
+        font-size: 20px;
+    }
+    .fac_sld_btns .swiper-button-prev, .fac_sld_btns .swiper-button-next {
+        width: 50px;
+        height: 35px;
+    }
+    .fac_sld_btns .swiper-button-prev:before, .fac_sld_btns .swiper-button-next:after {
+        width: 50px;
+        height: 35px;
+    }
+    .sld_tab_btn {
+        margin: 0 10px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 14px;
+    }
+    .sld_tab_btn.active {
+        border-bottom: 2px solid #e51e26;
+    }
+    /*popup*/
+    .faci_hidden_cont {
+        width: 700px;
+        height: 400px;
+    }
+    .faci_ppup_img {
+        width: 65%;
+    }
+    .med_desc {
+        width: 34%;
+        padding: 10px;
+        font-size: 14px;
+    }
+    .med_ttle {
+        font-size: 22px;
+    }
+    .med_share li {
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+    }
+    .med_share li a {
+        width: 30px;
+        height: 30px;
+    }
+    /*Facilities Page End*/
+    /* ================= Common Diseases Start ================= */
+    .com_dis_ppcont {
+        max-width: 650px;
+        padding: 5px 10px;
+    }
+    .dis_det_img {
+        margin-bottom: 20px;
+    }
+    .dis_det_desc {
+        font-size: 14px;
+    }
+    .dis_name_ttle {
+        font-size: 27px;
+        margin-bottom: 10px;
+    }
+    .sin_dis_sec:not(:nth-last-of-type(1)) {
+        margin-bottom: 10px;
+    }
+    .sin_dis_ttle {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    /*Common Diseases End*/
 }
 @media (max-width: 767px) {
-    .header-top-agile .s-12 {
+    /* ================= General Style Start ================= */
+    body {
+        padding-top: 86px;
+    }
+    .main_sction {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    /*General Style End*/
+    /* ================= Main Header Start ================= */
+    /* == Header Social Media == */
+    .head_smed {
+        background-color: #0069a1;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 36px;
+        z-index: 10;
+    }
+    .site_lang {
+        height: 36px;
+        line-height: 36px;
+        font-size: 12px;
+    }
+    .hd_sm_list {
+        height: 30px;
+    }
+    .hd_sm_list > li > a {
+        width: 30px;
+        height: 30px;
+    }
+    .hd_sm_list > li > a > i {
+        height: 28px;
+        width: 28px;
+        font-size: 18px;
+    }
+    /* == Mob Navbar == */
+    .mob_nav {
+        position: fixed;
+        top: 36px;
+        right: 0;
+        left: 0;
+        height: 50px;
+        background-color: #fff;
+        border-bottom: 1px solid #006ba1;
+        z-index: 10;
+    }
+    /*logo*/
+    .mob_nav .nav_logo {
+        float: left;
+    }
+    .mob_nav .nav_logo img {
+        height: 40px;
+        margin: 5px 0;
+    }
+    .mob_lks_cont {
+        float: right;
+    }
+    /*toggle btn*/
+    .mob_nv_btn {
+        width: 40px;
+        height: 40px;
+        margin: 5px 0;
+        text-align: center;
+        border: 1px solid #006ba1;
+        border-radius: 5px;
+        color: #006ba1;
+        -webkit-transition: all .2s linear;
+        -moz-transition: all .2s linear;
+        -o-transition: all .2s linear;
+        transition: all .2s linear;
+    }
+    .mob_nv_btn.active {
+        color: #fff;
+        background-color: #006ba1;
+    }
+    .mob_nv_btn i {
+        width: 38px;
+        height: 38px;
+        display: table-cell;
+        vertical-align: middle;
+        font-size: 25px;
+    }
+    /*links*/
+    .mob_lks_list {
         display: none;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        left: 0;
+        background-color: #fff;
+        max-height: 70vh;
+        overflow: auto;
     }
+    .mob_lks_list > li {
+        position: relative;
+        padding: 5px 10px;
+        border-bottom: 1px solid #006ba1;
+    }
+    .mob_lks_list > li a {
+        display: block;
+        text-transform: uppercase;
+        color: #2b337a;
+    }
+    .mob_nav .mob_sub_btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        /*border-left: 1px solid #006ba1;*/
+    }
+    .mob_lks_list > li.active > a ,.mob_sbmnu_lst > li.active a {
+        font-weight: 700;
+    }
+    .mob_nav .mob_sub_btn:before {
+        content: '\f0d7';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 700;
+        width: 30px;
+        height: 30px;
+        display: table-cell;
+        vertical-align: middle;
+        color: #006ba1;
+    }
+    .mob_nav .mob_sub_btn.active:before {
+        content: '\f0d8';
+    }
+    .mob_sbmnu_lst {
+        display: none;
+        margin-top: 5px;
+    }
+    .mob_sbmnu_lst > li{
+        padding: 5px 10px;
+        border-top: 1px solid #ec4b51;
+    }
+    .mob_sbmnu_lst > li:nth-of-type(1) {
+        border-top: 0;
+    }
+    .mob_sbmnu_lst > li a {
+        color: #2b337a;
+        font-size: 13px;
+        text-transform: capitalize;
+    }
+    /* == Header Slider == */
+    .header_slider {
+        height: auto;
+    }
+    .header_slider .sin_slide {
+        height: 300px;
+    }
+    .header_slider .sin_slide_text {
+        float: none;
+        margin-top: 70px;
+        width: auto;
+        margin-left: 0;
+    }
+    .header_slider .slide_ttle {
+        font-size: 25px;
+        text-align: center;
+    }
+    .header_slider .slide_desc {
+        font-size: 14px;
+        text-align: center;
+        max-height: 168px;
+        padding: 5px;
+    }
+    .header_slider .swiper-button-prev, .header_slider .swiper-button-next {
+        top: 135px;
+        width: auto;
+        height: auto;
+    }
+    .header_slider .swiper-button-prev:before, .header_slider .swiper-button-next:before {
+        font-size: 20px;
+        height: auto;
+    }
+    /* == Clinic Bio == */
+    .clinic_discip {
+        overflow: visible;
+        position: static;
+        height: auto;
+    }
+    .clinic_discip .sin_discip {
+        float: none;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+    .clinic_discip .sin_discip:nth-of-type(2n+1) {
+        background-color: #0077c0;
+    }
+    .clinic_discip .sin_discip:nth-of-type(2n+2) {
+        background-color: #00aeef;
+    }
+    .clinic_discip .discip_ico {
+        margin-bottom: 10px;
+    }
+    .clinic_discip .discip_ico img {
+        height: 50px;
+    }
+    .clinic_discip .discip_ttle {
+        font-size: 17px;
+    }
+    .clinic_discip .discip_desc {
+        font-size: 14px;
+        overflow: visible;
+        text-overflow: clip;
+        display: block;
+        -webkit-line-clamp: unset;
+        -webkit-box-orient: unset;
+        max-height: none;
+    }
+    /*Main Header End*/
+    /* ================= About The Clinic Start ================= */
+    .abt_clin_cont {
+        width: auto;
+        font-size: 13px;
+    }
+    .about_clinic_sec .sec_title {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    /*About The Clinic End*/
+    /* ================= Departments Section Start ================= */
+    .tabs_btns_cont, .tabs_contents_cont {
+        float: none;
+        width: auto;
+        height: auto;
+    }
+    .tab_intro {
+        padding: 10px;
+    }
+    .tabs_title {
+        font-size: 25px;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    .tab_intro .tabs_intro {
+        text-align: center;
+    }
+    .dep_tabs_btns {
+        padding: 0 10px 10px;
+    }
+    .sin_tab_btn {
+        padding: 0;
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+        font-size: 13px;
+        -webkit-transition: all .2s linear;
+        -moz-transition: all .2s linear;
+        -o-transition: all .2s linear;
+        transition: all .2s linear;
+    }
+    .sin_tab_btn.active {
+        font-weight: 400;
+        color: #fff;
+        background-color: #2a3780;
+    }
+    .sin_tab_btn .stab_txt {
+        padding: 0 5px;
+        width: 100%;
+    }
+    .sin_tab_btn:not(.active):before, .sin_tab_btn.active:before {
+        content: normal;
+    }
+    .sin_tab_cont {
+        height: auto;
+    }
+    .tab_detail, .tab_img {
+        float: none;
+    }
+    .tab_detail {
+        width: auto;
+        padding: 10px;
+    }
+    .tab_det_ttle {
+        font-size: 18px;
+        text-overflow: clip;
+        display: block;
+        -webkit-line-clamp: unset;
+        -webkit-box-orient: unset;
+        max-height: none;
+        text-align: center;
+    }
+    .tab_det_desc {
+        -webkit-line-clamp: 7;
+        max-height: 143px;
+    }
+    .tab_read_more {
+        position: static;
+        right: auto;
+        bottom: auto;
+        display: block;
+        margin-top: 10px;
+        text-align: center;
+    }
+    .tab_img {
+        height: 300px;
+        width: 100%;
+    }
+    /*Departments Section End*/
+    /* ================= Our Team Section Start ================= */
+    .our_tm_cont {
+        width: auto;
+        margin: 20px auto;
+    }
+    .our_team_intro, .our_team_imgs {
+        float: none;
+    }
+    .our_team_intro {
+        width: auto;
+        padding: 0 10px;
+        margin-bottom: 20px;
+    }
+    .our_team_ttle {
+        font-size: 25px;
+        width: auto;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .our_team_desc {
+        line-height: 1.42857143;
+        margin-bottom: 10px;
+    }
+    .rd_more_btn_cont {
+        text-align: center;
+    }
+    .rd_more_btn_cont .main_btn {
+        display: block;
+    }
+    .our_team_imgs {
+        width: auto;
+    }
+    .sin_doc_img {
+        float: none;
+        width: 270px;
+        height: 270px;
+        margin: 10px auto;
+    }
+    .sin_doc_det {
+        width: 270px;
+        height: 270px;
+    }
+    /*Our Team Section End*/
+    /* ================= Testimonial Slider Start ================= */
+    .testim_sec {
+        padding: 0;
+    }
+    .testim_sec .sec_overlay {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    .testim_ttle {
+        font-size: 25px;
+        text-align: center;
+    }
+    .sin_patient_testim {
+        float: none;
+        margin: 0 auto 0 0;
+        font-size: 15px;
+        width: auto;
+        max-width: 350px;
+    }
+    .sin_testim_silde {
+        height: auto;
+    }
+    .testim_slider .swiper-button-prev, .testim_slider .swiper-button-next {
+        width: 10px;
+        height: 22px;
+        background-size: 10px 15px;
+    }
+    .patient_txt {
+        padding: 40px 20px;
+    }
+    .patient_txt:before, .patient_txt:after {
+        width: 20px;
+        height: 20px;
+    }
+    .patient_txt:before {
+        margin-right: 5px;
+    }
+    .patient_txt:after {
+        margin-left: 7px;
+    }
+    .patient_job {
+        font-size: 13px;
+    }
+    /*Testimonial Slider End*/
+    /* ================= Message - FAQ Section Start ================= */
+    .msg_faq_intro {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .msg_faq_ttle {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    .msg_faq_bio {
+        font-size: 13px;
+    }
+    .msg_frm_cont {
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    .form_ipt_cont {
+        height: auto;
+        line-height: 1.42857143;
+        text-align: center;
+    }
+    .form_ipt_cont label , .form_ipt_cont input[type="text"], .form_ipt_cont input[type="email"] {
+        display: block;
+        width: 100%;
+        text-align: center;
 
-    textarea {
-        width:100%;
-
     }
-    .contact{
-        padding-right: 30px;
+    .frm_confirm {
+        text-align: center;
     }
-    #hospitalprof #registerform{
-        margin-top: 0;
+    .frm_confirm .main_btn {
+        margin: 0;
     }
-    #phisicialprof #registerform2 {
-        margin-top: 0;
+    .sin_accdn:not(:nth-last-of-type(1)) {
+        margin-bottom: 10px;
     }
-
-    #aboutus{
-        margin-top: -158px;
-        margin-bottom: 0;
+    .acc_desc, .acc_ttle {
+        padding: 5px 20px 5px 10px;
     }
-    .jumbotron{
+    .acc_ttle, .acc_desc {
+        font-size: 13px;
+    }
+    .acc_ttle:after {
+        right: 10px;
+    }
+    /*Message - FAQ Section End*/
+    /* ================= Location Section Start ================= */
+    .map_cont {
+        height: 300px;
+    }
+    .sin_wday, .wday_ico {
+        margin-bottom: 5px;
+        font-size: 12px;
+    }
+    /*Location Section End*/
+    /* ================= Footer Start ================= */
+    .footer_cont {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .sin_ftr_sec {
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .ftr_soc_md_list > li > a {
+        width: 36px;
+        height: 36px;
+    }
+    .ftr_soc_md_list > li > a > i {
+        width: 34px;
+        height: 34px;
+        font-size: 24px;
+    }
+    .footer_cpyright {
+        font-size: 13px;
+    }
+    /*Footer End*/
+    /* ================= departments & services Pages Start ================= */
+    .subpage_header, .subpage_header .header_content {
+        height: auto;
+        text-align: center;
+    }
+    .subpage_header .header_content {
+        width: auto;
+        padding: 50px 0;
+    }
+    #hr_page .header_content {
+        width: auto;
+    }
+    #facilities_page .header_content {
+        width: auto;
+    }
+    #facilities_page .facil_hd_text {
+        font-size: 20px;
+    }
+    #hr_page .hr_hd_text {
+        font-size: 20px;
+    }
+    #hr_page .hr_hd_text .text1 {
+        margin-bottom: 20px;
+        padding: 0;
+    }
+    .subpage_header .header_content .header_ttle {
+        font-size: 30px;
+        line-height: 1.2;
+        max-height: 113px;
+    }
+    #doctors_page .header_ttle {
+        font-size: 22px;
+    }
+    .subpage_header .header_content .header_desc {
+        font-size: 14px;
+        max-height: 164px;
+    }
+    .sin_dep_ttle {
+        font-size: 25px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .sin_dep_desc {
+        text-align: justify;
+        font-size: 13px;
+    }
+    .sin_dep_cont:not(:nth-last-of-type(1)) {
+        margin-bottom: 20px;
+    }
+    .dep_sin_doc {
+        max-width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .dep_sin_doc .dep_ttle {
+        text-overflow: clip;
+        display: block;
+        -webkit-line-clamp: unset;
+        -webkit-box-orient: unset;
+        height: auto;
+        margin-top: 5px;
+    }
+    .dep_sin_doc .doc_img {
+        height: 290px;
+    }
+    /* ================= Doctors Page Start ================= */
+    .doctors_fdet .dep_sin_doc .doc_img {
+        height: 290px;
+    }
+    .doctors_fdet .dep_sin_doc .doc_detls {
+        height: auto;
+    }
+    /*Doctors Page End*/
+    /* ================= Doctor Details page Start ================= */
+    .doc_fdet_hd {
+        height: 300px;
+        background-position: right;
+    }
+    .doc_fdet_card {
+        margin-bottom: 30px;
+    }
+    .doc_fdet_img {
+        margin: -190px auto 20px;
+        box-shadow: 0 0 21px 4px rgba(35, 41, 100, 0.5);
+        height: 290px;
+        width: 100%;
+        max-width: 290px;
+    }
+    .doc_fdet_bio {
+        font-size: 15px;
+        text-align: center;
+    }
+    .doc_fdet_bio .doc_fdet_name {
+        font-size: 18px;
+    }
+    .doc_fdet_text {
+        font-size: 14px;
+        text-align: justify;
+    }
+    /*Doctor Details page End*/
+    /* ================= Administration Page Start ================= */
+    .hres_ttle {
+        text-align: center;
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    .h_res_cont {
+        width: auto;
+    }
+    .sin_hr_sec {
+        padding: 10px 0;
+    }
+    .sin_admin_img, .sin_admin_info {
+        float: none;
+    }
+    .sin_admin_img {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto 10px auto;
+    }
+    .sin_admin_info {
+        height: auto;
+        width: auto;
+        text-align: center;
+    }
+    .admin_info_cont {
+        height: auto;
+        display: block;
+    }
+    .adm_name {
+        font-size: 18px;
+    }
+    .adm_pos {
+        font-size: 15px;
+    }
+    /*Administration Page End*/
+    /* ================= Careers Page Start ================= */
+    .sin_job_ttle {
+        font-size: 20px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .sin_job_req {
+        font-size: 14px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .job_apply_con {
+        height: auto;
+        line-height: 1.42857143;
+    }
+    .sin_job_code, .job_apply_btn {
+        float: none;
+        display: block;
+        text-align: center;
+    }
+    .sin_job_code {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    .job_apply_btn .main_btn {
+        display: block;
+    }
+    /*Career Form*/
+    .job_ipt.job_ipt_odd, .job_ipt.job_ipt_even {
+        float: none;
+    }
+    .job_ipt {
+        font-size: 14px;
+        width: 100%;
+        height: 35px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    .cv_lbl {
+        float: none;
+        display: block;
+        margin-bottom: 10px;
+        font-size: 18px;
+        text-align: center;
+    }
+    .cv_upld_ipt {
+        float: none;
+        height: 35px;
+        margin-bottom: 10px;
+    }
+    .job_form .main_btn {
+        width: 100%;
+        display: block;
+        font-size: 16px;
+    }
+    /*Careers Page End*/
+    /* ================= Facilities Page Start ================= */
+    .facil_ttle {
+        text-align: center;
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    .facil_tab_btns {
+        margin-bottom: 20px;
+    }
+    .fac_tb_btn {
+        width: auto;
+        height: 35px;
+        line-height: 35px;
+        font-size: 16px;
+        padding: 0 20px;
+        margin: 0;
+    }
+    .fac_sld_btns {
+        margin-bottom: 15px;
+    }
+    .fac_sld_btns .swiper-button-prev, .fac_sld_btns .swiper-button-next {
+        width: 30px;
+        height: 30px;
+    }
+    .fac_sld_btns .swiper-button-prev:before, .fac_sld_btns .swiper-button-next:after {
+        font-size: 16px;
+        width: 30px;
+        height: 30px;
+    }
+    .sld_tab_btn {
+        margin: 0 10px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 14px;
+    }
+    .sld_tab_btn.active {
+        border-bottom: 2px solid #e51e26;
+    }
+    .fci_sin_med_text {
+        font-size: 15px;
+    }
+    /*popup*/
+    .faci_hidden_cont {
+        width: 100%;
+        height: 400px;
+    }
+    .faci_ppup_img, .med_desc {
+        float: none;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .faci_ppup_img {
+        height: 200px;
+    }
+    .med_desc {
+        padding: 10px;
+        font-size: 14px;
+        text-align: center;
+        height: auto;
+    }
+    .med_ttle {
+        font-size: 20px;
+    }
+    .med_share {
+        position: static;
         margin-top: 30px;
     }
-
+    .med_share li {
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+    }
+    .med_share li a {
+        width: 30px;
+        height: 30px;
+    }
+    /*Facilities Page End*/
+    /* ================= Common Diseases Start ================= */
+    .com_dis_ppcont {
+        padding: 0;
+        text-align: center;
+    }
+    .dis_det_img {
+        margin-bottom: 10px;
+    }
+    .dis_det_desc {
+        font-size: 13px;
+    }
+    .dis_name_ttle {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    .sin_dis_sec:not(:nth-last-of-type(1)) {
+        margin-bottom: 10px;
+    }
+    .sin_dis_ttle {
+        font-size: 17px;
+        margin-bottom: 5px;
+    }
+    /*Common Diseases End*/
 }

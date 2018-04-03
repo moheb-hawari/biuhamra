@@ -24,7 +24,7 @@ class Information_model extends MY_Model
 	protected $after_insert 	= array();
 	protected $before_update 	= array();
 	protected $after_update 	= array();
-	protected $before_find 	    = array('where_delete');
+	protected $before_find 	    = array();
 	protected $after_find 		= array();
 	protected $before_delete 	= array();
 	protected $after_delete 	= array();
@@ -48,7 +48,7 @@ class Information_model extends MY_Model
 		array(
 			'field' => 'hot_line',
 			'label' => 'lang:information_field_hot_line',
-			'rules' => 'required|max_length[255]',
+			'rules' => 'required|max_length[255]|numeric',
 		),
 		array(
 			'field' => 'support',

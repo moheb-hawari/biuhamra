@@ -35,8 +35,8 @@ $id = isset($information->id) ? $information->id : '';
             </div>
                 <div class="control-group<?php echo form_error('en_ddress') ? ' error' : ''; ?>">
                 <?php echo form_label(lang('information_field_en_ddress') . lang('bf_form_label_required'), 'en_ddress', array('class' => 'control-label')); ?>
-                <div class="rtl-support">
-                        <textarea  class="summernote summernote-default" id="ar_ddress" name='ar_ddress'><?php echo set_value('ar_ddress', isset($information->ar_ddress) ? $information->ar_ddress : ''); ?></textarea>
+                <div class="input-wrapper controls rtl-support">
+                        <textarea cols="80" rows="5"  class=""  id="en_ddress" name='en_ddress'><?php echo set_value('en_ddress', isset($information->en_ddress) ? $information->en_ddress : ''); ?></textarea>
                     </div>    
                 <span class='help-inline'><?php echo form_error('en_ddress'); ?></span>
             </div>
@@ -52,8 +52,8 @@ $id = isset($information->id) ? $information->id : '';
             </div>
                 <div class="control-group<?php echo form_error('ar_ddress') ? ' error' : ''; ?>">
                 <?php echo form_label(lang('information_field_ar_ddress') . lang('bf_form_label_required'), 'ar_ddress', array('class' => 'control-label')); ?>
-                    <div class="rtl-support">
-                        <textarea  class="summernote summernote-default" id="en_ddress" name='en_ddress'><?php echo set_value('en_ddress', isset($information->en_ddress) ? $information->en_ddress : ''); ?></textarea>
+                    <div class="input-wrapper controls rtl-support">
+                        <textarea cols="80" rows="5"  class=""  id="ar_ddress" name='ar_ddress'><?php echo set_value('ar_ddress', isset($information->ar_ddress) ? $information->ar_ddress : ''); ?></textarea>
                     </div>                        <span class='help-inline'><?php echo form_error('ar_ddress'); ?></span>
             </div>
             </div>

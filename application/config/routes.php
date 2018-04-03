@@ -72,6 +72,7 @@ Route::any('resend_activation', 'users/resend_activation');
 // Contexts
 Route::prefix(SITE_AREA, function(){
     Route::context('content', array('home' => SITE_AREA .'/content/index'));
+    Route::context('homepage',array('home' => SITE_AREA .'/homepage/index'));
     Route::context('humanresources', array('home' => SITE_AREA .'/humanresources/index'));
     Route::context('facilities', array('home' => SITE_AREA .'/facilities/index'));
     Route::context('utility', array('home' => SITE_AREA .'/utility/index'));

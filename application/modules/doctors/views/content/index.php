@@ -1,6 +1,6 @@
 <?php
 
-$num_columns	= 15;
+$num_columns	= 7;
 $can_delete	= $this->auth->has_permission('Doctors.Content.Delete');
 $can_edit		= $this->auth->has_permission('Doctors.Content.Edit');
 $has_records	= isset($records) && is_array($records) && count($records);
@@ -22,7 +22,7 @@ if ($can_delete) {
 			<thead>
 				<tr>
 					<?php if ($can_delete && $has_records) : ?>
-					<th class='column-check'><input class='check-all' type='checkbox' /></th>
+					<th class='column-check'><input class='' type='checkbox' /></th>
 					<?php endif;?>
 					
 					<th><?php echo lang('doctors_field_en_name'); ?></th>

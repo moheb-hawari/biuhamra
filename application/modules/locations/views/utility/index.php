@@ -1,6 +1,6 @@
 <?php
 
-$num_columns	= 8;
+$num_columns	= 4;
 $can_delete	= $this->auth->has_permission('Locations.Utility.Delete');
 $can_edit		= $this->auth->has_permission('Locations.Utility.Edit');
 $has_records	= isset($records) && is_array($records) && count($records);

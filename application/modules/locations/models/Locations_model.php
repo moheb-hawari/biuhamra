@@ -58,12 +58,12 @@ class Locations_model extends MY_Model
 		array(
 			'field' => 'latitude',
 			'label' => 'lang:locations_field_latitude',
-			'rules' => 'required|max_length[255]',
+			'rules' => 'required|max_length[255]|decimal',
 		),
 		array(
 			'field' => 'longitude',
 			'label' => 'lang:locations_field_longitude',
-			'rules' => 'required|max_length[255]',
+			'rules' => 'required|max_length[255]|decimal',
 		),
 		array(
 			'field' => 'status',

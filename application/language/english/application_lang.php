@@ -329,6 +329,8 @@ $lang['bf_context_humanresources'] = 'Human Resources';
 
 $lang['bf_context_utility'] = 'Site Meta';
 
+$lang['bf_context_homepage'] = 'Home Page';
+
 $lang['bf_language_tab_english'] = 'English';
 $lang['bf_language_tab_arabic'] = 'Arabic';
 $lang['bf_nav_language'] = 'العربية';
@@ -349,6 +351,7 @@ $lang['bf_read_more'] = 'Read More';
 
 $lang['bf_meet'] = 'Meet';
 $lang['bf_our_team'] = 'Our Team';
+$lang['bf_our_teams'] = 'Our Team';
 
 $lang['bf_patients_say'] = 'Happy Patients Say';
 

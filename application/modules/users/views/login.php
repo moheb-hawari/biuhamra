@@ -20,7 +20,7 @@ $site_open = $this->settings_lib->item('auth.allow_register');
             </div>
         </div>
     <?php endif; ?>
-    <img class="slide-image" src="<?php echo assets_path() . 'images/logo.png'; ?>" alt="">
+    <img class="slide-image img-responsive" src="<?php echo assets_path() . 'images/logo.png'; ?>" alt="">
     <?php echo form_open(LOGIN_URL, array('autocomplete' => 'off')); ?>
 
     <div class="control-group <?php echo iif(form_error('login'), 'error'); ?>">
@@ -31,7 +31,7 @@ $site_open = $this->settings_lib->item('auth.allow_register');
 
     <div class="control-group <?php echo iif(form_error('password'), 'error'); ?>">
         <div class="controls">
-            <input style="width: 95%" type="password" name="password" id="password" value="" tabindex="2" placeholder="<?php echo lang('bf_password'); ?>" />
+            <input style="width: 95%" type="password" name="password" id="password" value="" tabindex="2" autocomplete="off" placeholder="<?php echo lang('bf_password'); ?>" />
         </div>
     </div>
 

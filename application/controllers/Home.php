@@ -68,16 +68,18 @@ class Home extends MX_Controller {
         $this->load->model('faq/faq_model');
         $this->load->model('locations/locations_model');
         $this->load->model('information/information_model');
+        $this->load->model('about_us/about_us_model');
         
         
-        Assets::add_css( 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css');
+        Assets::add_css(assets_path() . 'css/bootstrap.min.css');
         Assets::add_css(assets_path() . 'css/fontawesome-all.min.css');
         Assets::add_css(assets_path() . 'css/swiper.css');
         Assets::add_css(assets_path() . 'css/main_en.css');
+        if(isset($lang)&&$lang=='ar'){Assets::add_css(assets_path() . 'css/main_'.$lang.'.css');}
         Assets::add_css(assets_path() . 'css/media_en.css');
-        Assets::add_css(assets_path() . 'css/main_'.$lang.'.css');
-        Assets::add_css(assets_path() . 'css/media_'.$lang.'.css');
-        
+        if(isset($lang)&&$lang=='ar'){Assets::add_css(assets_path() . 'css/media_'.$lang.'.css');}
+
+        //Assets::add_js(assets_path() . 'js/jquery-3.3.1.min.js');
         Assets::add_js(assets_path() . 'js/swiper.min.js');
         Assets::add_js(assets_path() . 'js/fancybox.min.js');
         Assets::add_js(assets_path() . 'js/plugin.js');
@@ -99,19 +101,85 @@ class Home extends MX_Controller {
         
         Template::set('lang', $this->_lang);
         Template::set('social_media', $this->social_media_model->find(1));
-        Template::set('departments', $this->departments_model->order_by('weight')->find_all());
-        Template::set('departments_tabs', $this->departments_model->order_by('weight')->limit(6)->find_all());
-        Template::set('slider', $this->slider_model->order_by('weight')->find_all());
+        Template::set('departments', $this->departments_model->order_by('weight')->where(['status'=>0])->find_all());
+        Template::set('departments_tabs', $this->departments_model->order_by('weight')->where(['status'=>0])->limit(6)->find_all());
+        Template::set('slider', $this->slider_model->order_by('weight')->where(['status'=>0])->find_all());
         Template::set('about', $this->about_model->limit(3)->find_all());
         Template::set('meet_our_team', $this->meet_our_team_model->limit(1)->find_all());
-        Template::set('doctors', $this->doctors_model->order_by('weight')->limit(6)->find_all());
-        Template::set('patients_say', $this->patients_say_model->order_by('weight')->find_all());
-        Template::set('faq', $this->faq_model->order_by('weight')->limit(3)->find_all());
-        Template::set('locations', $this->locations_model->find_all());
+        Template::set('doctors', $this->doctors_model->order_by('weight')->where(['status'=>0])->limit(6)->find_all());
+        Template::set('patients_say', $this->patients_say_model->where(['status'=>0])->where(['status'=>0])->order_by('weight')->find_all());
+        Template::set('faq', $this->faq_model->order_by('weight')->where(['status'=>0])->limit(3)->find_all());
+        Template::set('locations', $this->locations_model->where(['status'=>0])->find_all());
         Template::set('information', $this->information_model->find(1));
+        Template::set('about_us', $this->about_us_model->find(1));
         
         Template::render();
     }
+    
+    function send_contact()
+    {
+        $this->load->library('users/auth');
+		$this->set_current_user();
+                
+        $this->load->library('emailer/emailer');
+        $this->load->model('emails/emails_model');
+        $this->load->model('emailer/emailer_model');
+        $this->emailer->enable_debug(true);
+        
+        $this->load->helper(array('form', 'url'));
+
+        $result = $this->emails_model->find(1);
+        
+        $email = $result->contact_email;
+
+        $message = $this->input->post('message') .'<br><br><br> '.lang('emailer_contact_from').$this->input->post('name').'<br> '.lang('emailer_contact_mobile').$this->input->post('phone').'<br>,<br>';
+        
+        $data = array(
+            'to'      => $email,
+            'subject' => sprintf(lang('emailer_contact_mail_subject'),$this->input->post('name')),
+            'message' => $message,
+            'from' => $this->input->post('email'),
+         );
+
+        $success = $this->emailer->send($data, false);
+
+        if($success)
+        {
+            Template::set_message(lang('email_send_success'), 'success');
+        }
+        else
+        {
+            Template::set_message(lang('email_send_failure') . $this->emailer->error, 'error');
+        }
+        
+        redirect(site_url().'/'.lang('bf_language_direction').'/?id=cont_clinic');
+
+    }
+    protected function set_current_user()
+	{
+        if (class_exists('Auth')) {
+			// Load our current logged in user for convenience
+            if ($this->auth->is_logged_in()) {
+				$this->current_user = clone $this->auth->user();
+
+				$this->current_user->user_img = gravatar_link($this->current_user->email, 22, $this->current_user->email, "{$this->current_user->email} Profile");
+
+				// if the user has a language setting then use it
+                if (isset($this->current_user->language)) {
+					$this->config->set_item('language', $this->current_user->language);
+				}
+            } else {
+				$this->current_user = null;
+			}
+
+			// Make the current user available in the views
+            if (! class_exists('Template')) {
+				$this->load->library('Template');
+			}
+			Template::set('current_user', $this->current_user);
+		}
+	}
+    
 
 
 }

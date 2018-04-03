@@ -130,7 +130,7 @@ class Users extends Front_Controller
 
         // Always clear browser data (don't silently ignore user requests).
         $this->auth->logout();
-        Template::redirect('/');
+        Template::redirect('/admin/content/dashboard');
     }
 
     // -------------------------------------------------------------------------

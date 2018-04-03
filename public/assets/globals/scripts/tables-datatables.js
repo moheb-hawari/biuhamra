@@ -2,9 +2,11 @@ var TablesDataTables = {
 
 	basic: function () {
 		$('.datatables-basic').dataTable({
-			"dom": "<'row'<'col-md-6 col-sm-12'l><'col-md-6 col-sm-12'f>r>t<'row'<'col-md-5 col-sm-12'i><'col-md-7 col-sm-12'p>>"
+			"dom": "<'row'<'col-md-6 col-sm-12'l><'col-md-6 col-sm-12'f>r>t<'row'<'col-md-5 col-sm-12'i><'col-md-7 col-sm-12'p>>",
 		});
+     
 	},
+
 
 	alphabetSorting: function () {
 		// Search function

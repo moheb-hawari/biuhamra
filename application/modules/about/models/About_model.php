@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') || exit('No direct script access allowed');
 
-class About_model extends MY_Model
+class About_model extends BF_Model
 {
     protected $table_name	= 'about';
 	protected $key			= 'id';
@@ -24,7 +24,7 @@ class About_model extends MY_Model
 	protected $after_insert 	= array();
 	protected $before_update 	= array();
 	protected $after_update 	= array();
-	protected $before_find 	    = array('where_delete');
+	protected $before_find 	    = array();
 	protected $after_find 		= array();
 	protected $before_delete 	= array();
 	protected $after_delete 	= array();
@@ -65,16 +65,7 @@ class About_model extends MY_Model
 			'label' => 'lang:about_field_ar_description',
 			'rules' => 'required',
 		),
-		array(
-			'field' => 'en_hours',
-			'label' => 'lang:about_field_en_hours',
-			'rules' => 'required',
-		),
-		array(
-			'field' => 'ar_hours',
-			'label' => 'lang:about_field_ar_hours',
-			'rules' => 'required',
-		),
+		
 
 	);
 	protected $insert_validation_rules  = array();

@@ -33,7 +33,7 @@ class Content extends Admin_Controller
         Assets::add_css( assets_path().'globals/plugins/components-summernote/dist/summernote.css');
                 Assets::add_css( assets_path().'globals/plugins/jasny-bootstrap/dist/css/jasny-bootstrap.min.css');
 
-        Assets::add_js(assets_path().'globals/plugins/components-summernote/dist/summernote.min.js');
+        Assets::add_js(assets_path().'globals/plugins/components-summernote/dist/summernote.js');
         Assets::add_js( assets_path().'globals/plugins/datatables/media/js/jquery.dataTables.min.js');
         Assets::add_js(assets_path().'globals/plugins/datatables/themes/bootstrap/dataTables.bootstrap.js');
                 Assets::add_js(assets_path().'globals/plugins/jasny-bootstrap/dist/js/jasny-bootstrap.min.js');
@@ -220,15 +220,31 @@ class Content extends Admin_Controller
             if (is_numeric($id)) {
                 $images = do_upload($id);
                 if(isset($images)){
+                    if(isset($images['error'])){
+                    
+                        Template::set_message($images['error'],'danger');
+                        redirect(SITE_AREA . '/homepage/about/edit/'.$id);
+                    }
                 $this->departments_model->skip_validation(true);
                 $this->departments_model->update($id, $images);
                 }
                 $return = $id;
             }
         } elseif ($type == 'update') {
+            if(isset($images['error'])){
+                    
+                        Template::set_message($images['error'],'danger');
+                        redirect(SITE_AREA . '/content/departments/edit/'.$id);
+                    }
             $return = $this->departments_model->update($id, $data);
              $images = do_upload($id);
-            if(isset($images)){ $this->departments_model->update($id, $images);}
+            if(isset($images)){ 
+                if(isset($images['error'])){
+                    
+                        Template::set_message($images['error'],'danger');
+                        redirect(SITE_AREA . '/content/departments/edit/'.$id);
+                    }
+                $this->departments_model->update($id, $images);}
         }
 
         return $return;

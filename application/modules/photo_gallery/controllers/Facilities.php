@@ -221,10 +221,10 @@ class Facilities extends Admin_Controller
         return $return;
     }
     
-    function uplaod_images($id,$name)
+    function uplaod_images($id,$name='')
     {
-
-                Assets::add_js( assets_path().'globals/plugins/multi_upload/js/vendor/jquery.ui.widget.js');
+        
+        Assets::add_js( assets_path().'globals/plugins/multi_upload/js/vendor/jquery.ui.widget.js');
         Assets::add_js( 'https://blueimp.github.io/JavaScript-Templates/js/tmpl.min.js');
         Assets::add_js( 'https://blueimp.github.io/JavaScript-Load-Image/js/load-image.all.min.js');
         Assets::add_js( 'https://blueimp.github.io/JavaScript-Canvas-to-Blob/js/canvas-to-blob.min.js');
@@ -252,14 +252,15 @@ class Facilities extends Admin_Controller
     function do_multi_upload($id,$name)
     {
 
-            require('assets/globals/plugins/multi_upload/server/php/UploadHandler.php');
+            $this->load->library("UploadHandler");
             $option = array(
             'user_dirs' => 'public/assets/images/',
             'gallary_id'=>$id
             );
-            $upload_handler = new UploadHandler($option);
+            //$upload_handler = new UploadHandler($option);
         
     }
+    
     
     function uplaod_images2($id,$name)
     {

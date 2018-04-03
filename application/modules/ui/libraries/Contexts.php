@@ -612,7 +612,7 @@ class Contexts
             return str_replace(
                 array('{extra}', '{url}', '{title}', '{display}'),
                 array(
-                    $module == self::$ci->uri->segment(3) ? 'class="active" ' : '',
+                    $module == self::$ci->uri->segment(3) ? ' class="active open" data-open-after="true" ' : '',
                     site_url(self::$site_area . "/{$context}/{$module}"),
                     $title,
                     $displayName,

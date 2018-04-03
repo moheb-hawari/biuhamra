@@ -59,6 +59,9 @@ body {
 .clinic_discip .sin_discip {
     float: right;
 }
+.clinic_discip .discip_desc {
+    max-height: 112px;
+}
 /*Main Header End*/
 /* =================================== Departments Section Start =================================== */
 .tabs_btns_cont, .tabs_contents_cont {
@@ -80,13 +83,15 @@ body {
     border-left-color: transparent;
     border-right-color: #fff;
 }
+.sin_tab_btn .stab_txt {
+    float: right;
+}
+.tab_det_desc {
+    max-height: 261px;
+}
 /*tabs contents*/
 .tab_detail, .tab_img {
     float: right;
-}
-.tab_det_ttle {
-    font-size: 31px;
-    line-height: 1.2;
 }
 .tab_read_more {
     right: auto;
@@ -201,12 +206,19 @@ body {
 }
 .subpage_header .header_content .header_ttle {
     font-size: 45px;
+    max-height: 137px;
 }
 .subpage_header .header_content .header_desc {
-    font-size: 19px;
+    max-height: 221px;
 }
 .dep_doc_cont .row > div {
     float: right;
+}
+.dep_sin_doc .dep_ttle {
+    height: 41px;
+}
+.doc_detls .doc_detls_spec {
+    font-weight: 400;
 }
 /*departments & services Pages End*/
 /* =================================== Doctor Details page Start =================================== */
@@ -250,6 +262,13 @@ body {
 /*Careers Page End*/
 /* =================================== Facilities Page Start =================================== */
 /*Tabs Slider*/
+.facil_bg_header, .facil_bg_header .hd_main_cont{
+    -moz-transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
+}
 .facilities_sec .row > div {
     float: right;
 }
