@@ -38,9 +38,7 @@ class Careers extends Front_Controller
     
     function send_career()
     {
-        
-        echo 'here';
-        die;
+ 
         $this->load->library('emailer/emailer');
         $this->load->model('emails/emails_model');
         $this->load->model('emailer/emailer_model');
@@ -50,14 +48,20 @@ class Careers extends Front_Controller
 
         $result = $this->emails_model->find(1);
         
-        $email = $result->contact_email;
+        $job = $this->careers_model->find($_POST['career_number']);
+        
+//                echo '<pre>';
+//print_r();
+//echo '</pre>';
+//die;
+        $email = $result->careers_email;
 
-        $message = $this->input->post('message') .'<br><br><br> '.lang('emailer_contact_from').$this->input->post('name').'<br> '.lang('emailer_contact_mobile').$this->input->post('phone').'<br>,<br>';
         
         $data = array(
             'to'      => $email,
-            'subject' => sprintf(lang('emailer_contact_mail_subject'),$this->input->post('name')),
-            'message' => $message,
+            'subject' => lang('job_code').' ; '.$job->job_code,
+            'attachments' => $_FILES['cv'],
+            'message'=>'',
             'from' => $this->input->post('email'),
          );
 
@@ -72,7 +76,7 @@ class Careers extends Front_Controller
             Template::set_message(lang('email_send_failure') . $this->emailer->error, 'error');
         }
         
-        redirect(site_url().'/'.lang('bf_language_direction').'/?id=cont_clinic');
+        redirect(site_url().'/'.lang('bf_language_direction').'/careers');
 
     }
       

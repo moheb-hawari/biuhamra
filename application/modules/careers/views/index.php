@@ -10,6 +10,7 @@
         </div>
     </div>
 </div>
+<?php echo Template::message(); ?>
 <section class="main_sction hmn_res_sec">
     <div class="container">
         <div class="hres_ttle"><?=site_text('careers', 'الوظائف');?></div>
@@ -40,7 +41,15 @@
                 <?php echo form_open_multipart($this->uri->uri_string().'/send_career/', 'class="send_msg_form"'); ?>
 
                 <div class="modal-body">
+                    
+                    <div class="control-group<?php echo form_error('email') ? ' error' : ''; ?>">
+                    <?php echo form_label(lang('bf_email') , 'email', array('class' => 'control-label')); ?>
+                    <div class="input-wrapper controls rtl-support">
+                        <input type="email" id="en_comment" name='email'/>
+                    </div> 
+                    <span class='help-inline'><?php echo form_error('email'); ?></span>
                     <input type="file" name='cv' />
+            </div>
                     <input type="hidden" name='career_number' value="<?php echo $val->id; ?>" />
                 </div>
                 <div class="modal-footer">
