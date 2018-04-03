@@ -1,6 +1,6 @@
 <?php
 
-$num_columns	= 7;
+$num_columns	= 4;
 $can_delete	= $this->auth->has_permission('Videos.Facilities.Delete');
 $can_edit		= $this->auth->has_permission('Videos.Facilities.Edit');
 $has_records	= isset($records) && is_array($records) && count($records);

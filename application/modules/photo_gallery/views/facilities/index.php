@@ -1,5 +1,5 @@
 <?php
-$num_columns = 6;
+$num_columns =4;
 $can_delete = $this->auth->has_permission('Photo_Gallery.Facilities.Delete');
 $can_edit = $this->auth->has_permission('Photo_Gallery.Facilities.Edit');
 $has_records = isset($records) && is_array($records) && count($records);
