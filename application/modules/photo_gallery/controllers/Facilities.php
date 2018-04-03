@@ -248,45 +248,43 @@ class Facilities extends Admin_Controller
     }
     
     
-    function do_multi_upload($id,$name)
-    {
-		
-		error_reporting(E_ALL | E_STRICT);
-		//print_r($this->auth->user());	
-		
-		   $script_url=$this->config->base_url()."index.php/admin/facilities/photo_gallery/deleteImages/".$id.'/';
-		
-            require('assets/globals/plugins/multi_upload/server/php/UploadHandler.php');
-            $option = array(
+    function do_multi_upload($id, $name) {
+
+        error_reporting(E_ALL | E_STRICT);
+        //print_r($this->auth->user());	
+
+        $script_url = $this->config->base_url() . "index.php/admin/facilities/photo_gallery/deleteImages/" . $id . '/';
+
+        require('assets/globals/plugins/multi_upload/server/php/UploadHandler.php');
+        $option = array(
             'user_dirs' => 'public/assets/images/',
-            'gallary_id'=>$id,
-			'script_url'=>$script_url
-            );
-            return $upload_handler = new UploadHandler($option);
-        
+            'gallary_id' => $id,
+            'script_url' => $script_url
+        );
+        return $upload_handler = new UploadHandler($option);
     }
-	
-	function deleteImages($id){
-		
-		 
-		require('assets/globals/plugins/multi_upload/server/php/UploadHandler.php');
-		
-		 $option = array(
+
+    function deleteImages($id) {
+
+
+        require('assets/globals/plugins/multi_upload/server/php/UploadHandler.php');
+
+        $option = array(
             'user_dirs' => 'public/assets/images/',
-            'gallary_id'=>$id,
-		
-            );
-		
-		 $upload_handler = new UploadHandler($option);
-	
-	}
-   function getNewToken(){	   
-	     $reponse = array(
-                'csrfName' => $this->security->get_csrf_token_name(),
-                'csrfHash' => $this->security->get_csrf_hash()
-                );				
-			echo $reponse['csrfHash'];	   
-   }		
+            'gallary_id' => $id,
+        );
+
+        $upload_handler = new UploadHandler($option);
+    }
+
+    function getNewToken() {
+        $reponse = array(
+            'csrfName' => $this->security->get_csrf_token_name(),
+            'csrfHash' => $this->security->get_csrf_hash()
+        );
+        echo $reponse['csrfHash'];
+    }
+
     function uplaod_images2($id,$name)
     {
                     
