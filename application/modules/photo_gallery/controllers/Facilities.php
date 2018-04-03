@@ -17,8 +17,7 @@ class Facilities extends Admin_Controller
      */
     public function __construct()
     {
-        parent::__construct();
-        
+        parent::__construct(); 	
         $this->auth->restrict($this->permissionView);
         $this->load->model('photo_gallery/photo_gallery_model');
         $this->load->helper('upload_helper');
@@ -251,25 +250,51 @@ class Facilities extends Admin_Controller
     
     function do_multi_upload($id,$name)
     {
-
-            $this->load->library("UploadHandler");
+		
+		error_reporting(E_ALL | E_STRICT);
+		//print_r($this->auth->user());	
+		
+		   $script_url=$this->config->base_url()."index.php/admin/facilities/photo_gallery/deleteImages/".$id.'/';
+		
+            require('assets/globals/plugins/multi_upload/server/php/UploadHandler.php');
             $option = array(
             'user_dirs' => 'public/assets/images/',
-            'gallary_id'=>$id
+            'gallary_id'=>$id,
+			'script_url'=>$script_url
             );
-            //$upload_handler = new UploadHandler($option);
+            return $upload_handler = new UploadHandler($option);
         
     }
-    
-    
+	
+	function deleteImages($id){
+		
+		 
+		require('assets/globals/plugins/multi_upload/server/php/UploadHandler.php');
+		
+		 $option = array(
+            'user_dirs' => 'public/assets/images/',
+            'gallary_id'=>$id,
+		
+            );
+		
+		 $upload_handler = new UploadHandler($option);
+	
+	}
+   function getNewToken(){	   
+	     $reponse = array(
+                'csrfName' => $this->security->get_csrf_token_name(),
+                'csrfHash' => $this->security->get_csrf_hash()
+                );				
+			echo $reponse['csrfHash'];	   
+   }		
     function uplaod_images2($id,$name)
     {
                     
         if (isset($_POST['submit'])) {
 
-        do_multi_upload($id);
+        $this->do_multi_upload($id);
         
-        Template::set_message(lang('photo_gallery_delete_success'), 'success');
+      Template::set_message(lang('photo_gallery_delete_success'), 'success');
 
         redirect(SITE_AREA . '/facilities/photo_gallery');
         

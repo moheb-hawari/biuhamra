@@ -6,7 +6,7 @@ $can_edit		= $this->auth->has_permission('FAQ.Homepage.Edit');
 $has_records	= isset($records) && is_array($records) && count($records);
 
 if ($can_delete) {
-    $num_columns++;
+     $num_columns++; 
 }
 ?>
 <div class='admin-box panel'>
@@ -32,14 +32,17 @@ if ($can_delete) {
 			</thead>
 			<?php if ($has_records) : ?>
 			<tfoot>
-				<?php if ($can_delete) : ?>
+				
 				<tr>
+				<?php if ($can_delete) : ?>
 					<td colspan='<?php echo $num_columns; ?>'>
 						<?php echo lang('bf_with_selected'); ?>
 						<button type='submit' name='delete' id='delete-me' class='btn btn-danger' value="<?php echo lang('bf_action_delete'); ?>" onclick="return confirm('<?php e(js_escape(lang('faq_delete_confirm'))); ?>')" ><?php echo lang('bf_action_delete'); ?></button>
 					</td>
+						<?php endif; ?>				
+					
 				</tr>
-				<?php endif; ?>
+			
 			</tfoot>
 			<?php endif; ?>
 			<tbody>
