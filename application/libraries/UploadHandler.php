@@ -9,7 +9,7 @@
  * Licensed under the MIT license:
  * https://opensource.org/licenses/MIT
  */
- 
+
 class UploadHandler
 {
 
@@ -168,7 +168,6 @@ class UploadHandler
             ),
             'print_response' => true
         );
-        
         if ($options) {
             $this->options = $options + $this->options;
         }
@@ -216,8 +215,8 @@ class UploadHandler
     }
 
     protected function get_user_id() {
-        //@session_start();
-        return $this->options['gallary_id'];
+        @session_start();
+        return session_id();
     }
 
     protected function get_user_path() {
@@ -271,7 +270,6 @@ class UploadHandler
     }
 
     protected function set_additional_file_properties($file) {
-		
         $file->deleteUrl = $this->options['script_url']
             .$this->get_query_separator($this->options['script_url'])
             .$this->get_singular_param_name()
@@ -433,7 +431,7 @@ class UploadHandler
                 $img_width = $img_height;
                 $img_height = $tmp;
                 unset($tmp);
-            
+            }
 
         }
         if (!empty($img_width)) {
@@ -456,7 +454,6 @@ class UploadHandler
         }
         return true;
     }
-	}
 
     protected function upcount_name_callback($matches) {
         $index = isset($matches[1]) ? ((int)$matches[1]) + 1 : 1;

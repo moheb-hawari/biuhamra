@@ -37,6 +37,7 @@ if ($can_delete) {
 				<tr>
 					<td colspan='<?php echo $num_columns; ?>'>
 						<?php echo lang('bf_with_selected'); ?>
+						
 						<button type='submit' name='delete' id='delete-me' class='btn btn-danger' value="<?php echo lang('bf_action_delete'); ?>" onclick="return confirm('<?php e(js_escape(lang('videos_delete_confirm'))); ?>')" ><?php echo lang('bf_action_delete'); ?></button>
 					</td>
 				</tr>

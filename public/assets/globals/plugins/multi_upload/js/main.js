@@ -48,6 +48,31 @@ $(function () {
             $(this).fileupload('option', 'done')
                 .call(this, $.Event('done'), {result: result});
         });
+		
+		var $fileInput = $('#fileupload');
+
+		$fileInput.on('fileuploaddone', function(e, data) {
+			var activeUploads = $fileInput.fileupload('active');
+
+			if(activeUploads == 1) {
+				console.info("All uploads done");
+				getNewCirfToken();
+				// Your stuff here
+			}
+		});
+		
+		function getNewCirfToken(){
+			  $.ajax({
+				      type:'GET',
+					  url:'http://localhost/biuhamra/public/index.php/admin/facilities/photo_gallery/getNewToken',
+					  data:{
+						 'getTokenData':true
+					  },
+					  success:function(res){
+						  $("input[name='ci_csrf_token']").val(res);
+					  }
+					});
+		}
     
 
 });
