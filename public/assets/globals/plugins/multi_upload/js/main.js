@@ -50,6 +50,7 @@ $(function () {
         });
 		
 		var $fileInput = $('#fileupload');
+	
 
 		$fileInput.on('fileuploaddone', function(e, data) {
 			var activeUploads = $fileInput.fileupload('active');
@@ -62,9 +63,11 @@ $(function () {
 		});
 		
 		function getNewCirfToken(){
+			
+			var controllerUrl= site_url+'/admin/facilities/photo_gallery/getNewToken';
 			  $.ajax({
 				      type:'GET',
-					  url:'http://localhost/biuhamra/public/index.php/admin/facilities/photo_gallery/getNewToken',
+					  url:controllerUrl,
 					  data:{
 						 'getTokenData':true
 					  },

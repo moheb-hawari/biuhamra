@@ -252,13 +252,15 @@ class Facilities extends Admin_Controller
     {
 		
 		error_reporting(E_ALL | E_STRICT);
-		//print_r($this->auth->user());
+		//print_r($this->auth->user());	
+		
+		   $script_url=$this->config->base_url()."index.php/admin/facilities/photo_gallery/deleteImages/".$id.'/';
 		
             require('assets/globals/plugins/multi_upload/server/php/UploadHandler.php');
             $option = array(
             'user_dirs' => 'public/assets/images/',
             'gallary_id'=>$id,
-			'script_url'=>'http://localhost/biuhamra/public/index.php/admin/facilities/photo_gallery/deleteImages/'.$id.'/'
+			'script_url'=>$script_url
             );
             return $upload_handler = new UploadHandler($option);
         
