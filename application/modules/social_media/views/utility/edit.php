@@ -80,14 +80,14 @@ $id = isset($social_media->id) ? $social_media->id : '';
                 </div>
             </div>
 
-            <div class="inputer floating-label control-group<?php echo form_error('youtube') ? ' error' : ''; ?>">
+<!--            <div class="inputer floating-label control-group<?php echo form_error('youtube') ? ' error' : ''; ?>">
                 <?php echo form_label(lang('social_media_field_youtube'), 'youtube', array('class' => 'control-label')); ?>
                 <div class='input-wrapper controls'>
                     <input class='form-control' id='youtube' type='text' name='youtube' maxlength='255' value="<?php echo set_value('youtube', isset($social_media->youtube) ? $social_media->youtube : ''); ?>" />
                         <label for='youtube'><?php echo lang('social_media_field_youtube'); ?></label>
                     <span class='help-inline'><?php echo form_error('youtube'); ?></span>
                 </div>
-            </div>
+            </div>-->
         </fieldset>
         <fieldset class='form-actions'>
             <input type='submit' name='save' class='btn btn-primary' value="<?php echo lang('social_media_action_edit'); ?>" />

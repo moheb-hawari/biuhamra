@@ -75,11 +75,11 @@ class Social_media_model extends MY_Model
 			'label' => 'lang:social_media_field_google',
 			'rules' => 'max_length[255]',
 		),
-		array(
-			'field' => 'youtube',
-			'label' => 'lang:social_media_field_youtube',
-			'rules' => 'max_length[255]',
-		),
+//		array(
+//			'field' => 'youtube',
+//			'label' => 'lang:social_media_field_youtube',
+//			'rules' => 'max_length[255]',
+//		),
 	);
 	protected $insert_validation_rules  = array();
 	protected $skip_validation 			= false;
