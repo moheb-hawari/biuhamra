@@ -21,25 +21,14 @@ if ($can_delete) {
 		<table class='table table-striped display datatables-basic'>
 			<thead>
 				<tr>
-					<?php if ($can_delete && $has_records) : ?>
-					<th class='column-check'><input class='check-all' type='checkbox' /></th>
-					<?php endif;?>
+					
 					
 					<th><?php echo lang('about_field_en_title'); ?></th>
 					<th><?php echo lang('about_field_logo'); ?></th>
 				</tr>
 			</thead>
 			<?php if ($has_records) : ?>
-			<tfoot>
-				<?php if ($can_delete) : ?>
-				<tr>
-					<td colspan='<?php echo $num_columns; ?>'>
-						<?php echo lang('bf_with_selected'); ?>
-						<button type='submit' name='delete' id='delete-me' class='btn btn-danger' value="<?php echo lang('bf_action_delete'); ?>" onclick="return confirm('<?php e(js_escape(lang('about_delete_confirm'))); ?>')" ><?php echo lang('bf_action_delete'); ?></button>
-					</td>
-				</tr>
-				<?php endif; ?>
-			</tfoot>
+			
 			<?php endif; ?>
 			<tbody>
 				<?php
@@ -47,9 +36,7 @@ if ($can_delete) {
 					foreach ($records as $record) :
 				?>
 				<tr>
-					<?php if ($can_delete) : ?>
-					<td class='column-check'><input type='checkbox' name='checked[]' value='<?php echo $record->id; ?>' /></td>
-					<?php endif;?>
+					
 					
 				<?php if ($can_edit) : ?>
 					<td><?php echo anchor(SITE_AREA . '/homepage/about/edit/' . $record->id, '<span class="icon-pencil"></span> ' .  $record->en_title); ?></td>

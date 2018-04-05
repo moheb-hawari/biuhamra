@@ -22,7 +22,7 @@ if ($can_delete) {
 			<thead>
 				<tr>
 					<?php if ($can_delete && $has_records) : ?>
-					<th class='column-check'><input class='check-all' type='checkbox' /></th>
+					<th class='sorting_asc_disabled column-check'><input class='check-all' type='checkbox' /></th>
 					<?php endif;?>
 					
 					<th><?php echo lang('videos_field_department'); ?></th>

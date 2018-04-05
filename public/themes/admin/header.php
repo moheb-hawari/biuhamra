@@ -74,13 +74,11 @@ $title = lang($controller.'_module_name');
             <!--.nav-user-->
             <div class="nav-user">
 			<div class="user">
+                            <a href="<?php echo site_url('logout'); ?>">
 				<img src="<?php echo assets_path().'globals/img/settings.png';?>" alt="">
-				<span class="badge">2</span>
+			    </a>
 			</div><!--.user-->
-			<div class="cross">
-				<span class="line"></span>
-				<span class="line"></span>
-			</div><!--.cross-->
+
 		</div>
             <!--.nav-user-->
             <!-- END OF ICONS -->
@@ -92,7 +90,7 @@ $title = lang($controller.'_module_name');
                 <div class="starting-point">
                     <span></span>
                 </div><!--.starting-point-->
-                <div class="logo">UIGTC ADMIN</div><!--.logo-->
+                <div class="logo">BIUHAMRA CMS</div><!--.logo-->
             </div><!--.overlay-->
 
             <div class="overlay-secondary"></div><!--.overlay-secondary-->
@@ -188,7 +186,7 @@ $title = lang($controller.'_module_name');
                                                 
                                     </li>-->
                                     <li>
-                                        <a href="<?php echo site_url('logout'); ?>"><?php echo lang('bf_action_logout'); ?></a>
+                                        
                                     </li>
                                     
                                 </ul>
