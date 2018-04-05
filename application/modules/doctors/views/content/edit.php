@@ -119,6 +119,7 @@ $id = isset($doctors->id) ? $doctors->id : '';
                     <span class="fileinput-filename"></span>
                     <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
                     <span class='help-inline'><?php echo form_error('cover_image'); ?></span>
+                    <br><span class='help-inline'>"At minimum 600*350 px"</span>
                 </div>
             </div>
             
@@ -161,7 +162,12 @@ $id = isset($doctors->id) ? $doctors->id : '';
                     <span class='help-inline'><?php echo form_error('google'); ?></span>
                 </div>
             </div>
-                
+                 <?php // Change the values in this array to populate your dropdown as required
+                if(!empty($departments))
+                    foreach($departments as $val)
+                        $options[$val->id] = $val->en_title;
+                echo form_dropdown(array('name' => 'department_id','class'=>'selectpicker','required' => 'required'), $options, set_value('department_id', isset($departments->department_id) ? $departments->department_id : ''), lang('doctors_field_department') . lang('bf_form_label_required'),'','','col-md-6');
+            ?>
                 
                 <?php // Change the values in this array to populate your dropdown as required
                     $options = array(

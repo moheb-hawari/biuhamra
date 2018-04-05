@@ -118,6 +118,8 @@ $id = isset($departments->id) ? $departments->id : '';
                     <span class="fileinput-filename"></span>
                     <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
                     <span class='help-inline'><?php echo form_error('dep_image'); ?></span>
+                    <br><span class='help-inline'>"At minimum 600*350 px"</span>
+
                 </div>
             </div>
                 

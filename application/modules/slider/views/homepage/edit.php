@@ -78,6 +78,7 @@ $id = isset($slider->id) ? $slider->id : '';
                     <span class="fileinput-filename"></span>
                     <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
                     <span class='help-inline'><?php echo form_error('image'); ?></span>
+                    <br><span class='help-inline'>"At minimum 1024*768 px"</span>
                 </div>
             </div>
                 <?php // Change the values in this array to populate your dropdown as required

@@ -70,3 +70,5 @@ $lang['doctors_field_type'] = 'Type';
 $lang['doctors_field_facebook'] = 'Facebook';
 $lang['doctors_field_twitter'] = 'Twitter';
 $lang['doctors_field_google'] = 'Google';
+
+$lang['doctors_field_department'] = 'Departments';

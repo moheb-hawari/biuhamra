@@ -13,8 +13,8 @@
                     <div class="col-xs-12 col-sm-7">
                         <div class="doc_fdet_bio">
                             <div class="doc_fdet_name"><?php echo $doctor->{$lang.'_name'};?></div>
-                            <div class="doc_fdet_pos"><?php echo $doctor->{$lang.'_academic'};?></div>
-                            <div class="doc_fdet_deg"><?=site_text('MD/PhD', 'ماجستير، دكتوراه');?></div><!--add edu degree to cms-->
+                            <div class="doc_fdet_pos"><?php echo $doctor->{$lang.'_job_title'};?></div>
+                            <div class="doc_fdet_deg"><?php echo $doctor->{$lang.'_academic'};?></div><!--add edu degree to cms-->
                         </div>
                     </div>
                 </div>

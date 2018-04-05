@@ -21,6 +21,7 @@ class Content extends Admin_Controller
         
         $this->auth->restrict($this->permissionView);
         $this->load->model('doctors/doctors_model');
+        $this->load->model('departments/departments_model');
         $this->lang->load('doctors');
         $this->load->helper('upload_helper');
             $this->form_validation->set_error_delimiters("<span class='error'>", "</span>");
@@ -116,6 +117,7 @@ class Content extends Admin_Controller
     {
         $id = $this->uri->segment(5);
         Template::set('weight', $this->doctors_model->count_all());
+        Template::set('departments', $this->departments_model->find_all());
         if (empty($id)) {
             if (isset($_POST['save'])) {
             if ($insert_id = $this->save_doctors()) {
